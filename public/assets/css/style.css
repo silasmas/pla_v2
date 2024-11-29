@@ -39,7 +39,7 @@ Project:  Lawfinity
 */
 /*------------------------------------------------------------------
 # [Typography]
- 
+
 Body copy: "Plus Jakarta Sans", sans-serif;
 */
 
@@ -50,16 +50,16 @@ body {
     font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-:root { 
+:root {
     --e-global-color-primary: #282828;
-    --e-global-color-secondary: #efdac7;
-    --e-global-color-accent: #51213d;
+    --e-global-color-secondary: #cf1e18;
+    --e-global-color-accent: #421f1d;
     --e-global-color-text: #575757;
 	--e-global-color-white: #ffffff;
     --e-global-color-black: #000000;
     --e-global-color-dark-gray: #a3a3a3;
     --e-global-color-very-dark-black-blue: #202226;
-    --e-global-color-light-grayish-orange: #f5f2ec;
+    --e-global-color-light-grayish-orange: #f7f7f7;
     --e-global-color-grayish-orange: #cbc8c1;
     --e-global-color-very-soft-orange: #e1bb98;
     --e-global-color-pure-red: #ff0000;
@@ -100,7 +100,7 @@ h6{
     padding-left: 34px;
     letter-spacing: 0.6px;
     text-transform: uppercase;
-    color: var(--e-global-color-accent);
+    color: var(--e-global-color-secondary);
 }
 p{
     font-size: 20px;
@@ -146,7 +146,7 @@ h6:before{
     width: 23px;
     height: 2px;
     position: absolute;
-    background-color: var(--e-global-color-accent);
+    background-color: var(--e-global-color-secondary);
 }
 .span_borderbootom{
     border-bottom: 1px solid var(--e-global-color-primary);
@@ -177,8 +177,8 @@ h6:before{
 }
 .navbar-collapse ul{
     text-align: center;
-    align-items: center; 
-    display: inherit; 
+    align-items: center;
+    display: inherit;
 }
 .navbar-expand-lg{
     position: relative;
@@ -206,11 +206,11 @@ h6:before{
     transition: all 0.3s ease-in-out;
 }
 .navbar-nav .nav-item a:hover{
-    color: var(--e-global-color-very-soft-orange) !important;
+    color: var(--e-global-color-secondary) !important;
     background-color: transparent;
 }
 .navbar-nav .active > a{
-    color: var(--e-global-color-very-soft-orange) !important;
+    color: var(--e-global-color-secondary) !important;
 }
 .navbar-collapse .drop-down-pages {
     text-align: left;
@@ -337,7 +337,7 @@ h6:before{
 }
 .banner-con .banner_content a {
     padding: 20px 32px 22px;
-    color: var(--e-global-color-very-dark-black-blue);
+    color: #fff;
     background: var(--e-global-color-secondary);
     transition: all 0.3s ease-in-out;
 }
@@ -349,6 +349,7 @@ h6:before{
 }
 .banner-con .banner_content a:hover {
     background: var(--e-global-color-white);
+    color: var(--e-global-color-primary);
 }
 .banner-con .owl-carousel .owl-dots {
     top: 94px;
@@ -1037,7 +1038,7 @@ h6:before{
 }
 .violence-con .violence_content a {
     padding: 20px 32px 22px;
-    color: var(--e-global-color-very-dark-black-blue);
+    color: white;
     background: var(--e-global-color-secondary);
     transition: all 0.3s ease-in-out;
 }
@@ -1049,6 +1050,7 @@ h6:before{
 }
 .violence-con .violence_content a:hover {
     background: var(--e-global-color-white);
+    color: var(--e-global-color-primary);
 }
 
 /* Lawyer */
@@ -1251,7 +1253,17 @@ h6:before{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url(../images/purple-bg.jpg);
+    background: #fff;
+
+    h3 {
+        color: var(--e-global-color-primary)!important;
+    }
+    h6 {
+        color: var(--e-global-color-secondary)!important;
+        &::before {
+            background: var(--e-global-color-secondary)!important;
+          }
+    }
 }
 .footer-con .upper_portion h6{
     font-size: 12px;
@@ -1272,8 +1284,8 @@ h6:before{
     margin-right: 10px;
     width: 350px;
     position: relative;
-    color: var(--e-global-color-text);
-    background-color: var(--e-global-color-white);
+    color: var(--e-global-color-primary);
+    background-color: #f7f7f7;
     border: none;
     border-radius: 30px;
     overflow: visible;
@@ -1290,7 +1302,7 @@ h6:before{
     border: none;
     position: relative;
     border-radius: 30px;
-    color: var(--e-global-color-very-dark-black-blue);
+    color: white;
     background: var(--e-global-color-secondary);
     overflow: visible;
     outline: none;
@@ -1457,7 +1469,7 @@ h6:before{
     text-align: center;
     border-radius: 30px;
     background-color: var(--e-global-color-accent);
-    box-shadow: 1px 1px 57px rgb(239 218 199 / 24%);
+    box-shadow: 1px 1px 57px rgba(0, 0, 0, 0.24);
     position: relative;
     display: none;
 }
@@ -1496,7 +1508,7 @@ h6:before{
     text-align: center;
     display: inline-block;
     border-radius: 30px;
-    color: var(--e-global-color-very-dark-black-blue);
+    color: #fff;
     background: var(--e-global-color-secondary);
     transition: all 0.3s ease-in-out;
     box-shadow: none;
@@ -2356,6 +2368,7 @@ h6:before{
     color: var(--e-global-color-primary);
     background: var(--e-global-color-secondary);
     transition: all 0.3s ease-in-out;
+    color: #fff;
 }
 .aboutpage-con .about_content a i {
     font-size: 14px;
@@ -3566,7 +3579,7 @@ h6:before{
 
 #button {
     display: inline-block;
-    background-color: var(--e-global-color-very-soft-orange);
+    background-color: var(--e-global-color-secondary);
     width: 64px;
     height: 64px;
     text-align: center;
@@ -3580,10 +3593,10 @@ h6:before{
     z-index: 10;
     display: flex;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
     -webkit-animation: spineer 2s infinite;
-    animation: spineer 2s infinite;  
-    text-decoration: none; 
+    animation: spineer 2s infinite;
+    text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
@@ -3604,20 +3617,20 @@ h6:before{
 }
 @-webkit-keyframes spineer {
 from {
-    box-shadow: 0 0 0 0 rgb(225 187 152 / 41%)
+    box-shadow: 0 0 0 0 #d01f19
 }
 to {
-    box-shadow: 0 0 0 35px rgba(250, 87, 51, .01)
+    box-shadow: 0 0 0 35px #d01f19
 }
 }
 
 @keyframes spineer {
-from {
-    box-shadow: 0 0 0 0 rgb(225 187 152 / 41%)
-}
-to {
-    box-shadow: 0 0 0 35px rgba(250, 87, 51, .01)
-}
+    from {
+        box-shadow: 0 0 0 0 #d01f1964
+    }
+    to {
+        box-shadow: 0 0 0 35px #d01f1908
+    }
 }
 
 /* Preloader -------------------------------------------------------*/
