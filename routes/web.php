@@ -1,7 +1,33 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\InfoController;
+use App\Http\Controllers\AvocatController;
+use App\Http\Controllers\BureauController;
+use App\Http\Controllers\PublicationController;
 
-Route::get('/', function () {
-    return view('pages.home');
-});
+// Route::get('/', function () {
+//     return view('pages.home');
+// });
+
+Route::get('/', [InfoController::class, 'index'])->name('home');
+Route::get('about', [InfoController::class, 'about'])->name('about');
+Route::get('expertise', [InfoController::class, 'expertise'])->name('expertise');
+Route::get('team', [InfoController::class, 'team'])->name('team');
+Route::get('publication', [InfoController::class, 'publication'])->name('publication');
+Route::get('presence', [InfoController::class, 'presence'])->name('presence');
+
+Route::get('detailPublication', [InfoController::class, 'show_pub'])->name('detailPublication');
+Route::get('detailTeam/{id}', [InfoController::class, 'show_team'])->name('detailTeam');
+Route::get('teamByCat/{id}', [InfoController::class, 'show'])->name('teamByCat');
+Route::get('teamByBureau/{id}', [InfoController::class, 'teamByBureau'])->name('teamByBureau');
+Route::get('detailExpertise', [InfoController::class, 'show_secteur'])->name('detailExpertise');
+Route::get('detailBureau/{id}', [BureauController::class, 'show'])->name('detailBureau');
+Route::get('detailCompetence', [InfoController::class, 'show_competence'])->name('detailCompetence');
+Route::get('downloadCv', [AvocatController::class, 'downloadCv'])->name('downloadCv');
+Route::get('downloadQr/{id}', [AvocatController::class, 'downloadQr'])->name('downloadQr');
+Route::get('downloadQrHome', [AvocatController::class, 'downloadQrHome'])->name('downloadQrHome');
+Route::get('downloadCvPub', [PublicationController::class, 'downloadCvPub'])->name('downloadCvPub');
+
+//newsletter
+Route::post('add.newsletter', [InfoController::class, 'store'])->name('add.newsletter');

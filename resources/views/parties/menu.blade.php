@@ -16,26 +16,26 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item dropdown active">
-                            <a class="nav-link" href="#"
+                            <a class="nav-link" href="{{ route('home') }}"
                                 aria-expanded="false"> @lang('info.m1') </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">@lang('info.m2') </a>
+                            <a class="nav-link" href="{{ route('about') }}">@lang('info.m2') </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">@lang('info.m3') </a>
+                            <a class="nav-link" href="{{ route('expertise') }}">@lang('info.m3') </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">@lang('info.m4') </a>
+                            <a class="nav-link" href="{{ route('team') }}">@lang('info.m4') </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">@lang('info.m6')</a>
+                            <a class="nav-link" href="{{ route('presence') }}">@lang('info.m6')</a>
                         </li>
                     </ul>
                     <div class="last_list">
                         <figure class="nav-phoneicon mb-0"><img class="img-fluid"
                                 src="./assets/images/nav-phoneicon.png" alt="image"></figure>
-                        <a class="text-decoration-none last_list_atag" href="tel:+568925896325">+5689 2589 6325</a>
+                        <a class="text-decoration-none last_list_atag" href="tel:+243824233125">+243 82 423 3125</a>
                     </div>
                 </div>
             </nav>
@@ -180,7 +180,7 @@
                     <figure class="scroll-arrow">
                         <img src="./assets/images/banner-scrolldownarrow.png" alt="image" class="img-fluid">
                     </figure>
-                    <span>Discover<br>More</span>
+                    <span>Découvrir<br>Plus</span>
                 </a>
                 <ul class="list-unstyled mb-0 social-icons">
                     <li><a href="https://www.facebook.com/login/" class="text-decoration-none"><i
