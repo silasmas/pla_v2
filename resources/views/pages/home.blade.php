@@ -177,7 +177,7 @@
             </div>
         </div>
         <div class="row" data-aos="fade-up">
-            <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-5">
                 <div class="lawyer-box">
                     <figure class="lawyer-image">
                         <img src="./assets/images/lawyer-image1.jpg" alt="image" class="img-fluid">
@@ -193,7 +193,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-5">
                 <div class="lawyer-box">
                     <figure class="lawyer-image">
                         <img src="./assets/images/lawyer-image2.jpg" alt="image" class="img-fluid">
@@ -209,7 +209,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-5">
                 <div class="lawyer-box mb-0">
                     <figure class="lawyer-image">
                         <img src="./assets/images/lawyer-image3.jpg" alt="image" class="img-fluid">
@@ -225,7 +225,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-5">
                 <div class="lawyer-box mb-0">
                     <figure class="lawyer-image">
                         <img src="./assets/images/lawyer-image3.jpg" alt="image" class="img-fluid">
@@ -241,7 +241,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-5">
                 <div class="lawyer-box mb-0">
                     <figure class="lawyer-image">
                         <img src="./assets/images/lawyer-image3.jpg" alt="image" class="img-fluid">
@@ -257,7 +257,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-5">
                 <div class="lawyer-box mb-0">
                     <figure class="lawyer-image">
                         <img src="./assets/images/lawyer-image3.jpg" alt="image" class="img-fluid">
@@ -274,6 +274,9 @@
                 </div>
             </div>
 
+        </div>
+        <div class="text-center mt-lg-5 mt-5">
+            <a href="#" class="text-decoration-none read_more">Read More<i class="fa-solid fa-arrow-right"></i></a>
         </div>
     </div>
 </section>

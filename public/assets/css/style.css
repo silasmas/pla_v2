@@ -51,14 +51,14 @@ body {
 }
 
 :root {
-    --e-global-color-primary: #282828;
-    --e-global-color-secondary: #cf1e18;
+    --e-global-color-primary: #1a1a1a;
+    --e-global-color-secondary: #d01f19;
     --e-global-color-accent: #421f1d;
     --e-global-color-text: #575757;
 	--e-global-color-white: #ffffff;
     --e-global-color-black: #000000;
     --e-global-color-dark-gray: #a3a3a3;
-    --e-global-color-very-dark-black-blue: #202226;
+    --e-global-color-very-dark-black-blue: #1a1a1a;
     --e-global-color-light-grayish-orange: #f7f7f7;
     --e-global-color-grayish-orange: #cbc8c1;
     --e-global-color-very-soft-orange: #e1bb98;
@@ -345,7 +345,7 @@ h6:before{
     font-size: 14px;
     margin-left: 21px;
     transition: all 0.3s ease-in-out;
-    color: var(--e-global-color-very-dark-black-blue);
+    color: white;
 }
 .banner-con .banner_content a:hover {
     background: var(--e-global-color-white);
@@ -397,7 +397,7 @@ h6:before{
     margin-bottom: 54px;
     text-align: center;
     border-radius: 100px;
-    background: var(--e-global-color-accent);
+    background: var(--e-global-color-primary);
     transition: all 0.3s ease-in-out;
 }
 .banner-con .banner_sideicon .scroll-arrow:hover{
@@ -406,9 +406,9 @@ h6:before{
 .banner-con .banner_sideicon .scroll-arrow img{
     transition: all 0.3s ease-in-out;
 }
-.banner-con .banner_sideicon .scroll-arrow:hover img{
+/* .banner-con .banner_sideicon .scroll-arrow:hover img{
     filter: invert(1);
-}
+} */
 .banner-con .banner_sideicon .scroll-arrow::before{
     content: "";
     width: 1px;
@@ -1046,7 +1046,7 @@ h6:before{
     font-size: 14px;
     margin-left: 21px;
     transition: all 0.3s ease-in-out;
-    color: var(--e-global-color-very-dark-black-blue);
+    color: white;
 }
 .violence-con .violence_content a:hover {
     background: var(--e-global-color-white);
@@ -1058,6 +1058,25 @@ h6:before{
 .lawyer-con {
     padding: 154px 0 162px;
     background: var(--e-global-color-white);
+
+    .read_more {
+        padding: 20px 32px 22px;
+        color: white;
+        background: var(--e-global-color-secondary);
+        transition: all 0.3s ease-in-out;
+        i {
+            font-size: 14px;
+            margin-left: 26px;
+            top: -1px;
+            position: relative;
+            color: white;
+            transition: all 0.3s ease-in-out;
+          }
+        &:hover {
+            color: var(--e-global-color-white);
+            background: var(--e-global-color-primary);
+        }
+    }
 }
 .lawyer-con .lawyer-sideimage{
     position: absolute;
@@ -1113,8 +1132,7 @@ h6:before{
 }
 .lawyer-con .lawyer-box .content li:hover i{
     transform: translateY(-5px);
-    color: var(--e-global-color-primary);
-    background: var(--e-global-color-very-soft-orange);
+    background: var(--e-global-color-secondary);
 }
 .lawyer-con .lawyer-box .content i {
     font-size: 14px;
@@ -1122,7 +1140,7 @@ h6:before{
     width: 45px;
     line-height: 45px;
     color: var(--e-global-color-white);
-    background: var(--e-global-color-accent);
+    background: var(--e-global-color-primary);
     border-radius: 100px;
     transition: all 0.3s ease-in-out;
     text-align: center;
@@ -1179,10 +1197,10 @@ h6:before{
     color: var(--e-global-color-text);
 }
 .article-con .article-box:hover h5 {
-    color: var(--e-global-color-very-soft-orange);
+    color: var(--e-global-color-secondary);
 }
 .article-con .article-box h5:hover {
-    color: var(--e-global-color-accent);
+    color: var(--e-global-color-secondary);
 }
 .article-con .article-box figure {
     border-radius: 20px 20px 0 0;
@@ -1202,7 +1220,7 @@ h6:before{
     transition: all 0.3s ease-in-out;
 }
 .article-con .article-box:hover .box-content i {
-    color: var(--e-global-color-very-soft-orange);
+    color: var(--e-global-color-secondary);
 }
 .article-con .article-box .box-content i:hover {
     color: var(--e-global-color-accent);
@@ -1222,12 +1240,12 @@ h6:before{
     color: var(--e-global-color-grayish-orange);
 }
 .article-con .owl-carousel .owl-dots .owl-dot:hover span {
-    background: var(--e-global-color-accent);
+    background: var(--e-global-color-primary);
 }
 .article-con .owl-carousel .owl-dots .owl-dot.active span {
     width: 16px;
     height: 16px;
-    background: var(--e-global-color-accent);
+    background: var(--e-global-color-primary);
 }
 .article-con .owl-carousel .owl-dots .owl-dot:focus {
     outline: none;
@@ -1239,7 +1257,7 @@ h6:before{
 /* Footer */
 
 .footer-con{
-    background: var(--e-global-color-very-dark-black-blue);
+    background: var(--e-global-color-primary);
 }
 .footer-con .footer-sideimage{
     position: absolute;
@@ -1312,7 +1330,7 @@ h6:before{
     font-size: 14px;
     margin-left: 24px;
     transition: all 0.3s ease-in-out;
-    color: var(--e-global-color-very-dark-black-blue);
+    color: white;
 }
 .footer-con .upper_portion button:hover {
     color: var(--e-global-color-white);
@@ -1440,6 +1458,9 @@ h6:before{
     text-align: center;
     color: var(--e-global-color-dark-gray);
     border-top: 1px solid rgb(255 255 255 / 10%);
+    a {
+        color: var(--e-global-color-secondary);
+    }
 }
 .footer-con .footer-contactimage{
     position: absolute;
@@ -2187,11 +2208,11 @@ h6:before{
     border-radius: 100px;
     text-align: center;
     color: var(--e-global-color-white);
-    background: var(--e-global-color-accent);
+    background: var(--e-global-color-primary);
     transition: all 0.3s ease-in-out;
 }
 .practice-con .box:hover {
-    background-color: var(--e-global-color-accent);
+    background-color: var(--e-global-color-primary);
 }
 .practice-con .box:hover::before {
     display: block;
@@ -2205,13 +2226,13 @@ h6:before{
     color: var(--e-global-color-white);
 }
 .practice-con .box:hover i{
-    color: var(--e-global-color-primary);
+    color: white;
     background: var(--e-global-color-secondary);
 }
-.practice-con .box i:hover{
+/* .practice-con .box i:hover{
     color: var(--e-global-color-white);
     background: var(--e-global-color-primary);
-}
+} */
 
 /* Practice Area Faq */
 
@@ -2271,7 +2292,7 @@ h6:before{
     position: absolute;
     border-radius: 30px;
     z-index: -1;
-    background: var(--e-global-color-accent);
+    background: var(--e-global-color-primary);
 }
 .aboutpage-con .about_wrapper .about-circle{
     position: absolute;
@@ -2300,7 +2321,7 @@ h6:before{
     font-weight: 700;
     display: inline-block;
     margin-bottom: 8px;
-    color: var(--e-global-color-accent);
+    color: var(--e-global-color-primary);
 }
 .aboutpage-con .about_wrapper .about-box .plus{
     font-size: 36px;
@@ -2309,7 +2330,7 @@ h6:before{
     top: 0;
     left: -2px;
     position: relative;
-    color: var(--e-global-color-accent);
+    color: var(--e-global-color-primary);
 }
 .aboutpage-con .about_wrapper .about-box .text{
     font-size: 14px;
@@ -2353,7 +2374,7 @@ h6:before{
     text-align: center;
     border-radius: 100%;
     color: var(--e-global-color-white);
-    background-color: var(--e-global-color-accent);
+    background-color: var(--e-global-color-primary);
     transition: all 0.3s ease-in-out;
 }
 .aboutpage-con .about_content ul li p {
@@ -2375,7 +2396,7 @@ h6:before{
     margin-left: 26px;
     top: -1px;
     position: relative;
-    color: var(--e-global-color-primary);
+    color: white;
     transition: all 0.3s ease-in-out;
 }
 .aboutpage-con .about_content a:hover {
