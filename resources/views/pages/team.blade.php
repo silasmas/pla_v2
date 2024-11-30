@@ -21,7 +21,7 @@
             </div>
         </div>
     </div>
-</section>
+
 <section class="blog-posts blogpage-section">
     <div class="container">
         <div class="row" data-aos="fade-up">
@@ -401,5 +401,5 @@
     </div>
 </section>
 
-
+</section>
 @endsection
