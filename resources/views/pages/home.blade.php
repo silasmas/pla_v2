@@ -4,7 +4,7 @@
 <!-- About -->
 <section class="aboutpage-con position-relative">
     <figure class="about-sideimage mb-0">
-        <img src="./assets/images/lawyer-sideimage.png" alt="image" class="img-fluid">
+        <img src="./assets/images/img/i2.jpg" alt="image" class="img-fluid">
     </figure>
     <div class="container">
         <div class="row">
@@ -138,6 +138,87 @@
                         <h5>Family Crimes</h5>
                         <p class="text-size-14">Aute irure dolor in reprehenderit in voluptate velit esse cillum maiores alias conse noloribus...</p>
                         <a href="./practice-area.html" class="text-decoration-none"><i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- FAQ -->
+<section class="faq-con practicearea-faq legal_situation_faq position-relative">
+    <div class="container">
+        <div class="faq">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div class="left_column" data-aos="fade-up">
+                        <div class="faq_content mb-0">
+                            <h6>Faq’s</h6>
+                            <h2>Frequently Asked Questions</h2>
+                            <p class="text-size-16">Nucimus qui blanditiis praesentium voluptatum deleniti atque
+                                corrupti quos dolores ruas molestias.
+                            </p>
+                        </div>
+                        <div class="accordian-section-inner position-relative">
+                            <div class="accordian-inner">
+                                <div id="faq_accordion1">
+                                    <div class="accordion-card">
+                                        <div class="card-header" id="headingOne">
+                                            <a href="#" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                <h5>How do I choose a personal injury lawyer?</h5>
+                                            </a>
+                                        </div>
+                                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne">
+                                            <div class="card-body">
+                                                <p class="text-size-14 text-left mb-0">Labore et dolore magna aliqua quis ipsum suspendis seultrices gravida risus commo ddolore.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-card">
+                                        <div class="card-header" id="headingTwo">
+                                            <a href="#" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                <h5>What should I do if I am involved in a car accident?</h5>
+                                            </a>
+                                        </div>
+                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
+                                            <div class="card-body">
+                                                <p class="text-size-14 text-left mb-0">Labore et dolore magna aliqua quis ipsum suspendis seultrices gravida risus commo ddolore.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-card">
+                                        <div class="card-header" id="headingThree">
+                                            <a href="#" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                <h5>How much does legal representation cost?</h5>
+                                            </a>
+                                        </div>
+                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
+                                            <div class="card-body">
+                                                <p class="text-size-14 text-left mb-0">Labore et dolore magna aliqua quis ipsum suspendis seultrices gravida risus commo ddolore.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-card">
+                                        <div class="card-header" id="headingFour">
+                                            <a href="#" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                <h5>How Do I Choose the Right Attorney?</h5>
+                                            </a>
+                                        </div>
+                                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour">
+                                            <div class="card-body">
+                                                <p class="text-size-14 text-left mb-0">Labore et dolore magna aliqua quis ipsum suspendis seultrices gravida risus commo ddolore.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div class="practicearea_wrapper position-relative" data-aos="zoom-in">
+                        <figure class="practicearea-faqimage mb-0">
+                            <img src="assets/images/practicearea-faqimage.png" alt="image" class="image-fluid">
+                        </figure>
                     </div>
                 </div>
             </div>
@@ -293,215 +374,5 @@
         </div>
     </div>
 </section>
-<!-- Article -->
-<section class="article-con">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="article_content text-center" data-aos="fade-up">
-                    <h6>News & Articles</h6>
-                    <h2>Latest <span class="span_borderbootom">blog</span> posts</h2>
-                    <p class="col-xl-8 col-lg-10 mx-auto text-size-16 mb-0">Kucimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores ruas molestias excepturi
-                        sint occaecati cupiditate non provident.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="row" data-aos="fade-up">
-            <div class="col-12">
-                <div class="owl-carousel owl-theme">
-                    <div class="item">
-                        <div class="article-box">
-                            <figure class="mb-0">
-                                <img src="./assets/images/article-image1.jpg" alt="image" class="img-fluid">
-                            </figure>
-                            <div class="box-content">
-                                <div class="span_wrapper">
-                                    <span>March 18, 2019</span>
-                                    <span class="dash">-</span>
-                                    <span>0 Comments</span>
-                                </div>
-                                <a href="single-blog.html" class="text-decoration-none">
-                                    <h5>Maiores alias consequatur perferendis doloribus</h5>
-                                </a>
-                                <p class="text-size-14">Aute irure dolor in reprehenderit in voluptate velit esse cillum...</p>
-                                <a href="single-blog.html" class="text-decoration-none">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="article-box">
-                            <figure class="mb-0">
-                                <img src="./assets/images/article-image2.jpg" alt="image" class="img-fluid">
-                            </figure>
-                            <div class="box-content">
-                                <div class="span_wrapper">
-                                    <span>March 18, 2019</span>
-                                    <span class="dash">-</span>
-                                    <span>0 Comments</span>
-                                </div>
-                                <a href="single-blog.html" class="text-decoration-none">
-                                    <h5>Eiusmod tempor incididunt labore aet dolore</h5>
-                                </a>
-                                <p class="text-size-14">Rute irure dolor in reprehenderit in voluptate velit esse cillum...</p>
-                                <a href="single-blog.html" class="text-decoration-none">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="article-box">
-                            <figure class="mb-0">
-                                <img src="./assets/images/article-image3.jpg" alt="image" class="img-fluid">
-                            </figure>
-                            <div class="box-content">
-                                <div class="span_wrapper">
-                                    <span>March 18, 2019</span>
-                                    <span class="dash">-</span>
-                                    <span>0 Comments</span>
-                                </div>
-                                <a href="single-blog.html" class="text-decoration-none">
-                                    <h5>Dolore aeu fugiat nulla paria sint occaecat</h5>
-                                </a>
-                                <p class="text-size-14">Gute irure dolor in reprehenderit in voluptate velit esse cillum...</p>
-                                <a href="single-blog.html" class="text-decoration-none">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="article-box">
-                            <figure class="mb-0">
-                                <img src="./assets/images/article-image1.jpg" alt="image" class="img-fluid">
-                            </figure>
-                            <div class="box-content">
-                                <div class="span_wrapper">
-                                    <span>March 18, 2019</span>
-                                    <span class="dash">-</span>
-                                    <span>0 Comments</span>
-                                </div>
-                                <a href="single-blog.html" class="text-decoration-none">
-                                    <h5>Maiores alias consequatur perferendis doloribus</h5>
-                                </a>
-                                <p class="text-size-14">Aute irure dolor in reprehenderit in voluptate velit esse cillum...</p>
-                                <a href="single-blog.html" class="text-decoration-none">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="article-box">
-                            <figure class="mb-0">
-                                <img src="./assets/images/article-image2.jpg" alt="image" class="img-fluid">
-                            </figure>
-                            <div class="box-content">
-                                <div class="span_wrapper">
-                                    <span>March 18, 2019</span>
-                                    <span class="dash">-</span>
-                                    <span>0 Comments</span>
-                                </div>
-                                <a href="single-blog.html" class="text-decoration-none">
-                                    <h5>Eiusmod tempor incididunt labore aet dolore</h5>
-                                </a>
-                                <p class="text-size-14">Rute irure dolor in reprehenderit in voluptate velit esse cillum...</p>
-                                <a href="single-blog.html" class="text-decoration-none">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="article-box">
-                            <figure class="mb-0">
-                                <img src="./assets/images/article-image3.jpg" alt="image" class="img-fluid">
-                            </figure>
-                            <div class="box-content">
-                                <div class="span_wrapper">
-                                    <span>March 18, 2019</span>
-                                    <span class="dash">-</span>
-                                    <span>0 Comments</span>
-                                </div>
-                                <a href="single-blog.html" class="text-decoration-none">
-                                    <h5>Dolore aeu fugiat nulla paria sint occaecat</h5>
-                                </a>
-                                <p class="text-size-14">Gute irure dolor in reprehenderit in voluptate velit esse cillum...</p>
-                                <a href="single-blog.html" class="text-decoration-none">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="article-box">
-                            <figure class="mb-0">
-                                <img src="./assets/images/article-image1.jpg" alt="image" class="img-fluid">
-                            </figure>
-                            <div class="box-content">
-                                <div class="span_wrapper">
-                                    <span>March 18, 2019</span>
-                                    <span class="dash">-</span>
-                                    <span>0 Comments</span>
-                                </div>
-                                <a href="single-blog.html" class="text-decoration-none">
-                                    <h5>Maiores alias consequatur perferendis doloribus</h5>
-                                </a>
-                                <p class="text-size-14">Aute irure dolor in reprehenderit in voluptate velit esse cillum...</p>
-                                <a href="single-blog.html" class="text-decoration-none">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="article-box">
-                            <figure class="mb-0">
-                                <img src="./assets/images/article-image2.jpg" alt="image" class="img-fluid">
-                            </figure>
-                            <div class="box-content">
-                                <div class="span_wrapper">
-                                    <span>March 18, 2019</span>
-                                    <span class="dash">-</span>
-                                    <span>0 Comments</span>
-                                </div>
-                                <a href="single-blog.html" class="text-decoration-none">
-                                    <h5>Eiusmod tempor incididunt labore aet dolore</h5>
-                                </a>
-                                <p class="text-size-14">Rute irure dolor in reprehenderit in voluptate velit esse cillum...</p>
-                                <a href="single-blog.html" class="text-decoration-none">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="article-box">
-                            <figure class="mb-0">
-                                <img src="./assets/images/article-image3.jpg" alt="image" class="img-fluid">
-                            </figure>
-                            <div class="box-content">
-                                <div class="span_wrapper">
-                                    <span>March 18, 2019</span>
-                                    <span class="dash">-</span>
-                                    <span>0 Comments</span>
-                                </div>
-                                <a href="single-blog.html" class="text-decoration-none">
-                                    <h5>Dolore aeu fugiat nulla paria sint occaecat</h5>
-                                </a>
-                                <p class="text-size-14">Gute irure dolor in reprehenderit in voluptate velit esse cillum...</p>
-                                <a href="single-blog.html" class="text-decoration-none">
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+@include("parties.blog")
 @endsection

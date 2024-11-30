@@ -64,7 +64,7 @@ class InfoController extends Controller
         $i = 0;
         $ii = 0;
         $sortes = sorte::all();
-        return view('pages.expertise', compact('accueil', 'secteur', 'domaine', 'sortes', 'i', 'ii'));
+        return view('pages.expertises', compact('accueil', 'secteur', 'domaine', 'sortes', 'i', 'ii'));
     }
     public function team()
     {
