@@ -147,14 +147,27 @@
 <section class="violence-con position-relative">
     <div class="container">
         <div class="row">
-            <div class="violence_wrapper position-relative">
-                <div class="violence_content" data-aos="fade-up">
-                    <h1 class="text-white">We are here to fight against any violence</h1>
-                    <p class="text-white text-size-16">Repudiandae sint et molestiae non recusandae itaque earum rerum hic tenetur a sapiente delectus maiores alias soluta nobis
-                        est eligendi optio cumque nihil imeit minus id quod maxime placeat facere possimus,.
-                    </p>
-                    <a href="./contact.html" class="text-decoration-none appointment">Book Appointment<i class="fa-solid fa-arrow-right"></i></a>
+            <div class="col-lg-8">
+                <div class="violence_wrapper position-relative">
+                    <div class="violence_content" data-aos="fade-up">
+                        <h1 class="text-white">We are here to fight against any violence</h1>
+                        <p class="text-white text-size-16">Repudiandae sint et molestiae non recusandae itaque earum rerum hic tenetur a sapiente delectus maiores alias soluta nobis
+                            est eligendi optio cumque nihil imeit minus id quod maxime placeat facere possimus,.
+                        </p>
+                        <a href="./contact.html" class="text-decoration-none appointment">Book Appointment<i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
                 </div>
+
+            </div>
+            <div class="col-lg-4">
+                <div class="video_icon">
+                    <a class="popup-vimeo" href="https://video-previews.elements.envatousercontent.com/a4464fc1-719e-45da-bf4b-f3ad0e517555/watermarked_preview/watermarked_preview.mp4">
+                        <figure class="mb-0">
+                            <img class="thumb img-fluid" style="cursor: pointer" src="./assets/images/client-videoicon.png" alt="image">
+                        </figure>
+                    </a>
+                </div>
+
             </div>
         </div>
     </div>
