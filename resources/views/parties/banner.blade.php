@@ -101,57 +101,97 @@
                         <div class="owl-carousel owl-theme">
                             <div class="item">
                                 <div class="case-box">
-                                    <figure class="mb-0">
-                                        <img src="./assets/images/case-image1.jpg" alt="image" class="img-fluid">
-                                    </figure>
-                                    <div class="box-content">
-                                        <span class="field">Car Insurance</span>
-                                        <span class="law">Law & Attorney</span>
-                                        <a href="./case-studies.html" class="text-decoration-none arrow_button"><i class="fa-solid fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="article-box">
-                                    <figure class="mb-0">
-                                        <img src="./assets/images/article-image3.jpg" alt="image" class="img-fluid">
-                                    </figure>
-                                    <div class="box-content">
-                                        <div class="span_wrapper">
-                                            <span>March 18, 2019</span>
-                                            <span class="dash">-</span>
-                                            <span>0 Comments</span>
+                                    <a href="#">
+                                        <figure class="mb-0">
+                                            <img src="./assets/images/case-image1.jpg" alt="image" class="img-fluid">
+                                        </figure>
+                                        <div class="box-content d-flex flex-column">
+                                            <div class="icon ml-auto">
+                                                <i class="fa-solid fa-arrow-right"></i>
+                                            </div>
+                                            <h5 class="field mt-auto">Car Insurance</h5>
                                         </div>
-                                        <a href="single-blog.html" class="text-decoration-none">
-                                            <h5>Dolore aeu fugiat nulla paria sint occaecat</h5>
-                                        </a>
-                                        <p class="text-size-14">Gute irure dolor in reprehenderit in voluptate velit
-                                            esse cillum...</p>
-                                        <a href="single-blog.html" class="text-decoration-none">
-                                            <i class="fa-solid fa-arrow-right"></i>
-                                        </a>
-                                    </div>
+                                    </a>
                                 </div>
                             </div>
                             <div class="item">
-                                <figure class="banner-image1 mb-0">
-                                    <img src="./assets/images/banner-image1.jpg" alt="image" class="img-fluid">
-                                </figure>
+                                <div class="case-box">
+                                    <a href="#">
+                                        <figure class="mb-0">
+                                            <img src="./assets/images/article-image3.jpg" alt="image" class="img-fluid">
+                                        </figure>
+                                        <div class="box-content d-flex flex-column">
+                                            <div class="icon ml-auto">
+                                                <i class="fa-solid fa-arrow-right"></i>
+                                            </div>
+                                            <h5 class="field mt-auto">Car Insurance</h5>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                             <div class="item">
-                                <figure class="banner-image2 mb-0">
-                                    <img src="./assets/images/banner-image2.jpg" alt="image" class="img-fluid">
-                                </figure>
+                                <div class="case-box">
+                                    <a href="#">
+                                        <figure class="banner-image1 mb-0">
+                                            <img src="./assets/images/banner-image1.jpg" alt="image" class="img-fluid">
+                                        </figure>
+                                        <div class="box-content d-flex flex-column">
+                                            <div class="icon ml-auto">
+                                                <i class="fa-solid fa-arrow-right"></i>
+                                            </div>
+                                            <h5 class="field mt-auto">Car Insurance</h5>
+                                        </div>
+                                    </a>
+                                </div>
+
                             </div>
                             <div class="item">
-                                <figure class="banner-image1 mb-0">
-                                    <img src="./assets/images/banner-image3.jpg" alt="image" class="img-fluid">
-                                </figure>
+                                <div class="case-box">
+                                    <a href="#">
+                                        <figure class="banner-image2 mb-0">
+                                            <img src="./assets/images/banner-image2.jpg" alt="image" class="img-fluid">
+                                        </figure>
+                                        <div class="box-content d-flex flex-column">
+                                            <div class="icon ml-auto">
+                                                <i class="fa-solid fa-arrow-right"></i>
+                                            </div>
+                                            <h5 class="field mt-auto">Car Insurance</h5>
+                                        </div>
+                                    </a>
+                                </div>
+
                             </div>
                             <div class="item">
-                                <figure class="banner-image2 mb-0">
-                                    <img src="./assets/images/banner-image4.jpg" alt="image" class="img-fluid">
-                                </figure>
+                               <div class="case-box">
+                                <a href="#">
+                                    <figure class="banner-image1 mb-0">
+                                        <img src="./assets/images/banner-image3.jpg" alt="image" class="img-fluid">
+                                    </figure>
+                                    <div class="box-content d-flex flex-column">
+                                        <div class="icon ml-auto">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </div>
+                                        <h5 class="field mt-auto">Car Insurance</h5>
+                                    </div>
+                                </a>
+                               </div>
+
+                            </div>
+                            <div class="item">
+                                <div class="case-box">
+                                    <a href="#">
+                                        <figure class="banner-image2 mb-0">
+                                            <img src="./assets/images/banner-image4.jpg" alt="image" class="img-fluid">
+                                        </figure>
+                                        <div class="box-content d-flex flex-column">
+                                            <div class="icon ml-auto">
+                                                <i class="fa-solid fa-arrow-right"></i>
+                                            </div>
+                                            <h5 class="field mt-auto">Car Insurance</h5>
+                                        </div>
+                                    </a>
+                                </div>
+
                             </div>
                         </div>
                     </div>
