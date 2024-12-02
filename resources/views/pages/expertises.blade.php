@@ -10,86 +10,158 @@
                 <div class="practice_content text-center" data-aos="fade-up">
                     <h6>Our Expertise</h6>
                     <h2>Our Legal Practice Areas</h2>
-                    <p class="col-xl-8 col-lg-10 mx-auto text-size-16 mb-0">Nucimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores ruas molestias excepturi
+                    <p class="col-xl-8 col-lg-10 mx-auto text-size-16 mb-0">Nucimus qui blanditiis praesentium
+                        voluptatum deleniti atque corrupti quos dolores ruas molestias excepturi
                         sint occaecati cupiditate non provident.
                     </p>
                 </div>
             </div>
         </div>
-        <div class="row" data-aos="fade-up">
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="box">
-                    <div class="practice-box">
-                        <figure class="icon">
-                            <img src="./assets/images/practice-icon1.png" alt="image" class="img-fluid">
-                        </figure>
-                        <h5>Immigration Law</h5>
-                        <p class="text-size-14">Aute irure dolor in reprehenderit in voluptate velit esse cillum maiores alias conse noloribus...</p>
-                        <a href="./practice-area.html" class="text-decoration-none"><i class="fa-solid fa-arrow-right"></i></a>
+        <div class="tabs">
+            <ul class="nav nav-tabs" id="tabs-posts" role="tablist" data-aos="fade-up" data-aos-duration="700">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#popular" role="tab"
+                        aria-controls="popular" aria-selected="true">@lang('info.expertises.menu')</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#featured" role="tab"
+                        aria-controls="featured" aria-selected="false">@lang('info.e.menu')</a>
+                </li>
+                <!--nav-tabs-->
+            </ul>
+            <div class="tab-content" id="tabs-posts-content" data-aos="fade-up" data-aos-duration="700">
+                <div class="tab-pane fade show active" id="popular" role="tabpanel">
+                    <div class="row" data-aos="fade-up">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                            <div class="box">
+                                <div class="practice-box">
+                                    <figure class="icon">
+                                        <img src="./assets/images/practice-icon1.png" alt="image" class="img-fluid">
+                                    </figure>
+                                    <h5>Immigration Law</h5>
+                                    <p class="text-size-14">Aute irure dolor in reprehenderit in voluptate velit esse
+                                        cillum maiores
+                                        alias conse noloribus...</p>
+                                    <a href="./practice-area.html" class="text-decoration-none"><i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                            <div class="box">
+                                <div class="practice-box">
+                                    <figure class="icon">
+                                        <img src="./assets/images/practice-icon2.png" alt="image" class="img-fluid">
+                                    </figure>
+                                    <h5>Business Law</h5>
+                                    <p class="text-size-14">Aute irure dolor in reprehenderit in voluptate velit esse
+                                        cillum maiores
+                                        alias conse noloribus...</p>
+                                    <a href="./practice-area.html" class="text-decoration-none"><i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                            <div class="box">
+                                <div class="practice-box">
+                                    <figure class="icon">
+                                        <img src="./assets/images/practice-icon3.png" alt="image" class="img-fluid">
+                                    </figure>
+                                    <h5>Criminal Law</h5>
+                                    <p class="text-size-14">Aute irure dolor in reprehenderit in voluptate velit esse
+                                        cillum maiores
+                                        alias conse noloribus...</p>
+                                    <a href="./practice-area.html" class="text-decoration-none"><i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                            <div class="box">
+                                <div class="practice-box">
+                                    <figure class="icon">
+                                        <img src="./assets/images/practice-icon4.png" alt="image" class="img-fluid">
+                                    </figure>
+                                    <h5>Real Estate Law</h5>
+                                    <p class="text-size-14">Aute irure dolor in reprehenderit in voluptate velit esse
+                                        cillum maiores
+                                        alias conse noloribus...</p>
+                                    <a href="./practice-area.html" class="text-decoration-none"><i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                            <div class="box">
+                                <div class="practice-box">
+                                    <figure class="icon">
+                                        <img src="./assets/images/practice-icon5.png" alt="image" class="img-fluid">
+                                    </figure>
+                                    <h5>Tax Litigation Law</h5>
+                                    <p class="text-size-14">Aute irure dolor in reprehenderit in voluptate velit esse
+                                        cillum maiores
+                                        alias conse noloribus...</p>
+                                    <a href="./practice-area.html" class="text-decoration-none"><i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                            <div class="box">
+                                <div class="practice-box">
+                                    <figure class="icon">
+                                        <img src="./assets/images/practice-icon6.png" alt="image" class="img-fluid">
+                                    </figure>
+                                    <h5>Family Crimes</h5>
+                                    <p class="text-size-14">Aute irure dolor in reprehenderit in voluptate velit esse
+                                        cillum maiores
+                                        alias conse noloribus...</p>
+                                    <a href="./practice-area.html" class="text-decoration-none"><i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="box">
-                    <div class="practice-box">
-                        <figure class="icon">
-                            <img src="./assets/images/practice-icon2.png" alt="image" class="img-fluid">
-                        </figure>
-                        <h5>Business Law</h5>
-                        <p class="text-size-14">Aute irure dolor in reprehenderit in voluptate velit esse cillum maiores alias conse noloribus...</p>
-                        <a href="./practice-area.html" class="text-decoration-none"><i class="fa-solid fa-arrow-right"></i></a>
+                <div class="tab-pane fade show" id="featured" role="tabpanel">
+                    <div class="row" data-aos="fade-up">
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                            <div class="box">
+                                <div class="practice-box">
+                                    <figure class="icon">
+                                        <img src="./assets/images/practice-icon1.png" alt="image" class="img-fluid">
+                                    </figure>
+                                    <h5>Immigration Law</h5>
+                                    <p class="text-size-14">Aute irure dolor in reprehenderit in voluptate velit esse
+                                        cillum maiores
+                                        alias conse noloribus...</p>
+                                    <a href="./practice-area.html" class="text-decoration-none"><i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                            <div class="box">
+                                <div class="practice-box">
+                                    <figure class="icon">
+                                        <img src="./assets/images/practice-icon2.png" alt="image" class="img-fluid">
+                                    </figure>
+                                    <h5>Business Law</h5>
+                                    <p class="text-size-14">Aute irure dolor in reprehenderit in voluptate velit esse
+                                        cillum maiores
+                                        alias conse noloribus...</p>
+                                    <a href="./practice-area.html" class="text-decoration-none"><i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="box">
-                    <div class="practice-box">
-                        <figure class="icon">
-                            <img src="./assets/images/practice-icon3.png" alt="image" class="img-fluid">
-                        </figure>
-                        <h5>Criminal Law</h5>
-                        <p class="text-size-14">Aute irure dolor in reprehenderit in voluptate velit esse cillum maiores alias conse noloribus...</p>
-                        <a href="./practice-area.html" class="text-decoration-none"><i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="box">
-                    <div class="practice-box">
-                        <figure class="icon">
-                            <img src="./assets/images/practice-icon4.png" alt="image" class="img-fluid">
-                        </figure>
-                        <h5>Real Estate Law</h5>
-                        <p class="text-size-14">Aute irure dolor in reprehenderit in voluptate velit esse cillum maiores alias conse noloribus...</p>
-                        <a href="./practice-area.html" class="text-decoration-none"><i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="box">
-                    <div class="practice-box">
-                        <figure class="icon">
-                            <img src="./assets/images/practice-icon5.png" alt="image" class="img-fluid">
-                        </figure>
-                        <h5>Tax Litigation Law</h5>
-                        <p class="text-size-14">Aute irure dolor in reprehenderit in voluptate velit esse cillum maiores alias conse noloribus...</p>
-                        <a href="./practice-area.html" class="text-decoration-none"><i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="box">
-                    <div class="practice-box">
-                        <figure class="icon">
-                            <img src="./assets/images/practice-icon6.png" alt="image" class="img-fluid">
-                        </figure>
-                        <h5>Family Crimes</h5>
-                        <p class="text-size-14">Aute irure dolor in reprehenderit in voluptate velit esse cillum maiores alias conse noloribus...</p>
-                        <a href="./practice-area.html" class="text-decoration-none"><i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
+
                 </div>
             </div>
         </div>
+
     </div>
 </section>
 <!-- About -->
@@ -111,7 +183,8 @@
                     <div class="content">
                         <h6>About us</h6>
                         <h2 class="text-white">Providing Top-Notch Legal Representation</h2>
-                        <p class="text-white text-size-16">Quis autem vel eum iure reprehenderit rui in ea volurate veli esse ruam nihil molestiae conseauatur vel illum rui dolorema
+                        <p class="text-white text-size-16">Quis autem vel eum iure reprehenderit rui in ea volurate veli
+                            esse ruam nihil molestiae conseauatur vel illum rui dolorema
                             eum fugiat ruo voluetas nulla pariatur.
                         </p>
                         <ul class="list-unstyled">
@@ -128,7 +201,8 @@
                                 <p class="mb-0 text-size-16">Rerum hic tenetur a sapiente delectus au occae.</p>
                             </li>
                         </ul>
-                        <a href="./about.html" class="text-decoration-none read_more">Read More<i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="./about.html" class="text-decoration-none read_more">Read More<i
+                                class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -154,49 +228,61 @@
                                 <div id="faq_accordion1">
                                     <div class="accordion-card">
                                         <div class="card-header" id="headingOne">
-                                            <a href="#" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                            <a href="#" class="btn btn-link collapsed" data-toggle="collapse"
+                                                data-target="#collapseOne" aria-expanded="false"
+                                                aria-controls="collapseOne">
                                                 <h5>How do I choose a personal injury lawyer?</h5>
                                             </a>
                                         </div>
                                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne">
                                             <div class="card-body">
-                                                <p class="text-size-14 text-left mb-0">Labore et dolore magna aliqua quis ipsum suspendis seultrices gravida risus commo ddolore.</p>
+                                                <p class="text-size-14 text-left mb-0">Labore et dolore magna aliqua
+                                                    quis ipsum suspendis seultrices gravida risus commo ddolore.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="accordion-card">
                                         <div class="card-header" id="headingTwo">
-                                            <a href="#" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            <a href="#" class="btn btn-link collapsed" data-toggle="collapse"
+                                                data-target="#collapseTwo" aria-expanded="false"
+                                                aria-controls="collapseTwo">
                                                 <h5>What should I do if I am involved in a car accident?</h5>
                                             </a>
                                         </div>
                                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
                                             <div class="card-body">
-                                                <p class="text-size-14 text-left mb-0">Labore et dolore magna aliqua quis ipsum suspendis seultrices gravida risus commo ddolore.</p>
+                                                <p class="text-size-14 text-left mb-0">Labore et dolore magna aliqua
+                                                    quis ipsum suspendis seultrices gravida risus commo ddolore.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="accordion-card">
                                         <div class="card-header" id="headingThree">
-                                            <a href="#" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            <a href="#" class="btn btn-link collapsed" data-toggle="collapse"
+                                                data-target="#collapseThree" aria-expanded="false"
+                                                aria-controls="collapseThree">
                                                 <h5>How much does legal representation cost?</h5>
                                             </a>
                                         </div>
                                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
                                             <div class="card-body">
-                                                <p class="text-size-14 text-left mb-0">Labore et dolore magna aliqua quis ipsum suspendis seultrices gravida risus commo ddolore.</p>
+                                                <p class="text-size-14 text-left mb-0">Labore et dolore magna aliqua
+                                                    quis ipsum suspendis seultrices gravida risus commo ddolore.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="accordion-card">
                                         <div class="card-header" id="headingFour">
-                                            <a href="#" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                            <a href="#" class="btn btn-link collapsed" data-toggle="collapse"
+                                                data-target="#collapseFour" aria-expanded="false"
+                                                aria-controls="collapseFour">
                                                 <h5>How Do I Choose the Right Attorney?</h5>
                                             </a>
                                         </div>
                                         <div id="collapseFour" class="collapse" aria-labelledby="headingFour">
                                             <div class="card-body">
-                                                <p class="text-size-14 text-left mb-0">Labore et dolore magna aliqua quis ipsum suspendis seultrices gravida risus commo ddolore.</p>
+                                                <p class="text-size-14 text-left mb-0">Labore et dolore magna aliqua
+                                                    quis ipsum suspendis seultrices gravida risus commo ddolore.</p>
                                             </div>
                                         </div>
                                     </div>
