@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\ServiceProvider;
+
 return [
 
     /*
@@ -15,6 +17,11 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
+    'available_locales' => [
+        'English' => 'en',
+        'Français' => 'fr',
+        // 'Lingala' => 'ln'
+    ],
     /*
     |--------------------------------------------------------------------------
     | Application Environment
@@ -77,12 +84,31 @@ return [
     | set to any locale for which you plan to have translation strings.
     |
     */
+    'providers' => ServiceProvider::defaultProviders()->merge([
+        /*
+         * Package Service Providers...
+         */
 
-    'locale' => env('APP_LOCALE', 'en'),
+        /*
+         * Application Service Providers...
+         */
+        // App\Providers\AppServiceProvider::class,
+        // App\Providers\AuthServiceProvider::class,
+        // // App\Providers\BroadcastServiceProvider::class,
+        // App\Providers\EventServiceProvider::class,
+        // App\Providers\Filament\AdminPanelProvider::class,
+        // App\Providers\Filament\AdministrateurPanelProvider::class,
+        // App\Providers\RouteServiceProvider::class,
 
-    'fallback_locale' => env('APP_FALLBACK_LOCALE', 'en'),
+        App\Providers\ViewServiceProvider::class,
+    ])->toArray(),
 
-    'faker_locale' => env('APP_FAKER_LOCALE', 'en_US'),
+
+    'locale' => env('APP_LOCALE',  'fr'),
+
+    'fallback_locale' => env('APP_FALLBACK_LOCALE', 'fr'),
+
+    'faker_locale' => env('APP_FAKER_LOCALE',  'fr_FR'),
 
     /*
     |--------------------------------------------------------------------------
@@ -122,5 +148,8 @@ return [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
+
+
+
 
 ];

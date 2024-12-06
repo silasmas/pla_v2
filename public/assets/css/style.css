@@ -1606,6 +1606,150 @@ h6:before{
     color: var(--e-global-color-white);
 }
 
+.drop-langue {
+    .btn-langue {
+        padding: 0;
+        border: 1px solid white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        box-shadow: none!important;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+    }
+
+    .dropdown-menu {
+        padding: 8px 14px;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+
+        .dropdown-item {
+            font-size: 14px;
+            color: var(--e-global-color-text);
+            padding: 8px 12px;
+            border-radius: 8px;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            -ms-border-radius: 8px;
+            -o-border-radius: 8px;
+            &:hover{
+                color: var(--e-global-color-primary);
+                background: #f7f7f7;
+            }
+            &.active {
+                color: var(--e-global-color-secondary);
+                background: #f9f0f0;
+            }
+}
+}
+}
+
+#tabs-posts {
+    justify-content: center;
+    border: none;
+
+    .nav-item {
+        width: 50%;
+    }
+
+    .nav-link {
+        border: none;
+        padding: 12px 14px;
+        position: relative;
+        color: var(--e-global-color-primary);
+        background: none;
+        border-radius: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: var(--e-global-color-secondary);
+            border-radius: 8px;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            -ms-border-radius: 8px;
+            -o-border-radius: 8px;
+            display: none;
+        }
+        &.active {
+            color: var(--e-global-color-secondary);
+
+            &::before {
+                display: block;
+            }
+        }
+}
+}
+.read_more {
+    padding: 20px 32px 22px;
+    color: white;
+    background: var(--e-global-color-secondary);
+    transition: all 0.3s ease-in-out;
+   i {
+        font-size: 14px;
+        margin-left: 26px;
+        top: -1px;
+        position: relative;
+        color: white;
+        transition: all 0.3s ease-in-out;
+      }
+       &:hover {
+      color: var(--e-global-color-white);
+      background: var(--e-global-color-primary);
+    }
+  }
+.filter-buttons {
+    gap: 10px;
+    .btn {
+        color: var(--e-global-color-primary);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        padding: 8px 14px;
+        box-shadow: none!important;
+        font-size: 14px;
+        &:hover {
+            border-color: var(--e-global-color-secondary);
+            color: var(--e-global-color-secondary);
+        }
+        &.active {
+            background: var(--e-global-color-secondary);
+            color: white;
+        }
+}
+}
+
 /* Contact Page */
 
 /* Contact Info */
@@ -1941,8 +2085,8 @@ h6:before{
 }
 .team-con .team-box .content li:hover i{
     transform: translateY(-5px);
-    color: var(--e-global-color-primary);
-    background: var(--e-global-color-very-soft-orange);
+    color: var(--e-global-color-white);
+    background: var(--e-global-color-secondary);
 }
 .team-con .team-box .content i {
     font-size: 14px;
@@ -1950,7 +2094,7 @@ h6:before{
     width: 45px;
     line-height: 45px;
     color: var(--e-global-color-white);
-    background: var(--e-global-color-accent);
+    background: var(--e-global-color-primary);
     border-radius: 100px;
     transition: all 0.3s ease-in-out;
     text-align: center;
@@ -1986,8 +2130,7 @@ h6:before{
 .about-con .content{
     padding: 74px 95px 80px 74px;
     border-radius: 20px;
-    background-image: url(../images/purple-bg.jpg);
-    background-position: center;
+    background: white;
 }
 .about-con .content h6{
     margin-bottom: 18px;
@@ -1999,6 +2142,7 @@ h6:before{
 }
 .about-con .content h2{
     margin-bottom: 28px;
+    color: var(--e-global-color-primary);
 }
 .about-con .content p{
     margin-bottom: 28px;
@@ -2020,7 +2164,7 @@ h6:before{
     position: absolute;
     text-align: center;
     border-radius: 100%;
-    color: var(--e-global-color-accent);
+    color: white;
     background-color: var(--e-global-color-secondary);
     transition: all 0.3s ease-in-out;
 }
@@ -2028,12 +2172,12 @@ h6:before{
     line-height: 20px;
     font-weight: 500;
     padding-left: 34px;
-    color: var(--e-global-color-white);
+    color: var(--e-global-color-primary);
     transition: all 0.3s ease-in-out;
 }
 .about-con .content a {
     padding: 20px 37px 22px;
-    color: var(--e-global-color-primary);
+    color: white;
     background: var(--e-global-color-secondary);
     transition: all 0.3s ease-in-out;
 }
@@ -2042,7 +2186,7 @@ h6:before{
     margin-left: 26px;
     top: -1px;
     position: relative;
-    color: var(--e-global-color-primary);
+    color: white;
     transition: all 0.3s ease-in-out;
 }
 .about-con .content a:hover {
@@ -2163,7 +2307,7 @@ h6:before{
     position: relative;
     transition: all 0.3s ease-in-out;
 }
-.practice-con .box::before {
+/* .practice-con .box::before {
     content: "";
     height: 100%;
     width: 100%;
@@ -2178,7 +2322,7 @@ h6:before{
     background-position: center;
     background-image: url(../images/practicearea-bgimage.jpg);
     transition: all 0.3s ease-in-out;
-}
+} */
 .practice-con .practice-box{
     position: relative;
     z-index: 1;
@@ -2709,7 +2853,7 @@ h6:before{
 /* Legal Situation Faq */
 
 .legal_situation_faq{
-    padding: 144px 0 144px;
+    padding: 144px 0 144px!important;
 }
 
 /* Legal Situation Amazing */
@@ -3744,7 +3888,7 @@ to {
 }
 
 .loader div {
-    background-color: var(--e-global-color-accent);
+    background-color: var(--e-global-color-secondary);
     display: inline-block;
     float: none;
     position: absolute;

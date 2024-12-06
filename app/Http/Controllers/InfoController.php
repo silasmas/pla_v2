@@ -29,8 +29,8 @@ class InfoController extends Controller
         // $publication = publication::with(['avocat', 'categorie'])->simplePaginate();
         // $avocat = avocat::get();
         // //    dd($avocat);
-        // $accueil = accueil::first();
-        // $bureau = bureau::all();
+        $accueil = accueil::first();
+        $bureau = bureau::all();
         // $slide = slides::all();
         // $about = about::first();
         // // dd(!empty($about->contenu)?Str::substr(strip_tags($about->contenu), 0, 200).'...':'');
@@ -156,16 +156,21 @@ class InfoController extends Controller
             ->orderBy('expertises.created_at', 'asc')->get();
         return view('pages.detailAvocat', compact('content', 'avocat', 'avocats', 'accueil', 'secteur', 'domaine', 'bureau'));
     }
-    public function show_secteur()
+    public function show_secteur($id)
     {
-        $secteur = expertise::where('sorte', 1)
-            ->orderBy('expertises.created_at', 'asc')->get();
-        $domaine = expertise::where('sorte', 2)
-            ->orderBy('expertises.created_at', 'asc')->get();
-
+        $allExpertise = expertise::find($id);
+        $expertise = expertise::orderBy('expertises.created_at', 'asc')->get();
+        // dd($allExpertise);
         $accueil = accueil::first();
-        // $secteur=expertise::where('sorte',1)->get();
-        return view('pages.detailSecteur', compact('accueil', 'secteur', 'secteur', 'domaine'));
+        $avant = expertise::where('id', '<', $allExpertise->id)
+            ->orderBy('id', 'desc')
+            ->first();
+
+        $apres = expertise::where('id', '>', $allExpertise->id)
+            ->orderBy('id', 'asc')
+            ->first();
+        // dd($avant);
+        return view('pages.detailExpertise', compact("avant", "apres", 'accueil', 'expertise', 'allExpertise'));
     }
 
     public function show_competence()

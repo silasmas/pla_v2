@@ -11,6 +11,13 @@ use Illuminate\View\View;
 
 class ProfileController extends Controller
 {
+    public function changeLanguage($locale)
+    {
+        app()->setLocale($locale);
+        session()->put('locale', $locale);
+
+        return redirect()->back();
+    }
     /**
      * Display the user's profile form.
      */

@@ -142,6 +142,9 @@
                 </div>
             </div>
         </div>
+        <div class="text-center mt-lg-5 mt-5">
+            <a href="{{ route('expertise') }}" class="text-decoration-none read_more">@lang("info.autres.lirePlus")<i class="fa-solid fa-arrow-right"></i></a>
+        </div>
     </div>
 </section>
 <!-- FAQ -->
@@ -370,7 +373,7 @@
 
         </div>
         <div class="text-center mt-lg-5 mt-5">
-            <a href="#" class="text-decoration-none read_more">Read More<i class="fa-solid fa-arrow-right"></i></a>
+            <a href="{{ route('team') }}" class="text-decoration-none read_more">@lang("info.autres.lirePlus")<i class="fa-solid fa-arrow-right"></i></a>
         </div>
     </div>
 </section>

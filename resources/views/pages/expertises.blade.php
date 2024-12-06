@@ -1,6 +1,36 @@
 @extends("layouts.template")
 
 @section("contente")
+@php
+$styles = '';
+foreach ($secteur as $e) {
+$styles .= "
+.dynamic-bg-{$e->id}::before {
+content: '';
+height: 100%;
+width: 100%;
+top: 0;
+left: 0;
+opacity: 0.17;
+display: block;
+position: absolute;
+border-radius: 20px;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+background-image: url('" . asset('storage/' . $e->background_image) . "');
+transition: all 0.3s ease-in-out;
+}
+";
+}
+@endphp
+
+<style>
+    {
+         ! ! $styles  ! !
+    }
+</style>
+
 
 <!-- Practice Area -->
 <section class="practice-con">
@@ -18,36 +48,51 @@
             </div>
         </div>
         <div class="tabs">
-            <ul class="nav nav-tabs" id="tabs-posts" role="tablist" data-aos="fade-up" data-aos-duration="700">
+            <ul class="nav nav-tabs mb-lg-5 mb-4" id="tabs-posts" role="tablist" data-aos="fade-up"
+                data-aos-duration="700">
                 <li class="nav-item">
                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#popular" role="tab"
                         aria-controls="popular" aria-selected="true">@lang('info.expertises.menu')</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#featured" role="tab"
-                        aria-controls="featured" aria-selected="false">@lang('info.e.menu')</a>
+                        aria-controls="featured" aria-selected="false">@lang('info.domaine.menu')</a>
                 </li>
                 <!--nav-tabs-->
             </ul>
             <div class="tab-content" id="tabs-posts-content" data-aos="fade-up" data-aos-duration="700">
                 <div class="tab-pane fade show active" id="popular" role="tabpanel">
                     <div class="row" data-aos="fade-up">
+                        @forelse ($secteur as $e)
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                            <div class="box">
+                            <div class="box dynamic-bg-{{ $e->id }}"
+                                style="background-image: url('{{ asset('storage/' . $e->background_image) }}'); background-size: cover; background-position: center;">
                                 <div class="practice-box">
-                                    <figure class="icon">
-                                        <img src="./assets/images/practice-icon1.png" alt="image" class="img-fluid">
-                                    </figure>
-                                    <h5>Immigration Law</h5>
-                                    <p class="text-size-14">Aute irure dolor in reprehenderit in voluptate velit esse
-                                        cillum maiores
-                                        alias conse noloribus...</p>
-                                    <a href="./practice-area.html" class="text-decoration-none"><i
-                                            class="fa-solid fa-arrow-right"></i></a>
+                                    <a href="{{ route('detailExpertise',['id'=>$e->id]) }}">
+                                        <figure class="icon">
+                                            <img src="./assets/images/img/lgmodif.png" alt="image" class="img-fluid">
+                                        </figure>
+                                    </a>
+                                    {{-- <a href="{{ route('detailExpertise',['id'=>$e->id]) }}"> --}}
+                                    <h5>
+
+                                            {{ $e->titre1 }}
+                                        </h5>
+                                    {{-- </a> --}}
+
+                                    {{-- <p class="text-size-14">
+                                        {!! Str::limit($e->contenu, 300, '...') !!}
+                                    </p> --}}
+                                    <a href="{{ route('detailExpertise',['id'=>$e->id]) }}"
+                                        class="text-decoration-none"><i class="fa-solid fa-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+
+                        @empty
+                        <p>Aucune donnée trouvée</p>
+                        @endforelse
+                        {{-- <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                             <div class="box">
                                 <div class="practice-box">
                                     <figure class="icon">
@@ -121,12 +166,31 @@
                                             class="fa-solid fa-arrow-right"></i></a>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="tab-pane fade show" id="featured" role="tabpanel">
                     <div class="row" data-aos="fade-up">
+                        @forelse ($domaine as $e)
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                            <div class="box">
+                                <div class="practice-box">
+                                    <figure class="icon">
+                                        <img src="./assets/images/img/lgmodif.png" alt="image" class="img-fluid">
+                                    </figure>
+                                    <h5>{{ $e->titre1 }}</h5>
+                                    <p class="text-size-14">
+                                        {{ $e->titre1 }}
+                                    </p>
+                                    <a href="{{ route('detailExpertise',['id'=>$e->id]) }}"
+                                        class="text-decoration-none"><i class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        @empty
+
+                        @endforelse
+                        {{-- <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                             <div class="box">
                                 <div class="practice-box">
                                     <figure class="icon">
@@ -155,7 +219,7 @@
                                             class="fa-solid fa-arrow-right"></i></a>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
 
                 </div>
@@ -167,14 +231,15 @@
 <!-- About -->
 <section class="about-con position-relative">
     <figure class="about-sideimage mb-0">
-        <img src="assets/images/about-sideimage.png" alt="image" class="image-fluid">
+        <img src="{{ asset('assets/images/img/i1.jpg') }}" alt="image" class="image-fluid">
     </figure>
     <div class="container">
         <div class="row">
             <div class="col-lg-5 col-md-12 col-sm-12 col-12">
                 <div class="about_wrapper position-relative">
                     <figure class="about-image mb-0">
-                        <img src="assets/images/about-image.jpg" alt="image" class="image-fluid">
+                        <img src="{{ asset('assets/images/img/12A.jpg') }}" alt="image" class="image-fluid">
+                        {{-- <img src="assets/images/about-image.jpg" alt="image" class="image-fluid"> --}}
                     </figure>
                 </div>
             </div>
@@ -182,8 +247,8 @@
                 <div class="about_content" data-aos="fade-up">
                     <div class="content">
                         <h6>About us</h6>
-                        <h2 class="text-white">Providing Top-Notch Legal Representation</h2>
-                        <p class="text-white text-size-16">Quis autem vel eum iure reprehenderit rui in ea volurate veli
+                        <h2>Providing Top-Notch Legal Representation</h2>
+                        <p class="text-size-16">Quis autem vel eum iure reprehenderit rui in ea volurate veli
                             esse ruam nihil molestiae conseauatur vel illum rui dolorema
                             eum fugiat ruo voluetas nulla pariatur.
                         </p>
@@ -201,7 +266,7 @@
                                 <p class="mb-0 text-size-16">Rerum hic tenetur a sapiente delectus au occae.</p>
                             </li>
                         </ul>
-                        <a href="./about.html" class="text-decoration-none read_more">Read More<i
+                        <a href="{{ route('about') }}" class="text-decoration-none read_more">Read More<i
                                 class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
