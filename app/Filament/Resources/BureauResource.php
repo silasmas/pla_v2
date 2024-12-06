@@ -4,7 +4,7 @@ namespace App\Filament\Resources;
 
 use Filament\Forms;
 use Filament\Tables;
-use App\Models\Bureau;
+use App\Models\bureau;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
@@ -31,7 +31,7 @@ use App\Filament\Resources\BureauResource\Pages\CreateBureau;
 
 class BureauResource extends Resource
 {
-    protected static ?string $model = Bureau::class;
+    protected static ?string $model = bureau::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-building-office';
 

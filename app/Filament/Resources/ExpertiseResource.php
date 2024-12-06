@@ -5,7 +5,7 @@ namespace App\Filament\Resources;
 use Filament\Forms;
 use Filament\Tables;
 use Filament\Forms\Form;
-use App\Models\Expertise;
+use App\Models\expertise;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Group;
@@ -26,7 +26,7 @@ use App\Filament\Resources\ExpertiseResource\RelationManagers;
 
 class ExpertiseResource extends Resource
 {
-    protected static ?string $model = Expertise::class;
+    protected static ?string $model = expertise::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-light-bulb';
 

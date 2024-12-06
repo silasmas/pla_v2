@@ -5,7 +5,7 @@ namespace App\Filament\Resources;
 use Filament\Forms;
 use App\Models\User;
 use Filament\Tables;
-use App\Models\Avocat;
+use App\Models\avocat;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
@@ -38,7 +38,7 @@ use App\Filament\Resources\AvocatResource\Pages\CreateAvocat;
 
 class AvocatResource extends Resource
 {
-    protected static ?string $model = Avocat::class;
+    protected static ?string $model = avocat::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-users';
     protected static ?string $recordTitleAttribute = 'Equipes';

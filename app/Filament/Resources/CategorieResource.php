@@ -5,7 +5,7 @@ namespace App\Filament\Resources;
 use Filament\Forms;
 use Filament\Tables;
 use Filament\Forms\Form;
-use App\Models\Categorie;
+use App\Models\categorie;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Group;
@@ -20,7 +20,7 @@ use App\Filament\Resources\CategorieResource\RelationManagers;
 
 class CategorieResource extends Resource
 {
-    protected static ?string $model = Categorie::class;
+    protected static ?string $model = categorie::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-tag';
 

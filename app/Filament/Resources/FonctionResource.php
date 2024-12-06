@@ -4,7 +4,7 @@ namespace App\Filament\Resources;
 
 use Filament\Forms;
 use Filament\Tables;
-use App\Models\Fonction;
+use App\Models\fonction;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
@@ -19,7 +19,7 @@ use App\Filament\Resources\FonctionResource\RelationManagers;
 
 class FonctionResource extends Resource
 {
-    protected static ?string $model = Fonction::class;
+    protected static ?string $model = fonction::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-shield-check';
     protected static ?string $recordTitleAttribute = 'Fonction';
