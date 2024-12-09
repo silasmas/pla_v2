@@ -131,7 +131,7 @@ class AvocatResource extends Resource
                                     ->circleCropper()
                                     ->downloadable()
                                     ->image()
-                                    ->maxSize(3024)
+                                    ->maxSize(5024)
                                     ->columnSpan(6)
                                     ->previewable(true)
                                     ->loadingIndicatorPosition('left')
