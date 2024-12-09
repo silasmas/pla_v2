@@ -1,5 +1,6 @@
 <?php
-
+passthru('php artisan storage:link');
+dd("Command executed.");
 if (function_exists('symlink')) {
     dd("symlink() is available.");
 } else {
