@@ -1,8 +1,17 @@
 <?php
+
 $targetFolder = $_SERVER['DOCUMENT_ROOT'] . '/storage/app/public';
 $linkFolder = $_SERVER['DOCUMENT_ROOT'] . '/public/storage';
 
-symlink($targetFolder,$linkFolder);
+echo "Target folder: $targetFolder\n";
+echo "Link folder: $linkFolder\n";
 
-echo 'Symlink process successfully completed';
-?>
+if (!is_dir($targetFolder)) {
+    echo "Target folder does not exist.\n";
+}
+
+if (symlink($targetFolder, $linkFolder)) {
+    echo 'Symlink created successfully.';
+} else {
+    echo 'Failed to create symlink.';
+}
