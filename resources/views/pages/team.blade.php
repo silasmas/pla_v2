@@ -27,129 +27,41 @@
         <div class="container">
             <div class="filter-buttons d-flex gap-3 justify-content-center mb-lg-5 mb-4">
                 <button data-filter="*" class="active btn btn-filter">All</button>
-                <button data-filter="category1" class="btn btn-filter">Category 1</button>
-                <button data-filter="category2" class="btn btn-filter">Category 2</button>
-                <button data-filter="category3" class="btn btn-filter">Category 3</button>
+                @forelse ($fonction as $f)
+                <button data-filter="{{ $f->fonction }}" class="btn btn-filter">{{ $f->fonction }}</button>
+
+                @empty
+
+                @endforelse
+                {{-- <button data-filter="category2" class="btn btn-filter">Category 2</button>
+                <button data-filter="category3" class="btn btn-filter">Category 3</button> --}}
             </div>
             <div class="row" data-aos="fade-up">
-
-                <div class="col-xl-4 col-lg-4 col-md-6 grid-item" data-category="category1">
+                @forelse ($teams as $t)
+                <div class="col-xl-4 col-lg-4 col-md-6 grid-item" data-category="{{ $t->fonction->fonction }}">
                     <div class="team-box">
                         <a href="">
-                            <figure class="lawyer-image">
-                                <img src="./assets/images/lawyer-image1.jpg" alt="image" class="img-fluid">
+                            <figure class="lawyer-image image-wrapper">
+                                <img src="{{ asset('storage/'.$t->photo) }}" alt="image" class="img-fluid">
                             </figure>
                             <div class="content">
-                                <h4>Marvin Joner</h4>
-                                <span class="text-size-14">Senior Lawyer</span>
+                                <h4>{{ $t->prenom." - ".$t->nom }}</h4>
+                                <span class="text-size-14">{{ $t->fonction->fonction }}</span>
                                 <ul class="list-unstyled mb-0">
-                                    <li class="icons"><a href="https://www.facebook.com/login/"><i
+                                    <li class="icons"><a href="https://www.facebook.com/login/" target="blank"><i
                                                 class="fa-brands fa-facebook-f"></i></a></li>
-                                    <li class="icons"><a href="https://twitter.com/i/flow/login"><i
+                                    <li class="icons"><a href="https://twitter.com/i/flow/login" target="blank"><i
                                                 class="fa-brands fa-x-twitter"></i></a></li>
-                                    <li class="icons"><a href="https://www.linkedin.com/login"><i
+                                    <li class="icons"><a href="https://www.linkedin.com/login" target="blank"><i
                                                 class="fa-brands fa-linkedin"></i></a></li>
                                 </ul>
                             </div>
-
                         </a>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 grid-item" data-category="category2">
-                    <div class="team-box">
-                        <figure class="lawyer-image">
-                            <img src="./assets/images/lawyer-image2.jpg" alt="image" class="img-fluid">
-                        </figure>
-                        <div class="content">
-                            <h4>Patricia Woodrum</h4>
-                            <span class="text-size-14">Assistant Lawyer</span>
-                            <ul class="list-unstyled mb-0">
-                                <li class="icons"><a href="https://www.facebook.com/login/"><i
-                                            class="fa-brands fa-facebook-f"></i></a></li>
-                                <li class="icons"><a href="https://twitter.com/i/flow/login"><i
-                                            class="fa-brands fa-x-twitter"></i></a></li>
-                                <li class="icons"><a href="https://www.linkedin.com/login"><i
-                                            class="fa-brands fa-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 grid-item" data-category="category3">
-                    <div class="team-box">
-                        <figure class="lawyer-image">
-                            <img src="./assets/images/lawyer-image3.jpg" alt="image" class="img-fluid">
-                        </figure>
-                        <div class="content">
-                            <h4>Hannaz Stone</h4>
-                            <span class="text-size-14">Junior Lawyer</span>
-                            <ul class="list-unstyled mb-0">
-                                <li class="icons"><a href="https://www.facebook.com/login/"><i
-                                            class="fa-brands fa-facebook-f"></i></a></li>
-                                <li class="icons"><a href="https://twitter.com/i/flow/login"><i
-                                            class="fa-brands fa-x-twitter"></i></a></li>
-                                <li class="icons"><a href="https://www.linkedin.com/login"><i
-                                            class="fa-brands fa-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 grid-item" data-category="category2">
-                    <div class="team-box">
-                        <figure class="lawyer-image">
-                            <img src="./assets/images/lawyer-image4.jpg" alt="image" class="img-fluid">
-                        </figure>
-                        <div class="content">
-                            <h4>Marvin Joner</h4>
-                            <span class="text-size-14">Senior Lawyer</span>
-                            <ul class="list-unstyled mb-0">
-                                <li class="icons"><a href="https://www.facebook.com/login/"><i
-                                            class="fa-brands fa-facebook-f"></i></a></li>
-                                <li class="icons"><a href="https://twitter.com/i/flow/login"><i
-                                            class="fa-brands fa-x-twitter"></i></a></li>
-                                <li class="icons"><a href="https://www.linkedin.com/login"><i
-                                            class="fa-brands fa-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 grid-item" data-category="category1">
-                    <div class="team-box">
-                        <figure class="lawyer-image">
-                            <img src="./assets/images/lawyer-image5.jpg" alt="image" class="img-fluid">
-                        </figure>
-                        <div class="content">
-                            <h4>Patricia Woodrum</h4>
-                            <span class="text-size-14">Assistant Lawyer</span>
-                            <ul class="list-unstyled mb-0">
-                                <li class="icons"><a href="https://www.facebook.com/login/"><i
-                                            class="fa-brands fa-facebook-f"></i></a></li>
-                                <li class="icons"><a href="https://twitter.com/i/flow/login"><i
-                                            class="fa-brands fa-x-twitter"></i></a></li>
-                                <li class="icons"><a href="https://www.linkedin.com/login"><i
-                                            class="fa-brands fa-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 grid-item" data-category="category2">
-                    <div class="team-box mb-0">
-                        <figure class="lawyer-image">
-                            <img src="./assets/images/lawyer-image6.jpg" alt="image" class="img-fluid">
-                        </figure>
-                        <div class="content">
-                            <h4>Hannaz Stone</h4>
-                            <span class="text-size-14">Junior Lawyer</span>
-                            <ul class="list-unstyled mb-0">
-                                <li class="icons"><a href="https://www.facebook.com/login/"><i
-                                            class="fa-brands fa-facebook-f"></i></a></li>
-                                <li class="icons"><a href="https://twitter.com/i/flow/login"><i
-                                            class="fa-brands fa-x-twitter"></i></a></li>
-                                <li class="icons"><a href="https://www.linkedin.com/login"><i
-                                            class="fa-brands fa-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                @empty
+
+                @endforelse
             </div>
         </div>
     </section>

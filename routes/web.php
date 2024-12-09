@@ -11,6 +11,10 @@ use App\Http\Controllers\PublicationController;
 //     return view('pages.home');
 // });
 // Language
+
+Route::get('/symlink', function () {
+    return view('symlink');
+})->name('generate_symlink');
 Route::get('/language/{locale}', [ProfileController::class, 'changeLanguage'])->name('change_language');
 
 Route::get('/', [InfoController::class, 'index'])->name('home');

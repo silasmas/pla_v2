@@ -42,7 +42,29 @@ Project:  Lawfinity
 
 Body copy: "Plus Jakarta Sans", sans-serif;
 */
+.image-container {
+    display: flex;
+    flex-wrap: wrap; /* Pour gérer plusieurs images sur plusieurs lignes */
+    gap: 20px; /* Espacement entre les images */
+    justify-content: center;
+}
 
+.image-wrapper {
+    width: 314px; /* Diamètre du cercle */
+    height: 314px; /* Diamètre du cercle */
+    overflow: hidden; /* Cache les parties qui dépassent */
+    border-radius: 50%; /* Rend le conteneur circulaire */
+    display: flex;
+    justify-content: center; /* Centrer l'image horizontalement */
+    align-items: center; /* Centrer l'image verticalement */
+    border: 2px solid #ddd; /* Optionnel : ajouter une bordure */
+}
+
+.image-wrapper img {
+    width: 100%; /* Adapte à la largeur du conteneur */
+    height: 100%; /* Adapte à la hauteur du conteneur */
+    object-fit: cover; /* Centre et coupe l'image pour remplir le cercle */
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 

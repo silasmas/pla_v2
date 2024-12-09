@@ -5,9 +5,11 @@ namespace App\Providers;
 
 use App\Models\Post;
 use App\Models\Event;
+use App\Models\avocat;
 use App\Models\Minister;
 use App\Models\Offrande;
 use App\Models\expertise;
+use App\Models\fonction;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Route;
@@ -33,23 +35,27 @@ class ViewServiceProvider extends ServiceProvider
 
             $settings = DB::table('general_settings')->first();
 
-            // $post = Post::with("minister", "event")->orderByDesc('date_publication')->where('is_active', 1)->get();
-            // $offrandes = Offrande::where('is_active', 1)->get();
+            $teams = avocat::with("publication", "bureau", "fonction")->orderBy('niveau')->where('visible', 1)->get();
+            $fonctions = fonction::get();
             // $posts = Post::get();
             // // dd($eventbunda);
             // // Obtenir le total séparément si nécessaire
             $slides = expertise::get();
 
+            $type1Data = expertise::where('sorte', 1)->take(3)->get(['id', 'titre1', 'contenu', 'photo']);
+            $type2Data = expertise::where('sorte', 2)->take(3)->get(['id', 'titre1', 'contenu', 'photo']);
 
+            // Combiner les deux collections
+            $allExpertises = $type1Data->merge($type2Data);
 
             $st = ($settings !== null && $settings->social_network !== null) ? json_decode($settings->social_network, true) : "";
             $view->with('title', $titre);
             $view->with('settings', $st);
             $view->with('setting', $settings);
             $view->with('slides', $slides);
-            // $view->with('pasteurs', $pasteurs);
-            // $view->with('post', $post);
-            // $view->with('offrandes', $offrandes);
+            $view->with('allExpertises', $allExpertises);
+            $view->with('teams', $teams);
+            $view->with('fonctions', $fonctions);
             // $view->with('posts', $posts);
         });
     }

@@ -1,4 +1,4 @@
-@if ( Route::current()->getName()!="home")
+@if (Route::current()->getName()!="home")
 <!-- Sub Banner -->
 <section class="sub_banner_con position-relative">
     <div class="container position-relative">
@@ -241,7 +241,7 @@
                 <div class="col-12">
                     <div class="banner_wrapper position-relative">
                         <div class="owl-carousel owl-theme">
-                            @forelse ($slides as $s)
+                            @forelse ($allExpertises as $s)
                             <div class="item">
                                 <div class="case-box">
                                     <a href="{{ route('detailExpertise',["id"=>$s->id]) }}">

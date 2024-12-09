@@ -11,7 +11,7 @@
             <div class="col-lg-6 col-md-12 col-sm-12 col-12 order-lg-1 order-2 text-lg-left text-center">
                 <div class="about_wrapper position-relative" data-aos="zoom-in">
                     <figure class="about-image mb-0">
-                        <img src="./assets/images/about2-image.jpg" alt="image" class="img-fluid">
+                        <img src="{{ asset('/assets/images/img/i1d.jpg') }}" alt="image" class="img-fluid">
                     </figure>
                     <figure class="about-circle mb-0">
                         <img src="./assets/images/aboutpage-circle.png" alt="image" class="img-fluid">
@@ -30,7 +30,8 @@
                 <div class="about_content" data-aos="fade-up">
                     <h6>About us</h6>
                     <h2>Providing Top-Notch Legal Representation</h2>
-                    <p class="text text-size-16">Quis autem vel eum iure reprehenderit rui in ea volurate veli esse ruam nihil molestiae conseauatur vel illum rui dolorema
+                    <p class="text text-size-16">Quis autem vel eum iure reprehenderit rui in ea volurate veli esse ruam
+                        nihil molestiae conseauatur vel illum rui dolorema
                         eum fugiat ruo voluetas nulla pariatur.
                     </p>
                     <ul class="list-unstyled">
@@ -47,7 +48,8 @@
                             <p class="mb-0 text-size-16">Rerum hic tenetur a sapiente delectus au occae.</p>
                         </li>
                     </ul>
-                    <a href="./about.html" class="text-decoration-none read_more">Read More<i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="./about.html" class="text-decoration-none read_more">Read More<i
+                            class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -60,90 +62,37 @@
         <div class="row">
             <div class="col-12">
                 <div class="practice_content text-center" data-aos="fade-up">
-                    <h6>Our Expertise</h6>
+                    <h6>Nos Expertises</h6>
                     <h2>Our Legal Practice Areas</h2>
-                    <p class="col-xl-8 col-lg-10 mx-auto text-size-16 mb-0">Nucimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores ruas molestias excepturi
+                    <p class="col-xl-8 col-lg-10 mx-auto text-size-16 mb-0">Nucimus qui blanditiis praesentium
+                        voluptatum deleniti atque corrupti quos dolores ruas molestias excepturi
                         sint occaecati cupiditate non provident.
                     </p>
                 </div>
             </div>
         </div>
         <div class="row" data-aos="fade-up">
+            @forelse ($allExpertises as $e)
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="box">
                     <div class="practice-box">
                         <figure class="icon">
-                            <img src="./assets/images/practice-icon1.png" alt="image" class="img-fluid">
+                            <img src="{{ asset('assets/images/img/lgmodif.png') }}" alt="image" class="img-fluid">
                         </figure>
-                        <h5>Immigration Law</h5>
-                        <p class="text-size-14">Aute irure dolor in reprehenderit in voluptate velit esse cillum maiores alias conse noloribus...</p>
-                        <a href="./practice-area.html" class="text-decoration-none"><i class="fa-solid fa-arrow-right"></i></a>
+                        <h5>{{ $e->titre1 }}</h5>
+                        <p class="text-size-14">{{ $e->titre1 }}</p>
+                        <a href="{{ route('detailExpertise',['id'=>$e->id]) }}" class="text-decoration-none"><i
+                                class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="box">
-                    <div class="practice-box">
-                        <figure class="icon">
-                            <img src="./assets/images/practice-icon2.png" alt="image" class="img-fluid">
-                        </figure>
-                        <h5>Business Law</h5>
-                        <p class="text-size-14">Aute irure dolor in reprehenderit in voluptate velit esse cillum maiores alias conse noloribus...</p>
-                        <a href="./practice-area.html" class="text-decoration-none"><i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="box">
-                    <div class="practice-box">
-                        <figure class="icon">
-                            <img src="./assets/images/practice-icon3.png" alt="image" class="img-fluid">
-                        </figure>
-                        <h5>Criminal Law</h5>
-                        <p class="text-size-14">Aute irure dolor in reprehenderit in voluptate velit esse cillum maiores alias conse noloribus...</p>
-                        <a href="./practice-area.html" class="text-decoration-none"><i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="box">
-                    <div class="practice-box">
-                        <figure class="icon">
-                            <img src="./assets/images/practice-icon4.png" alt="image" class="img-fluid">
-                        </figure>
-                        <h5>Real Estate Law</h5>
-                        <p class="text-size-14">Aute irure dolor in reprehenderit in voluptate velit esse cillum maiores alias conse noloribus...</p>
-                        <a href="./practice-area.html" class="text-decoration-none"><i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="box">
-                    <div class="practice-box">
-                        <figure class="icon">
-                            <img src="./assets/images/practice-icon5.png" alt="image" class="img-fluid">
-                        </figure>
-                        <h5>Tax Litigation Law</h5>
-                        <p class="text-size-14">Aute irure dolor in reprehenderit in voluptate velit esse cillum maiores alias conse noloribus...</p>
-                        <a href="./practice-area.html" class="text-decoration-none"><i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="box">
-                    <div class="practice-box">
-                        <figure class="icon">
-                            <img src="./assets/images/practice-icon6.png" alt="image" class="img-fluid">
-                        </figure>
-                        <h5>Family Crimes</h5>
-                        <p class="text-size-14">Aute irure dolor in reprehenderit in voluptate velit esse cillum maiores alias conse noloribus...</p>
-                        <a href="./practice-area.html" class="text-decoration-none"><i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
+            @empty
+
+            @endforelse
         </div>
         <div class="text-center mt-lg-5 mt-5">
-            <a href="{{ route('expertise') }}" class="text-decoration-none read_more">@lang("info.autres.lirePlus")<i class="fa-solid fa-arrow-right"></i></a>
+            <a href="{{ route('expertise') }}" class="text-decoration-none read_more">@lang("info.autres.lirePlus")<i
+                    class="fa-solid fa-arrow-right"></i></a>
         </div>
     </div>
 </section>
@@ -166,49 +115,61 @@
                                 <div id="faq_accordion1">
                                     <div class="accordion-card">
                                         <div class="card-header" id="headingOne">
-                                            <a href="#" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                            <a href="#" class="btn btn-link collapsed" data-toggle="collapse"
+                                                data-target="#collapseOne" aria-expanded="false"
+                                                aria-controls="collapseOne">
                                                 <h5>How do I choose a personal injury lawyer?</h5>
                                             </a>
                                         </div>
                                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne">
                                             <div class="card-body">
-                                                <p class="text-size-14 text-left mb-0">Labore et dolore magna aliqua quis ipsum suspendis seultrices gravida risus commo ddolore.</p>
+                                                <p class="text-size-14 text-left mb-0">Labore et dolore magna aliqua
+                                                    quis ipsum suspendis seultrices gravida risus commo ddolore.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="accordion-card">
                                         <div class="card-header" id="headingTwo">
-                                            <a href="#" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            <a href="#" class="btn btn-link collapsed" data-toggle="collapse"
+                                                data-target="#collapseTwo" aria-expanded="false"
+                                                aria-controls="collapseTwo">
                                                 <h5>What should I do if I am involved in a car accident?</h5>
                                             </a>
                                         </div>
                                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
                                             <div class="card-body">
-                                                <p class="text-size-14 text-left mb-0">Labore et dolore magna aliqua quis ipsum suspendis seultrices gravida risus commo ddolore.</p>
+                                                <p class="text-size-14 text-left mb-0">Labore et dolore magna aliqua
+                                                    quis ipsum suspendis seultrices gravida risus commo ddolore.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="accordion-card">
                                         <div class="card-header" id="headingThree">
-                                            <a href="#" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            <a href="#" class="btn btn-link collapsed" data-toggle="collapse"
+                                                data-target="#collapseThree" aria-expanded="false"
+                                                aria-controls="collapseThree">
                                                 <h5>How much does legal representation cost?</h5>
                                             </a>
                                         </div>
                                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
                                             <div class="card-body">
-                                                <p class="text-size-14 text-left mb-0">Labore et dolore magna aliqua quis ipsum suspendis seultrices gravida risus commo ddolore.</p>
+                                                <p class="text-size-14 text-left mb-0">Labore et dolore magna aliqua
+                                                    quis ipsum suspendis seultrices gravida risus commo ddolore.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="accordion-card">
                                         <div class="card-header" id="headingFour">
-                                            <a href="#" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                            <a href="#" class="btn btn-link collapsed" data-toggle="collapse"
+                                                data-target="#collapseFour" aria-expanded="false"
+                                                aria-controls="collapseFour">
                                                 <h5>How Do I Choose the Right Attorney?</h5>
                                             </a>
                                         </div>
                                         <div id="collapseFour" class="collapse" aria-labelledby="headingFour">
                                             <div class="card-body">
-                                                <p class="text-size-14 text-left mb-0">Labore et dolore magna aliqua quis ipsum suspendis seultrices gravida risus commo ddolore.</p>
+                                                <p class="text-size-14 text-left mb-0">Labore et dolore magna aliqua
+                                                    quis ipsum suspendis seultrices gravida risus commo ddolore.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -235,19 +196,23 @@
                 <div class="violence_wrapper position-relative">
                     <div class="violence_content" data-aos="fade-up">
                         <h1 class="text-white">We are here to fight against any violence</h1>
-                        <p class="text-white text-size-16">Repudiandae sint et molestiae non recusandae itaque earum rerum hic tenetur a sapiente delectus maiores alias soluta nobis
+                        <p class="text-white text-size-16">Repudiandae sint et molestiae non recusandae itaque earum
+                            rerum hic tenetur a sapiente delectus maiores alias soluta nobis
                             est eligendi optio cumque nihil imeit minus id quod maxime placeat facere possimus,.
                         </p>
-                        <a href="./contact.html" class="text-decoration-none appointment">Book Appointment<i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="./contact.html" class="text-decoration-none appointment">Book Appointment<i
+                                class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
 
             </div>
             <div class="col-lg-4">
                 <div class="video_icon">
-                    <a class="popup-vimeo" href="https://video-previews.elements.envatousercontent.com/a4464fc1-719e-45da-bf4b-f3ad0e517555/watermarked_preview/watermarked_preview.mp4">
+                    <a class="popup-vimeo"
+                        href="https://video-previews.elements.envatousercontent.com/a4464fc1-719e-45da-bf4b-f3ad0e517555/watermarked_preview/watermarked_preview.mp4">
                         <figure class="mb-0">
-                            <img class="thumb img-fluid" style="cursor: pointer" src="./assets/images/client-videoicon.png" alt="image">
+                            <img class="thumb img-fluid" style="cursor: pointer"
+                                src="./assets/images/client-videoicon.png" alt="image">
                         </figure>
                     </a>
                 </div>
@@ -267,113 +232,45 @@
                 <div class="lawyer_content text-center" data-aos="fade-up">
                     <h6>Team Members</h6>
                     <h2>Team of our expert <span class="span_borderbootom">lawyers</span></h2>
-                    <p class="col-xl-8 col-lg-10 mx-auto text-size-16 mb-0">Qucimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores ruas molestias excepturi
+                    <p class="col-xl-8 col-lg-10 mx-auto text-size-16 mb-0">Qucimus qui blanditiis praesentium
+                        voluptatum deleniti atque corrupti quos dolores ruas molestias excepturi
                         sint occaecati cupiditate non provident.
                     </p>
                 </div>
             </div>
         </div>
         <div class="row" data-aos="fade-up">
+            @forelse ($teams->take(6) as $t)
             <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-5">
                 <div class="lawyer-box">
-                    <figure class="lawyer-image">
-                        <img src="./assets/images/lawyer-image1.jpg" alt="image" class="img-fluid">
-                    </figure>
-                    <div class="content">
-                        <h4>Marvin Joner</h4>
-                        <span class="text-size-14">Senior Lawyer</span>
-                        <ul class="list-unstyled mb-0">
-                            <li class="icons"><a href="https://www.facebook.com/login/"><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li class="icons"><a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-x-twitter"></i></a></li>
-                            <li class="icons"><a href="https://www.linkedin.com/login"><i class="fa-brands fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
+                    <a href="">
+                        <figure class="lawyer-image image-wrapper">
+                            <img src="{{ asset('storage/'.$t->photo) }}" alt="image" class="img-fluid">
+                        </figure>
+                        <div class="content">
+                            <h4>{{ $t->prenom." - ".$t->nom }}</h4>
+                            <span class="text-size-14">{{ $t->fonction->fonction }}</span>
+                            <ul class="list-unstyled mb-0">
+                                <li class="icons"><a href="https://www.facebook.com/login/" target="blank"><i
+                                            class="fa-brands fa-facebook-f"></i></a></li>
+                                <li class="icons"><a href="https://twitter.com/i/flow/login" target="blank"><i
+                                            class="fa-brands fa-x-twitter"></i></a></li>
+                                <li class="icons"><a href="https://www.linkedin.com/login" target="blank"><i
+                                            class="fa-brands fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-5">
-                <div class="lawyer-box">
-                    <figure class="lawyer-image">
-                        <img src="./assets/images/lawyer-image2.jpg" alt="image" class="img-fluid">
-                    </figure>
-                    <div class="content">
-                        <h4>Patricia Woodrum</h4>
-                        <span class="text-size-14">Assistant Lawyer</span>
-                        <ul class="list-unstyled mb-0">
-                            <li class="icons"><a href="https://www.facebook.com/login/"><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li class="icons"><a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-x-twitter"></i></a></li>
-                            <li class="icons"><a href="https://www.linkedin.com/login"><i class="fa-brands fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-5">
-                <div class="lawyer-box mb-0">
-                    <figure class="lawyer-image">
-                        <img src="./assets/images/lawyer-image3.jpg" alt="image" class="img-fluid">
-                    </figure>
-                    <div class="content">
-                        <h4>Hannaz Stone</h4>
-                        <span class="text-size-14">Junior Lawyer</span>
-                        <ul class="list-unstyled mb-0">
-                            <li class="icons"><a href="https://www.facebook.com/login/"><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li class="icons"><a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-x-twitter"></i></a></li>
-                            <li class="icons"><a href="https://www.linkedin.com/login"><i class="fa-brands fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-5">
-                <div class="lawyer-box mb-0">
-                    <figure class="lawyer-image">
-                        <img src="./assets/images/lawyer-image3.jpg" alt="image" class="img-fluid">
-                    </figure>
-                    <div class="content">
-                        <h4>Hannaz Stone</h4>
-                        <span class="text-size-14">Junior Lawyer</span>
-                        <ul class="list-unstyled mb-0">
-                            <li class="icons"><a href="https://www.facebook.com/login/"><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li class="icons"><a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-x-twitter"></i></a></li>
-                            <li class="icons"><a href="https://www.linkedin.com/login"><i class="fa-brands fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-5">
-                <div class="lawyer-box mb-0">
-                    <figure class="lawyer-image">
-                        <img src="./assets/images/lawyer-image3.jpg" alt="image" class="img-fluid">
-                    </figure>
-                    <div class="content">
-                        <h4>Hannaz Stone</h4>
-                        <span class="text-size-14">Junior Lawyer</span>
-                        <ul class="list-unstyled mb-0">
-                            <li class="icons"><a href="https://www.facebook.com/login/"><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li class="icons"><a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-x-twitter"></i></a></li>
-                            <li class="icons"><a href="https://www.linkedin.com/login"><i class="fa-brands fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-5">
-                <div class="lawyer-box mb-0">
-                    <figure class="lawyer-image">
-                        <img src="./assets/images/lawyer-image3.jpg" alt="image" class="img-fluid">
-                    </figure>
-                    <div class="content">
-                        <h4>Hannaz Stone</h4>
-                        <span class="text-size-14">Junior Lawyer</span>
-                        <ul class="list-unstyled mb-0">
-                            <li class="icons"><a href="https://www.facebook.com/login/"><i class="fa-brands fa-facebook-f"></i></a></li>
-                            <li class="icons"><a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-x-twitter"></i></a></li>
-                            <li class="icons"><a href="https://www.linkedin.com/login"><i class="fa-brands fa-linkedin"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            @empty
+
+            @endforelse
+
 
         </div>
         <div class="text-center mt-lg-5 mt-5">
-            <a href="{{ route('team') }}" class="text-decoration-none read_more">@lang("info.autres.lirePlus")<i class="fa-solid fa-arrow-right"></i></a>
+            <a href="{{ route('team') }}" class="text-decoration-none read_more">@lang("info.autres.lirePlus")<i
+                    class="fa-solid fa-arrow-right"></i></a>
         </div>
     </div>
 </section>
