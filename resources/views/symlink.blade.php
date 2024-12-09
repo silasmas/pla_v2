@@ -1,5 +1,10 @@
 <?php
 
+if (function_exists('symlink')) {
+    dd("symlink() is available.");
+} else {
+    dd("symlink() is not available.");
+}
 $targetFolder = $_SERVER['DOCUMENT_ROOT'] . '/storage/app/public';
 $linkFolder = $_SERVER['DOCUMENT_ROOT'] . '/public/storage';
 
