@@ -11,7 +11,7 @@
             <div class="col-lg-6 col-md-12 col-sm-12 col-12 order-lg-1 order-2 text-lg-left text-center">
                 <div class="about_wrapper position-relative" data-aos="zoom-in">
                     <figure class="about-image mb-0">
-                        <img src="{{ asset('/assets/images/img/i1d.jpg') }}" alt="image" class="img-fluid">
+                        <img src="{{ asset('/assets/images/img/02.png') }}" alt="image" class="img-fluid">
                     </figure>
                     <figure class="about-circle mb-0">
                         <img src="./assets/images/aboutpage-circle.png" alt="image" class="img-fluid">
@@ -75,7 +75,8 @@
             @forelse ($allExpertises as $e)
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="box">
-                    <div class="practice-box">
+                    <div class="practice-box"
+                    data-background="{{ $e->photo ? asset("storage/".$e->photo) : asset('assets/images/img/lgmodif.png') }}">
                         <figure class="icon">
                             <img src="{{ asset('assets/images/img/lgmodif.png') }}" alt="image" class="img-fluid">
                         </figure>
@@ -96,99 +97,7 @@
         </div>
     </div>
 </section>
-<!-- FAQ -->
-<section class="faq-con practicearea-faq legal_situation_faq position-relative">
-    <div class="container">
-        <div class="faq">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                    <div class="left_column" data-aos="fade-up">
-                        <div class="faq_content mb-0">
-                            <h6>Faq’s</h6>
-                            <h2>Frequently Asked Questions</h2>
-                            <p class="text-size-16">Nucimus qui blanditiis praesentium voluptatum deleniti atque
-                                corrupti quos dolores ruas molestias.
-                            </p>
-                        </div>
-                        <div class="accordian-section-inner position-relative">
-                            <div class="accordian-inner">
-                                <div id="faq_accordion1">
-                                    <div class="accordion-card">
-                                        <div class="card-header" id="headingOne">
-                                            <a href="#" class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#collapseOne" aria-expanded="false"
-                                                aria-controls="collapseOne">
-                                                <h5>How do I choose a personal injury lawyer?</h5>
-                                            </a>
-                                        </div>
-                                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne">
-                                            <div class="card-body">
-                                                <p class="text-size-14 text-left mb-0">Labore et dolore magna aliqua
-                                                    quis ipsum suspendis seultrices gravida risus commo ddolore.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-card">
-                                        <div class="card-header" id="headingTwo">
-                                            <a href="#" class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#collapseTwo" aria-expanded="false"
-                                                aria-controls="collapseTwo">
-                                                <h5>What should I do if I am involved in a car accident?</h5>
-                                            </a>
-                                        </div>
-                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
-                                            <div class="card-body">
-                                                <p class="text-size-14 text-left mb-0">Labore et dolore magna aliqua
-                                                    quis ipsum suspendis seultrices gravida risus commo ddolore.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-card">
-                                        <div class="card-header" id="headingThree">
-                                            <a href="#" class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#collapseThree" aria-expanded="false"
-                                                aria-controls="collapseThree">
-                                                <h5>How much does legal representation cost?</h5>
-                                            </a>
-                                        </div>
-                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
-                                            <div class="card-body">
-                                                <p class="text-size-14 text-left mb-0">Labore et dolore magna aliqua
-                                                    quis ipsum suspendis seultrices gravida risus commo ddolore.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="accordion-card">
-                                        <div class="card-header" id="headingFour">
-                                            <a href="#" class="btn btn-link collapsed" data-toggle="collapse"
-                                                data-target="#collapseFour" aria-expanded="false"
-                                                aria-controls="collapseFour">
-                                                <h5>How Do I Choose the Right Attorney?</h5>
-                                            </a>
-                                        </div>
-                                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour">
-                                            <div class="card-body">
-                                                <p class="text-size-14 text-left mb-0">Labore et dolore magna aliqua
-                                                    quis ipsum suspendis seultrices gravida risus commo ddolore.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                    <div class="practicearea_wrapper position-relative" data-aos="zoom-in">
-                        <figure class="practicearea-faqimage mb-0">
-                            <img src="assets/images/practicearea-faqimage.png" alt="image" class="image-fluid">
-                        </figure>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
 <section class="violence-con position-relative">
     <div class="container">
         <div class="row">

@@ -36,7 +36,7 @@ class ViewServiceProvider extends ServiceProvider
             $settings = DB::table('general_settings')->first();
 
             $teams = avocat::with("publication", "bureau", "fonction")->orderBy('niveau')->where('visible', 1)->get();
-            $fonctions = fonction::get();
+            $fonctions = fonction::orderByDesc('fonction')->get();
             // $posts = Post::get();
             // // dd($eventbunda);
             // // Obtenir le total séparément si nécessaire

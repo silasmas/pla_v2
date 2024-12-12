@@ -2329,7 +2329,7 @@ h6:before{
     position: relative;
     transition: all 0.3s ease-in-out;
 }
-/* .practice-con .box::before {
+.practice-con .box::before {
     content: "";
     height: 100%;
     width: 100%;
@@ -2342,9 +2342,14 @@ h6:before{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(../images/practicearea-bgimage.jpg);
+    /* background-image: url(../images/img/cr.jpg); */
+    background-image: attr(data-background url);
     transition: all 0.3s ease-in-out;
-} */
+}
+.practice-con .box:hover::before {
+    display: block;
+}
+
 .practice-con .practice-box{
     position: relative;
     z-index: 1;

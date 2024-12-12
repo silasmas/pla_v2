@@ -41,7 +41,7 @@
                         @break
                     @case("team")
                     <div class="sub_banner_content" data-aos="fade-up">
-                        <h1 class="text-white">About Us</h1>
+                        <h1 class="text-white">@lang('info.m4')</h1>
                         <p class="col-xl-7 col-lg-9 mx-auto text-white text-size-16">
                             Dolor in reprehenderit in voluptate velit esse cillumdolore eu
                             fugiat nulla pariatur sint occaecat
@@ -58,7 +58,7 @@
                         @break
                     @case("presence")
                     <div class="sub_banner_content" data-aos="fade-up">
-                        <h1 class="text-white">About Us</h1>
+                        <h1 class="text-white">@lang('info.m5')</h1>
                         <p class="col-xl-7 col-lg-9 mx-auto text-white text-size-16">
                             Dolor in reprehenderit in voluptate velit esse cillumdolore eu
                             fugiat nulla pariatur sint occaecat
@@ -75,7 +75,7 @@
                         @break
                     @case("publication")
                     <div class="sub_banner_content" data-aos="fade-up">
-                        <h1 class="text-white">About Us</h1>
+                        <h1 class="text-white">@lang('info.m5')</h1>
                         <p class="col-xl-7 col-lg-9 mx-auto text-white text-size-16">
                             Dolor in reprehenderit in voluptate velit esse cillumdolore eu
                             fugiat nulla pariatur sint occaecat

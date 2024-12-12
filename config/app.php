@@ -17,11 +17,7 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
-    'available_locales' => [
-        'English' => 'en',
-        'Français' => 'fr',
-        // 'Lingala' => 'ln'
-    ],
+
     /*
     |--------------------------------------------------------------------------
     | Application Environment
@@ -92,7 +88,7 @@ return [
         /*
          * Application Service Providers...
          */
-        // App\Providers\AppServiceProvider::class,
+        App\Providers\AppServiceProvider::class,
         // App\Providers\AuthServiceProvider::class,
         // // App\Providers\BroadcastServiceProvider::class,
         // App\Providers\EventServiceProvider::class,
@@ -109,7 +105,11 @@ return [
     'fallback_locale' => env('APP_FALLBACK_LOCALE', 'fr'),
 
     'faker_locale' => env('APP_FAKER_LOCALE',  'fr_FR'),
-
+    'available_locales' => [
+        'English' => 'en',
+        'Français' => 'fr',
+        // 'Lingala' => 'ln'
+    ],
     /*
     |--------------------------------------------------------------------------
     | Encryption Key
