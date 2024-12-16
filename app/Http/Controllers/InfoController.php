@@ -130,17 +130,17 @@ class InfoController extends Controller
     {
 
         // Chemin du fichier Word à prévisualiser
-        $filePath = public_path('video/BIOGRAPHIE_Antoine.docx');
+        // $filePath = public_path('video/BIOGRAPHIE_Antoine.docx');
 
-        // Créer un objet PhpWord
-        $phpWord = IOFactory::load($filePath);
-        // Chemin où enregistrer le fichier HTML
-        $htmlFilePath =  public_path('video/vd/test.html');
+        // // Créer un objet PhpWord
+        // $phpWord = IOFactory::load($filePath);
+        // // Chemin où enregistrer le fichier HTML
+        // $htmlFilePath =  public_path('video/vd/test.html');
 
-        // Enregistrer le contenu du fichier Word en HTML
-        $phpWord->save($htmlFilePath, 'HTML');
-        //dd($htmlFilePath);
-        $content = "video/vd/test.html";
+        // // Enregistrer le contenu du fichier Word en HTML
+        // $phpWord->save($htmlFilePath, 'HTML');
+        // //dd($htmlFilePath);
+        // $content = "video/vd/test.html";
 
 
         $avocat = avocat::with('publication')->findOrFail($id);
@@ -154,7 +154,7 @@ class InfoController extends Controller
             ->orderBy('expertises.created_at', 'asc')->get();
         $domaine = expertise::where('sorte', 2)
             ->orderBy('expertises.created_at', 'asc')->get();
-        return view('pages.detailAvocat', compact('content', 'avocat', 'avocats', 'accueil', 'secteur', 'domaine', 'bureau'));
+        return view('pages.detailTeam', compact('avocat', 'avocats', 'accueil', 'secteur', 'domaine', 'bureau'));
     }
     public function show_secteur($id)
     {

@@ -14,22 +14,26 @@
             </div>
         </div>
         <div class="row" data-aos="fade-up">
+            @forelse ($presence as $b)
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="portfolio-box">
                     <div class="image position-relative">
                         <figure class="mb-0">
-                            <img src="{{ asset('assets/images/img/b1.webp') }}" alt="image" class="img-fluid">
+                            <img src="{{ asset('storage/'.$b->photo) }}" alt="image" class="img-fluid">
                         </figure>
-                        <span class="text-white">RD Congo</span>
+                        <span class="text-white">{{ $b->adresse }}</span>
                     </div>
                     <div class="box-content">
-                        <a href="./case-studies.html" class="text-decoration-none"><h5>Kinshasa</h5></a>
-                        <p class="text-size-14">Dolor in reprehenderit in velit esse cillum maiores alias...</p>
-                        <a href="./case-studies.html" class="text-decoration-none"><i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#" class="text-decoration-none" data-toggle="modal" data-target="#modal-detail-office{{ $b->id}}"><h5>{{ $b->adresse }}</h5></a>
+                        <p class="text-size-14">{{ $b->detail }}</p>
+                        <a href="" class="text-decoration-none" data-toggle="modal" data-target="#modal-detail-office{{ $b->id}}"><i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+            @empty
+
+            @endforelse
+            {{-- <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="portfolio-box">
                     <div class="image position-relative">
                         <figure class="mb-0">
@@ -58,10 +62,10 @@
                         <a href="./case-studies.html" class="text-decoration-none"><i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
         </div>
     </div>
 </section>
-
+@include("parties.modalDetailOfficec")
 @endsection

@@ -4,17 +4,17 @@
 
 <!-- About -->
 <section class="aboutpage-con position-relative">
-    <figure class="about-sideimage mb-0">
+    <figure class="mb-0 about-sideimage">
         <img src="./assets/images/img/i2.jpg" alt="image" class="img-fluid">
     </figure>
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-12 col-sm-12 col-12 order-lg-1 order-2 text-lg-left text-center">
+            <div class="order-2 text-center col-lg-6 col-md-12 col-sm-12 col-12 order-lg-1 text-lg-left">
                 <div class="about_wrapper position-relative" data-aos="zoom-in">
-                    <figure class="about-image mb-0">
+                    <figure class="mb-0 about-image">
                         <img src="./assets/images/about2-image.jpg" alt="image" class="img-fluid">
                     </figure>
-                    <figure class="about-circle mb-0">
+                    <figure class="mb-0 about-circle">
                         <img src="./assets/images/aboutpage-circle.png" alt="image" class="img-fluid">
                     </figure>
                     <div class="about-box">
@@ -27,11 +27,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 col-12 order-lg-2 order-1">
+            <div class="order-1 col-lg-6 col-md-12 col-sm-12 col-12 order-lg-2">
                 <div class="about_content" data-aos="fade-up">
                     <h6>About us</h6>
                     <h2>Providing Top-Notch Legal Representation</h2>
-                    <p class="text text-size-16">Quis autem vel eum iure reprehenderit rui in ea volurate veli esse ruam nihil molestiae conseauatur vel illum rui dolorema
+                    <p class="text text-size-16">Quis autem vel eum iure reprehenderit rui in ea volurate veli esse ruam
+                        nihil molestiae conseauatur vel illum rui dolorema
                         eum fugiat ruo voluetas nulla pariatur.
                     </p>
                     <ul class="list-unstyled">
@@ -48,7 +49,8 @@
                             <p class="mb-0 text-size-16">Rerum hic tenetur a sapiente delectus au occae.</p>
                         </li>
                     </ul>
-                    <a href="./about.html" class="text-decoration-none read_more">Read More<i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#" class="text-decoration-none read_more" data-toggle="modal"
+                        data-target="#modalAbout">Read More<i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
@@ -64,8 +66,9 @@
                 <div class="succeed_content" data-aos="fade-up">
                     <h6>Who We Are</h6>
                     <h2>Committed to Helping Our Clients Succeed</h2>
-                    <p class="text text-size-16">Nucimus qui blanditiis praesentium voluptatum deleniti atrue corrupti ruos dolores ruas molestias occaecati.</p>
-                    <ul class="list-unstyled mb-0">
+                    <p class="text text-size-16">Nucimus qui blanditiis praesentium voluptatum deleniti atrue corrupti
+                        ruos dolores ruas molestias occaecati.</p>
+                    <ul class="mb-0 list-unstyled">
                         <li>
                             <i class="fa fa-check" aria-hidden="true"></i>
                             <p class="mb-0 text-size-16">Nxcepteur sint occaecat cupidatat noru even.</p>
@@ -138,6 +141,33 @@
         </div>
     </div>
 </section>
+
+<div class="modal fade modal-about" data-backdrop="static" data-keyboard="false" id="modalAbout" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="border: none">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h3>
+                    A propos de nous
+                </h3>
+                <h1>PLA Law Firm</h1>
+                <p> Est un cabinet d’avocats basé en République Démocratique du Congo, offrant ses services dans tous
+                    les domaines du droit des affaires en Afrique francophone. <br>Nos avocats sont des experts
+                    juridiques internationaux ayant plus de 15 ans de pratique en droit des affaires et des compétences
+                    approfondies en analyse juridique.&nbsp; Ils suivent avec diligence les évolutions constantes des
+                    cadres juridiques et réglementaires de nos différents secteurs d’intervention.</p>
+                <p>Avec une équipe multiculturelle et multidisciplinaire respectant les standards internationaux de
+                    leurs professions, nous fournissons à nos clients une assistance et une représentation efficaces
+                    avec proactivité et une attention particulière à chaque détail dans la gestion des intérêts de nos
+                    clients. &nbsp;<br><br></p>
+            </div>
+        </div>
+    </div>
+</div>
 
 @include("parties.blog")
 @endsection()

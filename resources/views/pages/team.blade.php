@@ -10,10 +10,10 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="team_content text-center" data-aos="fade-up">
+                <div class="text-center team_content" data-aos="fade-up">
                     <h6>Team Members</h6>
                     <h2>Team of Our Expert Lawyers</h2>
-                    <p class="col-xl-8 col-lg-10 mx-auto text-size-16 mb-0">Qucimus qui blanditiis praesentium
+                    <p class="mx-auto mb-0 col-xl-8 col-lg-10 text-size-16">Qucimus qui blanditiis praesentium
                         voluptatum deleniti atque corrupti quos dolores ruas molestias excepturi
                         sint occaecati cupiditate non provident.
                     </p>
@@ -25,7 +25,7 @@
     <section class="blog-posts blogpage-section">
 
         <div class="container">
-            <div class="filter-buttons d-flex gap-3 justify-content-center mb-lg-5 mb-4">
+            <div class="gap-3 mb-4 filter-buttons d-flex justify-content-center mb-lg-5">
                 <button data-filter="*" class="active btn btn-filter">All</button>
                 @forelse ($fonction as $f)
                 <button data-filter="{{ $f->fonction }}" class="btn btn-filter">{{ $f->fonction }}</button>
@@ -40,14 +40,14 @@
                 @forelse ($teams as $t)
                 <div class="col-xl-4 col-lg-4 col-md-6 grid-item" data-category="{{ $t->fonction->fonction }}">
                     <div class="team-box">
-                        <a href="">
+                        <a href="#" data-toggle="modal" data-target="#modal-detail-team{{$t->id}}">
                             <figure class="lawyer-image image-wrapper">
                                 <img src="{{ asset('storage/'.$t->photo) }}" alt="image" class="img-fluid">
                             </figure>
                             <div class="content">
                                 <h4>{{ $t->prenom." - ".$t->nom }}</h4>
                                 <span class="text-size-14">{{ $t->fonction->fonction }}</span>
-                                <ul class="list-unstyled mb-0">
+                                <ul class="mb-0 list-unstyled">
                                     <li class="icons"><a href="https://www.facebook.com/login/" target="blank"><i
                                                 class="fa-brands fa-facebook-f"></i></a></li>
                                     <li class="icons"><a href="https://twitter.com/i/flow/login" target="blank"><i
@@ -67,4 +67,7 @@
     </section>
 
 </section>
+
+@include("parties.modalDetailTeam")
+
 @endsection

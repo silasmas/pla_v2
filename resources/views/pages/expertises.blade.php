@@ -1,35 +1,35 @@
 @extends("layouts.template")
 
 @section("contente")
-@php
-$styles = '';
-foreach ($secteur as $e) {
-$styles .= "
-.dynamic-bg-{$e->id}::before {
-content: '';
-height: 100%;
-width: 100%;
-top: 0;
-left: 0;
-opacity: 0.17;
-display: block;
-position: absolute;
-border-radius: 20px;
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center;
-background-image: url('" . asset('storage/' . $e->background_image) . "');
-transition: all 0.3s ease-in-out;
-}
-";
-}
-@endphp
+{{-- @php
+// $styles = '';
+// foreach ($secteur as $e) {
+// $styles .= "
+// .dynamic-bg-{$e->id}::before {
+// content: '';
+// height: 100%;
+// width: 100%;
+// top: 0;
+// left: 0;
+// opacity: 0.17;
+// display: block;
+// position: absolute;
+// border-radius: 20px;
+// background-size: cover;
+// background-repeat: no-repeat;
+// background-position: center;
+// background-image: url('" . asset('storage/' . $e->background_image) . "');
+// transition: all 0.3s ease-in-out;
+// }
+// ";
+// }
+// @endphp
 
 <style>
     {
          ! ! $styles  ! !
     }
-</style>
+</style> --}}
 
 
 <!-- Practice Area -->
@@ -37,10 +37,10 @@ transition: all 0.3s ease-in-out;
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="practice_content text-center" data-aos="fade-up">
+                <div class="text-center practice_content" data-aos="fade-up">
                     <h6>Our Expertise</h6>
                     <h2>Our Legal Practice Areas</h2>
-                    <p class="col-xl-8 col-lg-10 mx-auto text-size-16 mb-0">Nucimus qui blanditiis praesentium
+                    <p class="mx-auto mb-0 col-xl-8 col-lg-10 text-size-16">Nucimus qui blanditiis praesentium
                         voluptatum deleniti atque corrupti quos dolores ruas molestias excepturi
                         sint occaecati cupiditate non provident.
                     </p>
@@ -48,7 +48,7 @@ transition: all 0.3s ease-in-out;
             </div>
         </div>
         <div class="tabs">
-            <ul class="nav nav-tabs mb-lg-5 mb-4" id="tabs-posts" role="tablist" data-aos="fade-up"
+            <ul class="mb-4 nav nav-tabs mb-lg-5" id="tabs-posts" role="tablist" data-aos="fade-up"
                 data-aos-duration="700">
                 <li class="nav-item">
                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#popular" role="tab"
@@ -65,9 +65,9 @@ transition: all 0.3s ease-in-out;
                     <div class="row" data-aos="fade-up">
                         @forelse ($secteur as $e)
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                            <div class="box dynamic-bg-{{ $e->id }}"
-                                style="background-image: url('{{ asset('storage/' . $e->background_image) }}'); background-size: cover; background-position: center;">
-                                <div class="practice-box">
+                            <div class="box dynamic-bg-{{ $e->id }}">
+                                <div class="bg-img" style="background-image: url('{{ asset('storage/' . $e->photo) }}'); background-size: cover; background-position: center;"></div>
+                                 <div class="practice-box">
                                     <a href="{{ route('detailExpertise',['id'=>$e->id]) }}">
                                         <figure class="icon">
                                             <img src="./assets/images/img/lgmodif.png" alt="image" class="img-fluid">
@@ -230,14 +230,14 @@ transition: all 0.3s ease-in-out;
 </section>
 <!-- About -->
 <section class="about-con position-relative">
-    <figure class="about-sideimage mb-0">
+    <figure class="mb-0 about-sideimage">
         <img src="{{ asset('assets/images/img/i1.jpg') }}" alt="image" class="image-fluid">
     </figure>
     <div class="container">
         <div class="row">
             <div class="col-lg-5 col-md-12 col-sm-12 col-12">
                 <div class="about_wrapper position-relative">
-                    <figure class="about-image mb-0">
+                    <figure class="mb-0 about-image">
                         <img src="{{ asset('assets/images/img/12A.jpg') }}" alt="image" class="image-fluid">
                         {{-- <img src="assets/images/about-image.jpg" alt="image" class="image-fluid"> --}}
                     </figure>
@@ -281,7 +281,7 @@ transition: all 0.3s ease-in-out;
             <div class="row">
                 <div class="col-lg-6 col-md-12 col-sm-12 col-12">
                     <div class="left_column" data-aos="fade-up">
-                        <div class="faq_content mb-0">
+                        <div class="mb-0 faq_content">
                             <h6>Faq’s</h6>
                             <h2>Frequently Asked Questions</h2>
                             <p class="text-size-16">Nucimus qui blanditiis praesentium voluptatum deleniti atque
@@ -301,7 +301,7 @@ transition: all 0.3s ease-in-out;
                                         </div>
                                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne">
                                             <div class="card-body">
-                                                <p class="text-size-14 text-left mb-0">Labore et dolore magna aliqua
+                                                <p class="mb-0 text-left text-size-14">Labore et dolore magna aliqua
                                                     quis ipsum suspendis seultrices gravida risus commo ddolore.</p>
                                             </div>
                                         </div>
@@ -316,7 +316,7 @@ transition: all 0.3s ease-in-out;
                                         </div>
                                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
                                             <div class="card-body">
-                                                <p class="text-size-14 text-left mb-0">Labore et dolore magna aliqua
+                                                <p class="mb-0 text-left text-size-14">Labore et dolore magna aliqua
                                                     quis ipsum suspendis seultrices gravida risus commo ddolore.</p>
                                             </div>
                                         </div>
@@ -331,7 +331,7 @@ transition: all 0.3s ease-in-out;
                                         </div>
                                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
                                             <div class="card-body">
-                                                <p class="text-size-14 text-left mb-0">Labore et dolore magna aliqua
+                                                <p class="mb-0 text-left text-size-14">Labore et dolore magna aliqua
                                                     quis ipsum suspendis seultrices gravida risus commo ddolore.</p>
                                             </div>
                                         </div>
@@ -346,7 +346,7 @@ transition: all 0.3s ease-in-out;
                                         </div>
                                         <div id="collapseFour" class="collapse" aria-labelledby="headingFour">
                                             <div class="card-body">
-                                                <p class="text-size-14 text-left mb-0">Labore et dolore magna aliqua
+                                                <p class="mb-0 text-left text-size-14">Labore et dolore magna aliqua
                                                     quis ipsum suspendis seultrices gravida risus commo ddolore.</p>
                                             </div>
                                         </div>
@@ -358,7 +358,7 @@ transition: all 0.3s ease-in-out;
                 </div>
                 <div class="col-lg-6 col-md-12 col-sm-12 col-12">
                     <div class="practicearea_wrapper position-relative" data-aos="zoom-in">
-                        <figure class="practicearea-faqimage mb-0">
+                        <figure class="mb-0 practicearea-faqimage">
                             <img src="assets/images/practicearea-faqimage.png" alt="image" class="image-fluid">
                         </figure>
                     </div>

@@ -75,6 +75,7 @@
             @forelse ($allExpertises as $e)
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="box">
+                    <div class="bg-img" style="background-image: url('{{ asset('storage/' . $e->photo) }}'); background-size: cover; background-position: center;"></div>
                     <div class="practice-box"
                     data-background="{{ $e->photo ? asset("storage/".$e->photo) : asset('assets/images/img/lgmodif.png') }}">
                         <figure class="icon">
