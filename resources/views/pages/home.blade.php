@@ -33,7 +33,7 @@
                     <p class="text text-size-16">
                         {!! !empty($about->extrait)?Str::limit($about->contenu,450, '...'):'Vide '!!}
                     </p>
-                    <ul class="list-unstyled">
+                    {{-- <ul class="list-unstyled">
                         <li>
                             <i class="fa fa-check" aria-hidden="true"></i>
                             <p class="mb-0 text-size-16">Excepteur sint occaecat cupidatat noru even.</p>
@@ -46,7 +46,7 @@
                             <i class="fa fa-check" aria-hidden="true"></i>
                             <p class="mb-0 text-size-16">Rerum hic tenetur a sapiente delectus au occae.</p>
                         </li>
-                    </ul>
+                    </ul> --}}
                     <a href="{{ route('about') }}" class="text-decoration-none read_more">@lang('info.apropo.accueilBtn')<i
                             class="fa-solid fa-arrow-right"></i></a>
                 </div>

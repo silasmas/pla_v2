@@ -26,19 +26,19 @@ class InfoController extends Controller
      */
     public function index()
     {
-        // $publication = publication::with(['avocat', 'categorie'])->simplePaginate();
-        // $avocat = avocat::get();
+        $publication = publication::with(['avocat', 'categorie'])->simplePaginate();
+        $avocat = avocat::get();
         // //    dd($avocat);
         $accueil = accueil::first();
         $bureau = bureau::all();
-        // $slide = slides::all();
-        // $about = about::first();
+        $slide = slides::all();
+        $about = about::first();
         // // dd(!empty($about->contenu)?Str::substr(strip_tags($about->contenu), 0, 200).'...':'');
-        // $secteur = expertise::where('sorte', 1)
-        //     ->orderBy('expertises.created_at', 'asc')->get();
-        // $domaine = expertise::where('sorte', 2)
-        //     ->orderBy('expertises.created_at', 'asc')->get();
-        return view('pages.home');
+        $secteur = expertise::where('sorte', 1)
+            ->orderBy('expertises.created_at', 'asc')->get();
+        $domaine = expertise::where('sorte', 2)
+            ->orderBy('expertises.created_at', 'asc')->get();
+        return view('pages.home',compact('publication', 'avocat', 'accueil', 'bureau', 'slide', 'about', 'secteur', 'domaine'));
     }
     public function about()
     {
