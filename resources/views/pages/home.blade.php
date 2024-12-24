@@ -20,19 +20,18 @@
                         <figure class="about-icon">
                             <img src="./assets/images/aboutpage-icon.png" alt="image" class="img-fluid">
                         </figure>
-                        <span class="number counter">30</span>
+                        <span class="number counter">10</span>
                         <sup class="plus">+</sup>
-                        <span class="text">Years of Experience</span>
+                        <span class="text">@lang('info.apropo.s11')</span>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12 col-12 order-lg-2 order-1">
                 <div class="about_content" data-aos="fade-up">
-                    <h6>About us</h6>
-                    <h2>Providing Top-Notch Legal Representation</h2>
-                    <p class="text text-size-16">Quis autem vel eum iure reprehenderit rui in ea volurate veli esse ruam
-                        nihil molestiae conseauatur vel illum rui dolorema
-                        eum fugiat ruo voluetas nulla pariatur.
+                    <h6>{{ !empty($about->quisommenous)?$about->quisommenous:'Vide' }}</h6>
+                    <h2>{{ !empty($about->titrecabinet)?$about->titrecabinet:'Vide' }}</h2>
+                    <p class="text text-size-16">
+                        {!! !empty($about->extrait)?Str::limit($about->contenu,450, '...'):'Vide '!!}
                     </p>
                     <ul class="list-unstyled">
                         <li>
@@ -48,7 +47,7 @@
                             <p class="mb-0 text-size-16">Rerum hic tenetur a sapiente delectus au occae.</p>
                         </li>
                     </ul>
-                    <a href="./about.html" class="text-decoration-none read_more">Read More<i
+                    <a href="{{ route('about') }}" class="text-decoration-none read_more">@lang('info.apropo.accueilBtn')<i
                             class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>

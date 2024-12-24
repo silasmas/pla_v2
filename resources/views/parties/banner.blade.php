@@ -143,7 +143,7 @@
                                                 laborum.
                                             </p>
                                             <a href="{{ route('about') }}" class="text-decoration-none appointment">
-                                               Prendre rendez-vous<i class="fa-solid fa-arrow-right"></i></a>
+                                                @lang('info.apropo.accueilBtn')<i class="fa-solid fa-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -165,7 +165,7 @@
                                                 laborum.
                                             </p>
                                             <a href="{{ route('presence') }}" class="text-decoration-none appointment">
-                                                Voir en detail<i class="fa-solid fa-arrow-right"></i></a>
+                                               @lang('info.apropo.accueilBtn')<i class="fa-solid fa-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -186,7 +186,7 @@
                                                 laborum.
                                             </p>
                                             <a href="{{ route('presence') }}" class="text-decoration-none appointment">
-                                                Voir en detail<i class="fa-solid fa-arrow-right"></i></a>
+                                               @lang('info.apropo.accueilBtn')<i class="fa-solid fa-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -207,7 +207,7 @@
                                                 laborum.
                                             </p>
                                             <a href="{{ route('presence') }}" class="text-decoration-none appointment">
-                                                Voir en detail<i class="fa-solid fa-arrow-right"></i></a>
+                                               @lang('info.apropo.accueilBtn')<i class="fa-solid fa-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -228,7 +228,7 @@
                                                 laborum.
                                             </p>
                                             <a href="{{ route('team') }}" class="text-decoration-none appointment">
-                                                Voir en detail<i class="fa-solid fa-arrow-right"></i></a>
+                                               @lang('info.apropo.accueilBtn')<i class="fa-solid fa-arrow-right"></i></a>
                                         </div>
                                     </div>
                                 </div>

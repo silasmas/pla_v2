@@ -100,11 +100,14 @@ return [
     ])->toArray(),
 
 
-    'locale' => env('APP_LOCALE',  'fr'),
+    'locale' => "fr",
+    // 'locale' => env('APP_LOCALE',  'fr'),
 
-    'fallback_locale' => env('APP_FALLBACK_LOCALE', 'fr'),
+    'fallback_locale' => "Fr_fr",
+    // 'fallback_locale' => env('APP_FALLBACK_LOCALE', 'fr'),
 
-    'faker_locale' => env('APP_FAKER_LOCALE',  'fr_FR'),
+    'faker_locale' => "Fr_fr",
+    // 'faker_locale' => env('APP_FAKER_LOCALE',  'fr_FR'),
     'available_locales' => [
         'English' => 'en',
         'Français' => 'fr',

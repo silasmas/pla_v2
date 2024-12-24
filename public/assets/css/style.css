@@ -187,7 +187,7 @@ h6:before{
     height: 100%;
     opacity: .2;
     position: absolute;
-    background: url(../images/img/slide.jpg);
+    background: url(../images/img/slide.webp);
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1576,7 +1576,7 @@ h6:before{
     height: 100%;
     opacity: .2;
     position: absolute;
-    background: url(../images/img/i2.jpg);
+    background: url(../images/img/PL.png);
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
@@ -2668,7 +2668,7 @@ h6:before{
         color: white;
         border-radius: 50px;
     }
-   
+
 }
 a {
     text-decoration: none;

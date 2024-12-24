@@ -8,13 +8,17 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\App;
 
 class ProfileController extends Controller
 {
     public function changeLanguage($locale)
     {
+        // dd($locale);
         app()->setLocale($locale);
+        // App::setLocale($locale);
         session()->put('locale', $locale);
+
 
         return redirect()->back();
     }

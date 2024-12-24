@@ -100,7 +100,7 @@ class InfoController extends Controller
             ->orderBy('expertises.created_at', 'asc')->get();
         $domaine = expertise::where('sorte', 2)
             ->orderBy('expertises.created_at', 'asc')->get();
-        return view('pages.publication', compact('publication', 'avocat', 'categorie', 'accueil', 'secteur', 'domaine'));
+        return view('pages.publications', compact('publication', 'avocat', 'categorie', 'accueil', 'secteur', 'domaine'));
     }
     public function presence()
     {

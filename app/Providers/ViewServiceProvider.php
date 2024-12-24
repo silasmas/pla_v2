@@ -6,10 +6,11 @@ namespace App\Providers;
 use App\Models\Post;
 use App\Models\Event;
 use App\Models\avocat;
+use App\Models\accueil;
+use App\Models\fonction;
 use App\Models\Minister;
 use App\Models\Offrande;
 use App\Models\expertise;
-use App\Models\fonction;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Route;
@@ -34,7 +35,7 @@ class ViewServiceProvider extends ServiceProvider
             $titre = getTitle(Route::currentRouteName());
 
             $settings = DB::table('general_settings')->first();
-
+            $accueil = accueil::first();
             $teams = avocat::with("publication", "bureau", "fonction")->orderBy('niveau')->where('visible', 1)->get();
             $fonctions = fonction::orderByDesc('fonction')->get();
             // $posts = Post::get();
@@ -50,6 +51,7 @@ class ViewServiceProvider extends ServiceProvider
 
             $st = ($settings !== null && $settings->social_network !== null) ? json_decode($settings->social_network, true) : "";
             $view->with('title', $titre);
+            $view->with('accueil', $accueil);
             $view->with('settings', $st);
             $view->with('setting', $settings);
             $view->with('slides', $slides);

@@ -18,9 +18,13 @@ class Localization
      */
     public function handle(Request $request, Closure $next)
     {
+        // $locale = $request->get('lang', config('app.locale'));
+        // App::setLocale($locale);
+
+        // return $next($request);
+
         if (Session::has('locale')) {
             App::setLocale(Session::get('locale'));
-
         } else {
             // Check header request and determine localization
             $local = ($request->hasHeader('X-localization')) ? $request->header('X-localization') : 'fr';

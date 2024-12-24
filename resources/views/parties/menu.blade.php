@@ -28,10 +28,10 @@
                         <li class="nav-item {{ Route::current()->getName()=="team"?"active":"" }}">
                             <a class="nav-link" href="{{ route('team') }}">@lang('info.m4') </a>
                         </li>
-                        <li class="nav-item {{ Route::current()->getName()=="presence"?"presence":"" }}">
+                        <li class="nav-item {{ Route::current()->getName()=="presence"?"active":"" }}">
                             <a class="nav-link" href="{{ route('presence') }}">@lang('info.m6')</a>
                         </li>
-                        <li class="nav-item {{ Route::current()->getName()=="publication"?"publication":"" }}">
+                        <li class="nav-item {{ Route::current()->getName()=="publication"?"active":"" }}">
                             <a class="nav-link" href="{{ route('publication') }}">@lang('info.m5')</a>
                         </li>
                     </ul>
@@ -46,7 +46,17 @@
                             <i class="fa-solid fa-globe"></i>
                         </button>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                            @foreach ($available_locales as $locale_name => $available_locale)
+                            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center {{App::currentLocale() ===$localeCode?"active":""}}"
+                                hreflang="{{ $localeCode }}"
+                                href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+
+                                    {{ $properties['native']}}
+                                </a>
+                            </li>
+                            @endforeach
+                            {{-- @foreach ($available_locales as $locale_name => $available_locale)
                             @if ($available_locale === $current_locale)
                             <li>
                                 <a class="dropdown-item disabled d-flex align-items-center active" href="#">
@@ -86,7 +96,7 @@
                                 </a>
                             </li>
                             @endif
-                            @endforeach
+                            @endforeach --}}
                             {{-- <a class="dropdown-item active" href="#">Anglais</a>
                             <a class="dropdown-item" href="#">
                                 Français
