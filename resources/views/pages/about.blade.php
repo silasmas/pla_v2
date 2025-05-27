@@ -5,21 +5,21 @@
 <!-- About -->
 <section class="aboutpage-con position-relative">
     <figure class="mb-0 about-sideimage">
-        <img src="./assets/images/img/i2.jpg" alt="image" class="img-fluid">
+        <img src="{{ asset('assets/images/img/i2.jpg') }}" alt="image" class="img-fluid">
     </figure>
     <div class="container">
         <div class="row">
             <div class="order-2 text-center col-lg-6 col-md-12 col-sm-12 col-12 order-lg-1 text-lg-left">
                 <div class="about_wrapper position-relative" data-aos="zoom-in">
                     <figure class="mb-0 about-image">
-                        <img src="./assets/images/about2-image.jpg" alt="image" class="img-fluid">
+                        <img src="{{ asset('assets/images/about2-image.jpg') }}" alt="image" class="img-fluid">
                     </figure>
                     <figure class="mb-0 about-circle">
-                        <img src="./assets/images/aboutpage-circle.png" alt="image" class="img-fluid">
+                        <img src="{{ asset('assets/images/aboutpage-circle.png') }}" alt="image" class="img-fluid">
                     </figure>
                     <div class="about-box">
                         <figure class="about-icon">
-                            <img src="./assets/images/aboutpage-icon.png" alt="image" class="img-fluid">
+                            <img src="{{ asset('assets/images/aboutpage-icon.png') }}" alt="image" class="img-fluid">
                         </figure>
                         <span class="number counter">30</span>
                         <sup class="plus">+</sup>
