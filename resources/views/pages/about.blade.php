@@ -91,7 +91,7 @@
                             <div class="box">
                                 <div class="succeed-box">
                                     <figure class="icon">
-                                        <img src="./assets/images/succeed-icon1.png" alt="image" class="img-fluid">
+                                        <img src="{{ asset('assets/images/succeed-icon1.png') }}" alt="image" class="img-fluid">
                                     </figure>
                                     <span class="number counter">250</span>
                                     <sup class="plus">+</sup>
@@ -102,7 +102,7 @@
                         <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                             <div class="succeed-box">
                                 <figure class="icon">
-                                    <img src="./assets/images/succeed-icon2.png" alt="image" class="img-fluid">
+                                    <img src="{{ asset('assets/images/succeed-icon2.png') }} " alt="image" class="img-fluid">
                                 </figure>
                                 <span class="number counter">180</span>
                                 <sup class="plus">+</sup>
@@ -116,7 +116,7 @@
                                 <div class="box">
                                     <div class="succeed-box">
                                         <figure class="icon">
-                                            <img src="./assets/images/succeed-icon3.png" alt="image" class="img-fluid">
+                                            <img src="{{ asset('assets/images/succeed-icon3.png') }} " alt="image" class="img-fluid">
                                         </figure>
                                         <span class="number counter">370</span>
                                         <sup class="plus">+</sup>
@@ -127,7 +127,7 @@
                             <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="succeed-box">
                                     <figure class="icon">
-                                        <img src="./assets/images/succeed-icon4.png" alt="image" class="img-fluid">
+                                        <img src="{{ asset('assets/images/succeed-icon4.png') }} " alt="image" class="img-fluid">
                                     </figure>
                                     <span class="number counter">90</span>
                                     <sup class="plus">+</sup>
