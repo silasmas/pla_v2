@@ -5,7 +5,7 @@
 <!-- About -->
 <section class="aboutpage-con position-relative">
     <figure class="mb-0 about-sideimage">
-        <img src="{{ asset('assets/images/img/i2.jpg') }}" alt="image" class="img-fluid">
+        <img src="{{ asset('assets/images/client-sideimage.png') }}" alt="image" class="img-fluid">
     </figure>
     <div class="container">
         <div class="row">
