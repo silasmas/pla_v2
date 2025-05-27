@@ -18,7 +18,7 @@
                     <div class="item">
                         <div class="article-box">
                             <figure class="mb-0">
-                                <img src="./assets/images/article-image1.jpg" alt="image" class="img-fluid">
+                                <img src="{{ asset('assets/images/article-image1.jpg') }}" alt="image" class="img-fluid">
                             </figure>
                             <div class="box-content">
                                 <div class="span_wrapper">
@@ -39,7 +39,7 @@
                     <div class="item">
                         <div class="article-box">
                             <figure class="mb-0">
-                                <img src="./assets/images/article-image2.jpg" alt="image" class="img-fluid">
+                                <img src="{{ asset('assets/images/article-image2.jpg') }}" alt="image" class="img-fluid">
                             </figure>
                             <div class="box-content">
                                 <div class="span_wrapper">
@@ -60,7 +60,7 @@
                     <div class="item">
                         <div class="article-box">
                             <figure class="mb-0">
-                                <img src="./assets/images/article-image3.jpg" alt="image" class="img-fluid">
+                                <img src="{{ asset('assets/images/article-image3.jpg') }}" alt="image" class="img-fluid">
                             </figure>
                             <div class="box-content">
                                 <div class="span_wrapper">
@@ -81,7 +81,7 @@
                     <div class="item">
                         <div class="article-box">
                             <figure class="mb-0">
-                                <img src="./assets/images/article-image1.jpg" alt="image" class="img-fluid">
+                                <img src="{{ asset('assets/images/article-image1.jpg') }}" alt="image" class="img-fluid">
                             </figure>
                             <div class="box-content">
                                 <div class="span_wrapper">
@@ -102,7 +102,7 @@
                     <div class="item">
                         <div class="article-box">
                             <figure class="mb-0">
-                                <img src="./assets/images/article-image2.jpg" alt="image" class="img-fluid">
+                                <img src="{{ asset('assets/images/article-image2.jpg') }} " alt="image" class="img-fluid">
                             </figure>
                             <div class="box-content">
                                 <div class="span_wrapper">
@@ -123,7 +123,7 @@
                     <div class="item">
                         <div class="article-box">
                             <figure class="mb-0">
-                                <img src="./assets/images/article-image3.jpg" alt="image" class="img-fluid">
+                                <img src="{{ asset('assets/images/article-image3.jpg') }} " alt="image" class="img-fluid">
                             </figure>
                             <div class="box-content">
                                 <div class="span_wrapper">
@@ -144,7 +144,7 @@
                     <div class="item">
                         <div class="article-box">
                             <figure class="mb-0">
-                                <img src="./assets/images/article-image1.jpg" alt="image" class="img-fluid">
+                                <img src="{{ asset('assets/images/article-image1.jpg') }} " alt="image" class="img-fluid">
                             </figure>
                             <div class="box-content">
                                 <div class="span_wrapper">
@@ -165,7 +165,7 @@
                     <div class="item">
                         <div class="article-box">
                             <figure class="mb-0">
-                                <img src="./assets/images/article-image2.jpg" alt="image" class="img-fluid">
+                                <img src="{{ asset('assets/images/article-image2.jpg') }} " alt="image" class="img-fluid">
                             </figure>
                             <div class="box-content">
                                 <div class="span_wrapper">
@@ -186,7 +186,7 @@
                     <div class="item">
                         <div class="article-box">
                             <figure class="mb-0">
-                                <img src="./assets/images/article-image3.jpg" alt="image" class="img-fluid">
+                                <img src="{{ asset('assets/images/article-image3.jpg') }} " alt="image" class="img-fluid">
                             </figure>
                             <div class="box-content">
                                 <div class="span_wrapper">
