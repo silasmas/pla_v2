@@ -32,12 +32,17 @@ class FonctionResource extends Resource
                     Section::make('Formulaire')->schema([
                         TextInput::make('fonction.fr')
                             ->label("Titre (FR)")
-                            ->columnSpan(6)
+                            ->columnSpan(4)
                             ->required(),
                         TextInput::make('fonction.en')
                             ->label("Titre (EN)")
                             ->required()
-                            ->columnSpan(6),
+                            ->columnSpan(4),
+                        TextInput::make('Position')
+                            ->label("L'ordre de l'hiyerarchie")
+                            ->required()
+                            ->numeric()
+                            ->columnSpan(4),
                     ])->columns(12)
                 ])->columnSpanFull()
             ]);
@@ -49,6 +54,10 @@ class FonctionResource extends Resource
             ->columns([
                 TextColumn::make(name: 'fonction')
                     ->label("Nom de la fonction ")
+                    ->searchable(),
+                TextColumn::make(name: 'position')
+                    ->label("Position dans l'hierarchie")
+                    ->sortable()
                     ->searchable(),
                 TextColumn::make('created_at')
                     ->dateTime()

@@ -21,6 +21,7 @@
 <script src="{{ asset('assets/js/contact-form.js') }}"></script>
 <script src="{{ asset('assets/js/contact-validate.js') }}"></script>
 <script src="{{ asset('assets/js/counter.js') }}"></script>
+@yield('script')
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         const buttons = document.querySelectorAll(".filter-buttons button");

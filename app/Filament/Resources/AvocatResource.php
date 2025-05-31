@@ -1,48 +1,38 @@
 <?php
-
 namespace App\Filament\Resources;
 
-use Filament\Forms;
-use App\Models\User;
-use Filament\Tables;
+use App\Filament\Resources\AvocatResource\Pages;
 use App\Models\avocat;
-use Filament\Forms\Form;
-use Filament\Tables\Table;
-use Filament\Resources\Resource;
+use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\MarkdownEditor;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Forms\Components\Wizard;
-use Filament\Forms\Components\Section;
-use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\Wizard\Step;
+use Filament\Forms\Form;
+use Filament\Resources\Resource;
+use Filament\Tables\Actions\ActionGroup;
+use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteAction;
+use Filament\Tables\Actions\DeleteBulkAction;
 use Filament\Tables\Actions\EditAction;
 use Filament\Tables\Actions\ViewAction;
 use Filament\Tables\Columns\IconColumn;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Forms\Components\TextInput;
-use Filament\Tables\Actions\ActionGroup;
 use Filament\Tables\Columns\ImageColumn;
-use Filament\Forms\Components\DatePicker;
-use Filament\Forms\Components\FileUpload;
-use Filament\Tables\Actions\DeleteAction;
-use Illuminate\Database\Eloquent\Builder;
-use Filament\Forms\Components\Wizard\Step;
-use Filament\Tables\Actions\BulkActionGroup;
-use Filament\Forms\Components\MarkdownEditor;
-use Filament\Tables\Actions\DeleteBulkAction;
-use App\Filament\Resources\AvocatResource\Pages;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\AvocatResource\Pages\EditAvocat;
-use App\Filament\Resources\AvocatResource\RelationManagers;
-use App\Filament\Resources\AvocatResource\Pages\ListAvocats;
-use App\Filament\Resources\AvocatResource\Pages\CreateAvocat;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\SelectFilter;
+use Filament\Tables\Table;
 
 class AvocatResource extends Resource
 {
     protected static ?string $model = avocat::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-users';
+    protected static ?string $navigationIcon       = 'heroicon-o-users';
     protected static ?string $recordTitleAttribute = 'Equipes';
-    protected static ?int $navigationSort = 1;
+    protected static ?int $navigationSort          = 1;
     public static function form(Form $form): Form
     {
         return $form
@@ -80,7 +70,7 @@ class AvocatResource extends Resource
                                     ->maxLength(255)
                                     ->unique(avocat::class, 'email', ignoreRecord: true),
 
-                            ])->columns(12)
+                            ])->columns(12),
                         ]),
                     Step::make('Étape 2')
                         ->schema([
@@ -108,7 +98,7 @@ class AvocatResource extends Resource
                                 MarkdownEditor::make('biographie.en')
                                     ->columnSpan(12)
                                     ->label('Biographie en (EN)'),
-                            ])->columns(12)
+                            ])->columns(12),
                         ]),
                     Step::make('Étape 3')
                         ->schema([
@@ -145,14 +135,9 @@ class AvocatResource extends Resource
                                     ->onColor('success')
                                     ->offColor('danger')
                                     ->required(),
-                            ])->columns(12)
+                            ])->columns(12),
                         ]),
                 ])->columnSpanFull(),
-
-
-
-
-
 
             ]);
     }
@@ -173,8 +158,11 @@ class AvocatResource extends Resource
                     ->searchable(),
                 TextColumn::make('sexe')
                     ->searchable(),
-                // TextColumn::make('datenaissance')
-                //     ->searchable(),
+                TextColumn::make('bureau.ville')
+                    ->label('Bureaux')
+                    ->badge()          // Affiche les noms dans des badges
+                    ->separator(', '), // Ou ->list() si tu veux une liste à puces
+
                 TextColumn::make('telephone')
                     ->searchable(),
                 TextColumn::make('email')
@@ -201,14 +189,19 @@ class AvocatResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                //
+                SelectFilter::make('bureau')
+                    ->label('Filtrer par Bureau')
+                    ->relationship('bureau', 'ville'),
+                SelectFilter::make('fonction')
+                    ->label('Filtrer par fonction')
+                    ->relationship('fonction', 'fonction'),
             ])
             ->actions([
                 ActionGroup::make([
                     ViewAction::make(),
                     EditAction::make(),
                     DeleteAction::make(),
-                ])
+                ]),
             ])
             ->bulkActions([
                 BulkActionGroup::make([
@@ -227,16 +220,16 @@ class AvocatResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListAvocats::route('/'),
+            'index'  => Pages\ListAvocats::route('/'),
             'create' => Pages\CreateAvocat::route('/create'),
-            'edit' => Pages\EditAvocat::route('/{record}/edit'),
+            'edit'   => Pages\EditAvocat::route('/{record}/edit'),
         ];
     }
     public static function getNavigationBadge(): ?string
     {
         return static::getModel()::count();
     }
-    public static function getNavigationBadgeColor(): string|array|null
+    public static function getNavigationBadgeColor(): string | array | null
     {
         return "success";
     }

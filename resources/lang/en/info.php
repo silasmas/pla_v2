@@ -17,6 +17,7 @@ return [
         'videInfo' => 'The content of this page will be available soon'
     ],
     'bureau' => [
+        'filtre' => 'Office',
         'menu' => 'Our offices',
         'avocat' => 'Team',
         'Presentation' => 'Presentation'

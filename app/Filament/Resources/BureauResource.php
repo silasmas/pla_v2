@@ -56,8 +56,15 @@ class BureauResource extends Resource
                             ->label("Email")
                             ->maxLength(255),
                         TextInput::make('telephone')
-                            ->tel()
                             ->label("Téléphone")
+                            ->columnSpan(4)
+                            ->maxLength(255),
+                        TextInput::make('ville')
+                            ->label("La ville")
+                            ->columnSpan(4)
+                            ->maxLength(255),
+                        TextInput::make('pays')
+                            ->label("Pays")
                             ->columnSpan(4)
                             ->maxLength(255),
                         Textarea::make('physique.fr')
@@ -82,7 +89,7 @@ class BureauResource extends Resource
                             ->image()
                             ->maxSize(3024)
                             ->columnSpanFull(),
-                    ])
+                    ])->columns(12)
                 ])->columnSpanFull()
             ]);
     }
@@ -100,9 +107,22 @@ class BureauResource extends Resource
                     ->label("Nom du bureau")
                     ->searchable(),
                 TextColumn::make('email')
+                    ->label("Email")
                     ->searchable(),
                 TextColumn::make('telephone')
+                    ->label("Téléphone")
                     ->searchable(),
+                TextColumn::make('ville')
+                    ->label("Ville")
+                    ->searchable(),
+                TextColumn::make('pays')
+                    ->label("Pays")
+                    ->searchable(),
+                    ImageColumn::make('avocat.photo')
+    ->circular()
+    ->stacked()
+    ->overlap(2)
+    ->wrap(),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -140,8 +160,8 @@ class BureauResource extends Resource
     {
         return [
             'index' => Pages\ListBureaus::route('/'),
-            'create' => Pages\CreateBureau::route('/create'),
-            'edit' => Pages\EditBureau::route('/{record}/edit'),
+            // 'create' => Pages\CreateBureau::route('/create'),
+            // 'edit' => Pages\EditBureau::route('/{record}/edit'),
         ];
     }
     public static function getNavigationBadge(): ?string

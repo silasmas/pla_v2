@@ -6,6 +6,7 @@ namespace App\Providers;
 use App\Models\Post;
 use App\Models\Event;
 use App\Models\avocat;
+use App\Models\bureau;
 use App\Models\accueil;
 use App\Models\fonction;
 use App\Models\Minister;
@@ -38,8 +39,9 @@ class ViewServiceProvider extends ServiceProvider
             $accueil = accueil::first();
             $teams = avocat::with("publication", "bureau", "fonction")->orderBy('niveau')->where('visible', 1)->get();
             $fonctions = fonction::orderByDesc('fonction')->get();
+             $bureaux = bureau::all();
             // $posts = Post::get();
-            // // dd($eventbunda);
+    //    dd($bureaux);
             // // Obtenir le total séparément si nécessaire
             $slides = expertise::get();
 
@@ -58,7 +60,7 @@ class ViewServiceProvider extends ServiceProvider
             $view->with('allExpertises', $allExpertises);
             $view->with('teams', $teams);
             $view->with('fonctions', $fonctions);
-            // $view->with('posts', $posts);
+            $view->with('bureaux', $bureaux);
         });
     }
 }

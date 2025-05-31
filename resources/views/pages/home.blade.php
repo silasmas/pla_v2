@@ -152,7 +152,7 @@
             @forelse ($teams->take(6) as $t)
             <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-5">
                 <div class="lawyer-box">
-                    <a href="">
+                    <a href="#" data-toggle="modal" data-target="#modal-detail-team{{$t->id}}">
                         <figure class="lawyer-image image-wrapper">
                             <img src="{{ asset('storage/'.$t->photo) }}" alt="image" class="img-fluid">
                         </figure>
@@ -184,4 +184,6 @@
     </div>
 </section>
 @include("parties.blog")
+
+@include("parties.modalDetailTeam")
 @endsection

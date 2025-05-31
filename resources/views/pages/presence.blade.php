@@ -21,7 +21,7 @@
                         <figure class="mb-0">
                             <img src="{{ asset('storage/'.$b->photo) }}" alt="image" class="img-fluid">
                         </figure>
-                        <span class="text-white">{{ $b->adresse }}</span>
+                        <span class="text-white">{{ $b->ville }}</span>
                     </div>
                     <div class="box-content">
                         <a href="#" class="text-decoration-none" data-toggle="modal" data-target="#modal-detail-office{{ $b->id}}"><h5>{{ $b->adresse }}</h5></a>

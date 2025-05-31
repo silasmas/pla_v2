@@ -16,6 +16,7 @@ return [
 
     ],
     'bureau' => [
+        'filtre' => 'Bureau',
         'menu' => 'Nos bureaux',
         'avocat' => 'Equipe',
         'Presentation' => 'Presentation'

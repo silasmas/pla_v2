@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\about;
@@ -15,7 +14,6 @@ use App\Models\slides;
 use App\Models\sorte;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
-use PhpOffice\PhpWord\IOFactory;
 
 class InfoController extends Controller
 {
@@ -26,24 +24,28 @@ class InfoController extends Controller
      */
     public function index()
     {
+        // Incrémentation des vues de la page d'accueil
         $publication = publication::with(['avocat', 'categorie'])->simplePaginate();
-        $avocat = avocat::get();
+        $avocat      = avocat::get();
+
         // //    dd($avocat);
         $accueil = accueil::first();
-        $bureau = bureau::all();
-        $slide = slides::all();
-        $about = about::first();
+        $accueil->vzt()->increment();
+        $accueil->vzt()->count();
+        $bureau  = bureau::all();
+        $slide   = slides::all();
+        $about   = about::first();
         // // dd(!empty($about->contenu)?Str::substr(strip_tags($about->contenu), 0, 200).'...':'');
         $secteur = expertise::where('sorte', 1)
             ->orderBy('expertises.created_at', 'asc')->get();
         $domaine = expertise::where('sorte', 2)
             ->orderBy('expertises.created_at', 'asc')->get();
-        return view('pages.home',compact('publication', 'avocat', 'accueil', 'bureau', 'slide', 'about', 'secteur', 'domaine'));
+        return view('pages.home', compact('publication', 'avocat', 'accueil', 'bureau', 'slide', 'about', 'secteur', 'domaine'));
     }
     public function about()
     {
         $accueil = accueil::first();
-        $about = about::first();
+        $about   = about::first();
         // $type=type::all();
         // dd(empty($about->contenu->contenu)?"vide":'oui');
         $secteur = expertise::where('sorte', 1)
@@ -61,8 +63,8 @@ class InfoController extends Controller
             ->orderBy('expertises.created_at', 'asc')->get();
 
         //    dd($expertises);
-        $i = 0;
-        $ii = 0;
+        $i      = 0;
+        $ii     = 0;
         $sortes = sorte::all();
         return view('pages.expertises', compact('accueil', 'secteur', 'domaine', 'sortes', 'i', 'ii'));
     }
@@ -73,15 +75,16 @@ class InfoController extends Controller
         //     return $q->where("id",1);
         // });
         $avocat = avocat::with('fonction')->orderBy('niveau', 'asc')->get();
-        //$avocat=fonction::with('avocat')->distinct()->get();
+        // $avocat->vzt()->increment();
+        // $avocat->vzt()->count();
         $avocat = $avocat->groupBy(function ($member) {
             return $member->niveau;
         })->all();
         //  dd($avocat);
         //$avocat=$av->unique('finction_id');
-        $fonction = fonction::with('avocat')->get();
+        $fonction = fonction::with('avocat')->orderBy('position')->get();
         // dd($fonction->unique());
-        $bureau = bureau::all();
+        $bureau  = bureau::all();
         $secteur = expertise::where('sorte', 1)
             ->orderBy('expertises.created_at', 'asc')->get();
         $domaine = expertise::where('sorte', 2)
@@ -91,9 +94,9 @@ class InfoController extends Controller
 
     public function publication()
     {
-        $avocat = avocat::all();
-        $categorie = categorie::with('publication')->get();
-        $accueil = accueil::first();
+        $avocat      = avocat::all();
+        $categorie   = categorie::with('publication')->get();
+        $accueil     = accueil::first();
         $publication = publication::with(['avocat', 'categorie'])->simplePaginate();
         // $type=type::all();
         $secteur = expertise::where('sorte', 1)
@@ -104,7 +107,7 @@ class InfoController extends Controller
     }
     public function presence()
     {
-        $accueil = accueil::first();
+        $accueil  = accueil::first();
         $presence = bureau::all();
         // $type=type::all();
         $secteur = expertise::where('sorte', 1)
@@ -115,8 +118,10 @@ class InfoController extends Controller
     }
     public function show_pub()
     {
-        $pub = publication::with(['avocat', 'categorie'])->findOrFail($_GET['id']);
+        $pub     = publication::with(['avocat', 'categorie'])->findOrFail($_GET['id']);
         $accueil = accueil::first();
+        $pub->vzt()->increment();
+        $pub->vzt()->count();
         // $type=type::all();
         $publication = publication::simplePaginate(2);
         $publication->withPath('detailPublication?id=' . $_GET['id']);
@@ -128,25 +133,13 @@ class InfoController extends Controller
     }
     public function show_team($id)
     {
-
-        // Chemin du fichier Word à prévisualiser
-        // $filePath = public_path('video/BIOGRAPHIE_Antoine.docx');
-
-        // // Créer un objet PhpWord
-        // $phpWord = IOFactory::load($filePath);
-        // // Chemin où enregistrer le fichier HTML
-        // $htmlFilePath =  public_path('video/vd/test.html');
-
-        // // Enregistrer le contenu du fichier Word en HTML
-        // $phpWord->save($htmlFilePath, 'HTML');
-        // //dd($htmlFilePath);
-        // $content = "video/vd/test.html";
-
-
         $avocat = avocat::with('publication')->findOrFail($id);
 
-        $bureau = avocat::with('bureau')->findOrFail($id);
+        $bureau  = avocat::with('bureau')->findOrFail($id);
         $avocats = avocat::all();
+
+        $bureau->vzt()->increment();
+        $bureau->vzt()->count();
         // dd($bureau);
         $accueil = accueil::first();
         // $type=type::all();
@@ -159,10 +152,10 @@ class InfoController extends Controller
     public function show_secteur($id)
     {
         $allExpertise = expertise::find($id);
-        $expertise = expertise::orderBy('expertises.created_at', 'asc')->get();
+        $expertise    = expertise::orderBy('expertises.created_at', 'asc')->get();
         // dd($allExpertise);
         $accueil = accueil::first();
-        $avant = expertise::where('id', '<', $allExpertise->id)
+        $avant   = expertise::where('id', '<', $allExpertise->id)
             ->orderBy('id', 'desc')
             ->first();
 
@@ -203,7 +196,7 @@ class InfoController extends Controller
         if ($emailExiste) {
             return response()->json([
                 'reponse' => false,
-                'msg' => 'Cette adresse est déjà enregistrée!',
+                'msg'     => 'Cette adresse est déjà enregistrée!',
             ]);
         } else {
             info::create([
@@ -211,7 +204,7 @@ class InfoController extends Controller
             ]);
             return response()->json([
                 'reponse' => true,
-                'msg' => 'Votre enregistrement est fait avec succès!',
+                'msg'     => 'Votre enregistrement est fait avec succès!',
             ]);
         }
     }
@@ -231,7 +224,7 @@ class InfoController extends Controller
         $accueil = accueil::first();
         // $publication=publication::with(['avocat','categorie'])->where('categorie_id',$id)->simplePaginate();
         $fonction = fonction::with('avocat')->get();
-        $bureau = bureau::all();
+        $bureau   = bureau::all();
         //$publication->withPath('publication?id='.$_GET['id']);
         $secteur = expertise::where('sorte', 1)
             ->orderBy('expertises.created_at', 'asc')->get();
@@ -254,7 +247,7 @@ class InfoController extends Controller
         $accueil = accueil::first();
         // $publication=publication::with(['avocat','categorie'])->where('categorie_id',$id)->simplePaginate();
         $fonction = fonction::with('avocat')->get();
-        $bureau = bureau::all();
+        $bureau   = bureau::all();
         //$publication->withPath('publication?id='.$_GET['id']);
         $secteur = expertise::where('sorte', 1)
             ->orderBy('expertises.created_at', 'asc')->get();
@@ -297,12 +290,12 @@ class InfoController extends Controller
         if ($info) {
             return response()->json([
                 'reponse' => true,
-                'msg' => 'Element supprimer avec succès.',
+                'msg'     => 'Element supprimer avec succès.',
             ]);
         } else {
             return response()->json([
                 'reponse' => false,
-                'msg' => 'Erreur de suppression',
+                'msg'     => 'Erreur de suppression',
             ]);
         }
     }

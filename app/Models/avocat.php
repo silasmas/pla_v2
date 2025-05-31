@@ -32,4 +32,12 @@ class avocat extends Model
     {
         return $this->belongsTo(fonction::class);
     }
+     public function visits()
+    {
+        return visits($this)->relation();
+    }
+    public function vzt()
+    {
+        return visits($this);
+    }
 }
