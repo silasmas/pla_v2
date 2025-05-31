@@ -12,7 +12,7 @@
             <div class="order-2 text-center col-lg-6 col-md-12 col-sm-12 col-12 order-lg-1 text-lg-left">
                 <div class="about_wrapper position-relative" data-aos="zoom-in">
                     <figure class="mb-0 about-image">
-                        <img src="{{ asset('assets/images/about2-image.jpg') }}" alt="image" class="img-fluid">
+                        <img src="{{ asset('/assets/images/img/02.png') }}" alt="image" class="img-fluid">
                     </figure>
                     <figure class="mb-0 about-circle">
                         <img src="{{ asset('assets/images/aboutpage-circle.png') }}" alt="image" class="img-fluid">
