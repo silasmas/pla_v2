@@ -37,7 +37,7 @@
                     </ul>
                     <div class="last_list">
                         <figure class="nav-phoneicon mb-0"><img class="img-fluid"
-                                src="./assets/images/nav-phoneicon.png" alt="image"></figure>
+                                src="{{ asset('assets/images/nav-phoneicon.png') }}" alt="image"></figure>
                         <a class="text-decoration-none last_list_atag" href="tel:+243824233125">+243 82 423 3125</a>
                     </div>
                     <div class="dropdown drop-langue">

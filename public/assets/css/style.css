@@ -1172,7 +1172,8 @@ h6:before{
 
 .article-con {
     padding: 154px 0 226px;
-    background: var(--e-global-color-light-grayish-orange);
+    background: #e8dfdf;
+    /* background: var(--e-global-color-light-grayish-orange); */
 }
 .article-con .article_content {
     margin-bottom: 53px;
@@ -2304,7 +2305,8 @@ h6:before{
 
 .practice-con {
     padding: 144px 0 118px;
-    background: var(--e-global-color-light-grayish-orange);
+    background: #e8dfdf;
+    /* background: var(--e-global-color-light-grayish-orange); */
 }
 .practice-con .practice_content {
     margin-bottom: 55px;

@@ -15,7 +15,7 @@
                         </div>
                         <div class="ml-2 info-name-team ml-lg-3">
                             <div class="mb-1 d-flex align-items-center">
-                                <h4 class="mb-0">{{ $t->nom." ".$t->prenom}}</h4>
+                                <h4 class="mb-0">{{ $t->nom . ' ' . $t->prenom }}</h4>
                             </div>
                             <p class="mb-0">{{ $t->fonction->fonction }}</p>
                             @forelse ($t->bureau as $b)
@@ -30,12 +30,11 @@
                             @empty
                             @endforelse
                             <br>
-                            @if($t->pdfbio)
-                            <a href="#" class="link" onclick="downloadCV(this)"
-                                data-file="{{ asset('storage/' . $t->pdfbio) }}">
-                                Télécharger CV
-                            </a>
-
+                            @if ($t->pdfbio)
+                                <a href="#" class="link" onclick="downloadCV(this)"
+                                    data-file="{{ asset('storage/' . $t->pdfbio) }}">
+                                    Télécharger CV
+                                </a>
                             @endif
                         </div>
                     </div>
@@ -48,22 +47,14 @@
                     <div class="block-articles">
                         <h6 class="mb-lg-3">Publications</h6>
                         <div class="row">
-                            @forelse ($t->publication as $p)
-                                <div class="col-lg-4">
-                                    <div class="card card-article">
-                                        <div class="date">
-                                            12 Déc, 2024
-                                        </div>
-                                        <div class="my-2 title-article">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus,
-                                            dolores?
-                                        </div>
-                                        <a href="#" class="link">Savoir plus</a>
-                                    </div>
-                                </div>
-                            @empty
-                            @endforelse
-
+                            <div class="col-12">
+                                @if ($t->publication->count() > 0)
+                                   {{  $t->publication->count().' Article(s) publié(s)' }}
+                                   <a href="">@lang('info.apropo.accueilBtn')</a>
+                                @else
+                                    {{ 'Aucune publication disponible.' }}
+                                @endif
+                            </div>
                         </div>
                     </div>
                 </div>
