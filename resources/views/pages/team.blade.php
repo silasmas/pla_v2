@@ -5,6 +5,7 @@
         .btn-filter.active {
             background-color: #D01F19;
             color: white;
+            box-shadow: 0 0 5px rgba(255, 0, 0, 0.4);
         }
 
         .team-box {
