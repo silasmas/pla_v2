@@ -1,6 +1,17 @@
 <?php
 
 return [
+    'site'=>[
+        'title' => 'PLA Law Firm',
+        'description' => 'Cabinet d\'avocats basé en République Démocratique du Congo, offrant ses services dans tous les domaines du droit des affaires en Afrique francophone.',
+         'author' => 'PLA Law Firm',
+        'url' => 'https://www.plalawfirm.com',
+        'image' => 'https://www.plalawfirm.com/images/logo.png',
+        'keywords' => 'cabinet d\'avocats, droit des affaires, RDC, expertise juridique, avocats internationaux',
+
+
+    ],
+
     'titrepage' => [
         'home' => 'Accueil',
         'about' => 'Apropo',
@@ -16,7 +27,7 @@ return [
 
     ],
     'bureau' => [
-        'filtre' => 'Bureau',
+        'filtre' => 'Bureau de',
         'menu' => 'Nos bureaux',
         'avocat' => 'Equipe',
         'Presentation' => 'Presentation'
@@ -152,7 +163,15 @@ return [
         'tNewsletter' => 'Abonnement',
         'txtNewsletter' => 'Abonnez-vous à notre newsletter',
         'btnNewsletter' => 'S\'abonner',
-        'placeholderNewsletter' => 'Votre adresse e-mail'
+        'placeholderNewsletter' => 'Votre adresse e-mail',
+
+        "msgException"=>"Impossible de contacter le serveur. Vérifiez votre connexion",
+        "msgErr"=>"Une erreur est survenue. Veuillez réessayer ultérieurement.",
+        "msgSuccess"=>"Merci ! Votre inscription a bien été prise en compte.",
+        "msgEncour"=>"Envoi en cours…",
+        "msgErrEmail"=>"Veuillez renseigner votre adresse e-mail.",
+        "msgErrEmail2"=>"Vous êtes déjà enregistrer.",
+        "msgErrFormatEmail"=>"Format d’adresse e-mail invalide.",
     ],
     /*
   team

@@ -32,7 +32,7 @@
                         </p>
                         <div class="box">
                             <a href="{{ route('home') }}" class="text-decoration-none">
-                                <span class="mb-0">@lang('info.m3') </span>
+                                <span class="mb-0">@lang('info.m1') </span>
                             </a>
                             <i class="arrow fa-solid fa-arrow-right"></i>
                             <span class="mb-0 box_span">@lang('info.m3') </span>
@@ -49,16 +49,16 @@
                         </p>
                         <div class="box">
                             <a href="index.html" class="text-decoration-none">
-                                <span class="mb-0">Home</span>
+                                <span class="mb-0">@lang('info.m1')</span>
                             </a>
                             <i class="arrow fa-solid fa-arrow-right"></i>
-                            <span class="mb-0 box_span">About</span>
+                            <span class="mb-0 box_span">@lang('info.m4')</span>
                         </div>
                     </div>
                         @break
                     @case("presence")
                     <div class="sub_banner_content" data-aos="fade-up">
-                        <h1 class="text-white">@lang('info.m5')</h1>
+                        <h1 class="text-white">@lang('info.m6')</h1>
                         <p class="col-xl-7 col-lg-9 mx-auto text-white text-size-16">
                             Dolor in reprehenderit in voluptate velit esse cillumdolore eu
                             fugiat nulla pariatur sint occaecat
@@ -66,10 +66,10 @@
                         </p>
                         <div class="box">
                             <a href="index.html" class="text-decoration-none">
-                                <span class="mb-0">Home</span>
+                                <span class="mb-0">@lang('info.m1')</span>
                             </a>
                             <i class="arrow fa-solid fa-arrow-right"></i>
-                            <span class="mb-0 box_span">About</span>
+                            <span class="mb-0 box_span">@lang('info.m6')</span>
                         </div>
                     </div>
                         @break
@@ -83,10 +83,10 @@
                         </p>
                         <div class="box">
                             <a href="index.html" class="text-decoration-none">
-                                <span class="mb-0">Home</span>
+                                <span class="mb-0">@lang('info.m1')</span>
                             </a>
                             <i class="arrow fa-solid fa-arrow-right"></i>
-                            <span class="mb-0 box_span">About</span>
+                            <span class="mb-0 box_span">@lang('info.m5')</span>
                         </div>
                     </div>
                         @break

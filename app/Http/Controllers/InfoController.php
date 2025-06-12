@@ -82,8 +82,8 @@ class InfoController extends Controller
         })->all();
         //  dd($avocat);
         //$avocat=$av->unique('finction_id');
-        $fonction = fonction::with('avocat')->orderBy('position')->get();
-        // dd($fonction->unique());
+        $fonction = fonction::with('avocat')->orderBy('position','ASC')->get();
+        //  dd($fonction->unique());
         $bureau  = bureau::all();
         $secteur = expertise::where('sorte', 1)
             ->orderBy('expertises.created_at', 'asc')->get();
@@ -118,18 +118,19 @@ class InfoController extends Controller
     }
     public function show_pub()
     {
-        $pub     = publication::with(['avocat', 'categorie'])->findOrFail($_GET['id']);
+        // $pub     = publication::with(['avocat', 'categorie'])->findOrFail($_GET['id']);
         $accueil = accueil::first();
-        $pub->vzt()->increment();
-        $pub->vzt()->count();
-        // $type=type::all();
-        $publication = publication::simplePaginate(2);
-        $publication->withPath('detailPublication?id=' . $_GET['id']);
-        $secteur = expertise::where('sorte', 1)
-            ->orderBy('expertises.created_at', 'asc')->get();
-        $domaine = expertise::where('sorte', 2)
-            ->orderBy('expertises.created_at', 'asc')->get();
-        return view('pages.detail_publication', compact('pub', 'publication', 'accueil', 'secteur', 'domaine'));
+        // $pub->vzt()->increment();
+        // $pub->vzt()->count();
+        // // $type=type::all();
+        // $publication = publication::simplePaginate(2);
+        // $publication->withPath('detailPublication?id=' . $_GET['id']);
+        // $secteur = expertise::where('sorte', 1)
+        //     ->orderBy('expertises.created_at', 'asc')->get();
+        // $domaine = expertise::where('sorte', 2)
+        //     ->orderBy('expertises.created_at', 'asc')->get();
+        return view('pages.detailPublication', compact( 'accueil'));
+        // return view('pages.detail_publication', compact('pub', 'publication', 'accueil', 'secteur', 'domaine'));
     }
     public function show_team($id)
     {

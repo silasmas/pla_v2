@@ -38,7 +38,7 @@ class ViewServiceProvider extends ServiceProvider
             $settings = DB::table('general_settings')->first();
             $accueil = accueil::first();
             $teams = avocat::with("publication", "bureau", "fonction")->orderBy('niveau')->where('visible', 1)->get();
-            $fonctions = fonction::orderByDesc('fonction')->get();
+            $fonctions = fonction::orderBy('position','ASC')->get();
              $bureaux = bureau::all();
             // $posts = Post::get();
     //    dd($bureaux);

@@ -549,7 +549,7 @@ a.item-link {
 }
 
 .blogpage-section .blog-box .lower-portion a:hover h5 {
-	color: var(--e-global-color-very-soft-orange);
+	color:#D01F19;
 }
 
 .blogpage-section .blog-box .button-portion {
@@ -574,7 +574,7 @@ a.item-link {
 
 .blogpage-section .blog-box .button-portion .calendar-ml {
 	font-size: 18px;
-	color: var(--e-global-color-accent);
+	color: #D01F19;
 	margin-right: 5px;
 	margin-bottom: 28px;
 }
@@ -585,7 +585,7 @@ a.item-link {
     font-weight: 400;
     /* font-family: "Jost", sans-serif; */
     color: var(--e-global-color-white);
-    background: var(--e-global-color-accent);
+    background: #D01F19;
     padding: 11px 18px 13px;
 	text-align: center;
 	display: inline-block;
@@ -602,8 +602,8 @@ a.item-link {
 }
 
 .blogpage-section .blog-box .button-portion .read_more:hover {
-	color: var(--e-global-color-primary);
-	background: var(--e-global-color-secondary);
+	color: #fff;
+	background: #000;
 	/* border-color: var(--e-global-color-secondary); */
 }
 
@@ -1877,7 +1877,7 @@ a.item-link {
 	border-radius: 15px;
 }
 
-.blogpage-section .blog-box .lower-portion, 
+.blogpage-section .blog-box .lower-portion,
 .blogpage-section .blog-box .button-portion {
 	background-color: #fff;
 }
@@ -2492,7 +2492,7 @@ a.item-link {
 	}
 	.sidebar {
 		padding: 12px;
-	}	
+	}
 	.blog-section .generic-title {
 		margin-bottom: 40px;
 	}
@@ -2639,7 +2639,7 @@ a.item-link {
 }
 
 @media screen and (max-width: 991px) {
-	
+
 	.text-size-14 {
 		font-size: 12px;
 		line-height: 20px;
@@ -3063,11 +3063,11 @@ a.item-link {
 		height: 230px;
 	}
 
-	
+
 	.blogpage-section .threecolumn-blog .date{
 		margin-bottom: 0;
 	}
-	
+
 	.blogpage-section .blog-box.threecolumn-blog .button-portion {
 		padding: 12px 20px;
 	}
@@ -3198,7 +3198,7 @@ a.item-link {
 		margin-bottom: 18px;
 	} */
 
-	.singleblog-section .main-box .content1 p { 
+	.singleblog-section .main-box .content1 p {
 		font-size: 14px;
 		line-height: 20px;
 		margin-bottom: 20px;
@@ -3323,7 +3323,7 @@ a.item-link {
 	.singleblog-section .box1 h4 {
 		margin-bottom: 28px;
 	}
-	
+
 	/* .singleblog-section .box1 h4:after {
 		width: 88%;
 		height: 32px;
@@ -3403,7 +3403,7 @@ a.item-link {
 	.blog-posts .twocolumn-blog .lower-portion .text-mr {
 		margin-right: 40px;
 	}
-	
+
 	.blogpage-section .twocolumn-blog .lower-portion p {
 		font-size: 14px;
 		line-height: 22px;
@@ -3737,7 +3737,7 @@ a.item-link {
 	.singleblog-section .box4 ul {
 		padding: 0;
 	}
-/* 
+/*
 	.singleblog-section .box5 .feed:after {
 		width: 84%;
 	} */

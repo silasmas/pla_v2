@@ -38,7 +38,7 @@ class FonctionResource extends Resource
                             ->label("Titre (EN)")
                             ->required()
                             ->columnSpan(4),
-                        TextInput::make('Position')
+                        TextInput::make('position')
                             ->label("L'ordre de l'hiyerarchie")
                             ->required()
                             ->numeric()

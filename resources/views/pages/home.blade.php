@@ -109,7 +109,7 @@
                             rerum hic tenetur a sapiente delectus maiores alias soluta nobis
                             est eligendi optio cumque nihil imeit minus id quod maxime placeat facere possimus,.
                         </p>
-                        <a href="./contact.html" class="text-decoration-none appointment">Book Appointment<i
+                        <a href="#"  id="book-appointment-btn" class="text-decoration-none appointment">Book Appointment<i
                                 class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>

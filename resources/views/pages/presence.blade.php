@@ -33,39 +33,11 @@
             @empty
 
             @endforelse
-            {{-- <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="portfolio-box">
-                    <div class="image position-relative">
-                        <figure class="mb-0">
-                            <img src="{{ asset('assets/images/img/b2.webp') }}" alt="image" class="img-fluid">
-                        </figure>
-                        <span class="text-white">République du congo</span>
-                    </div>
-                    <div class="box-content">
-                        <a href="./case-studies.html" class="text-decoration-none"><h5> Brazza Centre/Poto Poto</h5></a>
-                        <p class="text-size-14">Nolor in reprehenderit in velit esse cillum maiores alias...</p>
-                        <a href="./case-studies.html" class="text-decoration-none"><i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="portfolio-box">
-                    <div class="image position-relative">
-                        <figure class="mb-0">
-                            <img src="{{ asset('assets/images/img/b3.webp') }}" alt="image" class="img-fluid">
-                        </figure>
-                        <span class="text-white">Afrique du sud</span>
-                    </div>
-                    <div class="box-content">
-                        <a href="./case-studies.html" class="text-decoration-none"><h5>Business & Family</h5></a>
-                        <p class="text-size-14">Golor in reprehenderit in velit esse cillum maiores alias...</p>
-                        <a href="./case-studies.html" class="text-decoration-none"><i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div> --}}
+
 
         </div>
     </div>
 </section>
 @include("parties.modalDetailOfficec")
+ @include("parties.modalDetailTeam")
 @endsection

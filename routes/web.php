@@ -1,10 +1,12 @@
 <?php
 
+use App\Models\Newsletter;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InfoController;
 use App\Http\Controllers\AvocatController;
 use App\Http\Controllers\BureauController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\PublicationController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -31,7 +33,7 @@ Route::group(
         Route::get('publication', [InfoController::class, 'publication'])->name('publication');
         Route::get('presence', [InfoController::class, 'presence'])->name('presence');
 
-        Route::get('detailPublication', [InfoController::class, 'show_pub'])->name('detailPublication');
+        Route::get('detailPublication/{id}', [InfoController::class, 'show_pub'])->name('detailPublication');
         Route::get('detailTeam/{id}', [InfoController::class, 'show_team'])->name('detailTeam');
         Route::get('teamByCat/{id}', [InfoController::class, 'show'])->name('teamByCat');
         Route::get('teamByBureau/{id}', [InfoController::class, 'teamByBureau'])->name('teamByBureau');
@@ -44,6 +46,6 @@ Route::group(
         Route::get('downloadCvPub', [PublicationController::class, 'downloadCvPub'])->name('downloadCvPub');
 
         //newsletter
-        Route::post('add.newsletter', [InfoController::class, 'store'])->name('add.newsletter');
+        Route::post('add.newsletter', [NewsletterController::class, 'subscribe'])->name('add.newsletter');
     }
 );

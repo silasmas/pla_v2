@@ -8,16 +8,18 @@
                         <div class="col-12">
                             <div class="upper_portion" data-aos="fade-up">
                                 <div class="heading">
-                                    <h6 class="text-white">@lang("info.footer.tNewsletter")</h6>
+                                    <h6 class="text-white">@lang('info.footer.tNewsletter')</h6>
                                     <h3 class="text-white mb-0" style="font-size: 20px;"><span
-                                            class="span_borderbootom">@lang("info.footer.txtNewsletter")</span></h3>
+                                            class="span_borderbootom">@lang('info.footer.txtNewsletter')</span></h3>
                                 </div>
-                                <form action="javascript:;">
+                                <form action="#" id="newsletter-form">
                                     <div class="form-group position-relative mb-0">
-                                        <input type="text" class="form_style" placeholder="@lang("info.footer.placeholderNewsletter")"
-                                            name="email">
-                                        <button>@lang("info.footer.btnNewsletter")<i class="fa-solid fa-arrow-right"></i></button>
+                                        <input type="text" class="form_style" placeholder="@lang('info.footer.placeholderNewsletter')"
+                                            name="email" id="newsletter-email" required>
+                                        <button id="newsletter-button">@lang('info.footer.btnNewsletter')<i class="fa-solid fa-arrow-right"></i></button>
                                     </div>
+                                    {{-- Zone pour afficher les messages d’erreur / succès --}}
+                                    <div id="newsletter-feedback" style="margin-top:0.5rem; font-size:0.9rem;"></div>
                                 </form>
                             </div>
                         </div>
@@ -34,16 +36,16 @@
                                     alt="image"></figure>
                         </a>
                         <p class="text-size-14">
-                            {!! $accueil->txtfooter??"" !!}
+                            {!! $accueil->txtfooter ?? '' !!}
                         </p>
                         <ul class="list-unstyled mb-0 social-icons">
-                            <li {{ $accueil->facebook??"hidden" }}><a href="{{ $accueil->facebook??"" }}"
+                            <li {{ $accueil->facebook ?? 'hidden' }}><a href="{{ $accueil->facebook ?? '' }}"
                                     class="text-decoration-none"><i
                                         class="fa-brands fa-facebook-f social-networks"></i></a></li>
-                            <li {{ $accueil->tweeter??"hidden" }}><a href="{{ $accueil->tweeter??" hidden" }}"
+                            <li {{ $accueil->tweeter ?? 'hidden' }}><a href="{{ $accueil->tweeter ?? ' hidden' }}"
                                     class="text-decoration-none"><i
                                         class="fa-brands fa-x-twitter social-networks"></i></a></li>
-                            <li {{ $accueil->tweeter??"hidden" }}><a href="{{ $accueil->tweeter??" hidden" }}"
+                            <li {{ $accueil->tweeter ?? 'hidden' }}><a href="{{ $accueil->tweeter ?? ' hidden' }}"
                                     class="text-decoration-none"><i
                                         class="fa-brands fa-linkedin social-networks"></i></a></li>
                         </ul>
@@ -51,7 +53,7 @@
                 </div>
                 <div class="col-xl-3 col-lg-2 col-md-4 col-sm-4 col-6">
                     <div class="links">
-                        <h4 class="heading">@lang("info.footer.titreMenuRaccourci")</h4>
+                        <h4 class="heading">@lang('info.footer.titreMenuRaccourci')</h4>
                         <ul class="list-unstyled mb-0">
                             <li><i class="fa-solid fa-arrow-right"></i><a href=""
                                     class=" text-size-14 text text-decoration-none">@lang('info.m1')</a></li>
@@ -70,12 +72,12 @@
                 </div>
                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6">
                     <div class="timing">
-                        <h4 class="heading">@lang("info.footer.titretemp") </h4>
+                        <h4 class="heading">@lang('info.footer.titretemp') </h4>
                         <ul class="list-unstyled mb-0">
                             <li>
-                                <p>@lang("info.footer.lundi") – @lang("info.footer.vendredi") </p>
+                                <p>@lang('info.footer.lundi') – @lang('info.footer.vendredi') </p>
                             </li>
-                            <li><span>@lang("info.footer.temps") </span></li>
+                            <li><span>@lang('info.footer.temps') </span></li>
                         </ul>
                     </div>
                 </div>
@@ -85,13 +87,13 @@
                         <ul class="list-unstyled mb-0">
                             <li class="text">
                                 <i class="fa-solid fa-phone"></i>
-                                <a href="tel:{{ $accueil->telphone??"" }}" class="text-decoration-none">{{
-                                    $accueil->telphone??"" }}</a>
+                                <a href="tel:{{ $accueil->telphone ?? '' }}"
+                                    class="text-decoration-none">{{ $accueil->telphone ?? '' }}</a>
                             </li>
                             <li class="text">
                                 <i class="fa-solid fa-envelope"></i>
-                                <a href="mailto:{{ $accueil->email??"" }}" class="text-decoration-none">{{
-                                    $accueil->email??"" }}</a>
+                                <a href="mailto:{{ $accueil->email ?? '' }}"
+                                    class="text-decoration-none">{{ $accueil->email ?? '' }}</a>
                             </li>
                             <li class="text">
                                 <i class="fa-solid fa-location-dot"></i>
@@ -131,8 +133,8 @@
         <img src="{{ asset('assets/images/footer-sideimage.png') }}" alt="image" class="img-fluid">
     </figure>
     <div class="copyright">
-        <p class="mb-0">Copyright © Pathy Liongo & Associates 2024 <small>Designed By <a href="https://www.silasmas.com"
-                    target="_blank">SilasDev</a></small></p>
+        <p class="mb-0">Copyright © Pathy Liongo & Associates 2024 <small>Designed By <a
+                    href="https://www.silasmas.com" target="_blank">SilasDev</a></small></p>
         {{-- <p class="mb-0" style="font-size: 14px;"></p> --}}
 
     </div>
