@@ -11,7 +11,7 @@
                 <div class="main-box">
                     <figure class="image1 mb-3" data-aos="fade-up" data-aos-duration="700">
 
-                        <img src="{{ asset('assets/images/article-image5.jpg') }}" alt="Default Photo"  class="img-fluid">
+                        <img src="{{ asset('assets/images/article-image5.jpg') }}" alt="Default Photo"  class="img-fluid" loading="lazy">
 
                     </figure>
                     <div class="content1" data-aos="fade-up" data-aos-duration="700">

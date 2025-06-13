@@ -16,7 +16,7 @@ return [
         'home' => 'Accueil',
         'about' => 'Apropo',
         'expertise' => 'Expertise',
-        'presence' => 'Presence',
+        'présences' => 'Présences',
         'publication' => 'Publications',
         'team' => 'Equipe',
         'vuepar' => 'Afficher par',
@@ -56,7 +56,7 @@ return [
     'm3' => 'Expertises',
     'm4' => 'Equipe',
     'm5' => 'Publications',
-    'm6' => 'Présence',
+    'm6' => 'Présences',
     'm7' => 'Présentation',
 
     /*
@@ -99,7 +99,7 @@ return [
     'm3' => 'Expertises',
     'm4' => 'Equipe',
     'm5' => 'Publications',
-    'm6' => 'Presence',
+    'm6' => 'Présences',
 
 
     'apropo' => [
@@ -157,9 +157,9 @@ return [
         'titreMenuRaccourci' => 'Raccourci',
         'lundi' => 'Lundi',
         'vendredi' => 'Vendredi',
-        'temps' => 'Heure de travail',
-        'temps' => '12:00 – 14:45',
-        'titretemp' => 'Heure de travail',
+        'temps' => 'Heures de travail',
+        'temps' => '08:00 – 17:00',
+        'titretemp' => 'Heures de travail',
         'tNewsletter' => 'Abonnement',
         'txtNewsletter' => 'Abonnez-vous à notre newsletter',
         'btnNewsletter' => 'S\'abonner',
