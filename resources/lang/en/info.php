@@ -27,6 +27,7 @@ return [
         'filtre'       => 'Office of ',
         'menu'         => 'Our offices',
         'avocat'       => 'Team',
+        'detail' => 'Details',
         'Presentation' => 'Presentation',
 
     ],

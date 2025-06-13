@@ -30,6 +30,7 @@ return [
         'filtre' => 'Bureau de',
         'menu' => 'Nos bureaux',
         'avocat' => 'Equipe',
+        'detail' => 'Détails',
         'Presentation' => 'Presentation'
 
     ],
@@ -56,7 +57,7 @@ return [
     'm3' => 'Expertises',
     'm4' => 'Equipe',
     'm5' => 'Publications',
-    'm6' => 'Présences',
+    'm6' => 'Présence',
     'm7' => 'Présentation',
 
     /*
@@ -99,7 +100,7 @@ return [
     'm3' => 'Expertises',
     'm4' => 'Equipe',
     'm5' => 'Publications',
-    'm6' => 'Présences',
+    'm6' => 'Présence',
 
 
     'apropo' => [

@@ -74,10 +74,10 @@ class BureauResource extends Resource
                             ->label("Adresse physique (EN)")
                             ->columnSpan(6),
                         Textarea::make('detail.fr')
-                            ->label("Pus de detail (FR)")
+                            ->label("Plus de detail (FR)")
                             ->columnSpan(6),
                         Textarea::make('detail.en')
-                            ->label("Pus de detail  (EN)")
+                            ->label("Plus de detail  (EN)")
                             ->columnSpan(6),
                         FileUpload::make('photo')
                             ->label('Image du bureau')

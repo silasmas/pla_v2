@@ -97,7 +97,7 @@
                             </li>
                             <li class="text">
                                 <i class="fa-solid fa-location-dot"></i>
-                                <p class="address mb-0">2380;AV/Goma, C/Gombe,Immeuble 14 Perles Ap 702</p>
+                                <p class="address mb-0">2380, Av. Goma, C/ Gombe, Immeuble 14 Perles, App. 702</p>
                             </li>
                         </ul>
                     </div>

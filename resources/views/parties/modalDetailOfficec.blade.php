@@ -46,7 +46,7 @@
                             <li class="nav-item">
                                 <a class="nav-link active" style="font-size: 14px" id="home-tab" data-toggle="tab"
                                     href="#detail{{ $b->id }}" role="tab" aria-controls="popular"
-                                    aria-selected="true">Details</a>
+                                    aria-selected="true">@lang('info.bureau.detail')</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" style="font-size: 14px" id="profile-tab" data-toggle="tab"
