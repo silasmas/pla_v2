@@ -124,7 +124,7 @@
                     {{-- Filtres par bureau --}}
                     @foreach ($bureaux as $b)
                         <button class="btn btn-filter" data-filter=".bureau-{{ Str::slug($b->ville) }}">
-                            @lang("info.bureau.filtre") {{ $b->ville }}
+                            @lang('info.bureau.filtre') {{ $b->ville }}
                         </button>
                     @endforeach
                 </div>
@@ -133,33 +133,51 @@
                 <div class="row grid" data-aos="fade-up">
                     @foreach ($teams as $t)
                         @php
-                            $fonctionClass = 'fonction-' . Str::slug($t->fonction->fonction);
-                            $bureauxClasses = $t->bureau->map(fn($b) => 'bureau-' . Str::slug($b->ville))->implode(' ');
+
+                            // Génère une classe CSS basée sur la fonction de l'avocat (ex: "fonction-avocat")
+$fonctionClass = 'fonction-' . Str::slug($t->fonction->fonction);
+
+// Génère une ou plusieurs classes CSS basées sur les bureaux (ex: "bureau-kinshasa bureau-lubumbashi")
+$bureauxClasses = $t->bureau->map(fn($b) => 'bureau-' . Str::slug($b->ville))->implode(' ');
+
+// Vérifie si une photo est enregistrée et existe réellement dans le disque 'public'
+$photoExists = $t->photo && Storage::disk('public')->exists($t->photo);
+
+// Choisit l'image à afficher :
+                            // - Si une photo personnelle existe → l'utiliser
+// - Sinon :
+//     - Si c'est un avocat homme → avatar-avocat-homme.png
+                            //     - Si c'est une avocate femme → avatar-avocat-femme.png
+//     - Sinon (non-avocat ou genre non précisé) → avatar générique
+$photoUrl = $photoExists
+    ? asset('storage/' . $t->photo)
+    : match (true) {
+        $t->fonction->fonction != 'Assistant administratif' ||
+            ($t->fonction->fonction != 'Administrative assistant' && $t->sexe === 'H')
+            => asset('assets/images/p2.png'),
+        $t->fonction->fonction != 'Assistant administratif' ||
+            ($t->fonction->fonction != 'Administrative assistant' && $t->sexe === 'F')
+            => asset('assets/images/p3.png'),
+        default => asset('assets/images/p1.png'),
+                                };
                         @endphp
 
                         <div class="col-xl-4 col-lg-4 col-md-6 grid-item {{ $fonctionClass }} {{ $bureauxClasses }}">
                             <div class="team-box">
                                 <a href="#" data-toggle="modal" data-target="#modal-detail-team{{ $t->id }}">
                                     <figure class="lawyer-image image-wrapper">
-                                        <img src="{{ asset('storage/' . $t->photo) }}" alt="{{ $t->nom }}"
-                                            class="img-fluid">
+                                        <img src="{{ $photoUrl }}" alt="{{ $t->nom }}" class="img-fluid">
                                     </figure>
                                     <div class="content">
                                         <h4 class="avocat-name">{{ $t->prenom }} {{ $t->nom }}</h4>
                                         <span class="text-size-14">{{ $t->fonction->fonction }}</span>
-                                        <ul class="mb-0 list-unstyled">
-                                            <li class="icons"><a href="https://facebook.com" target="_blank"><i
-                                                        class="fab fa-facebook-f"></i></a></li>
-                                            <li class="icons"><a href="https://twitter.com" target="_blank"><i
-                                                        class="fab fa-x-twitter"></i></a></li>
-                                            <li class="icons"><a href="https://linkedin.com" target="_blank"><i
-                                                        class="fab fa-linkedin"></i></a></li>
-                                        </ul>
                                     </div>
                                 </a>
                             </div>
                         </div>
                     @endforeach
+
+
                 </div>
 
             </div>
