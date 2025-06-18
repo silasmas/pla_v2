@@ -133,11 +133,40 @@
         </div>
         <div class="row" data-aos="fade-up">
             @forelse ($teams->take(6) as $t)
+               @php
+
+                            // Génère une classe CSS basée sur la fonction de l'avocat (ex: "fonction-avocat")
+$fonctionClass = 'fonction-' . Str::slug($t->fonction->fonction);
+
+// Génère une ou plusieurs classes CSS basées sur les bureaux (ex: "bureau-kinshasa bureau-lubumbashi")
+$bureauxClasses = $t->bureau->map(fn($b) => 'bureau-' . Str::slug($b->ville))->implode(' ');
+
+// Vérifie si une photo est enregistrée et existe réellement dans le disque 'public'
+$photoExists = $t->photo && Storage::disk('public')->exists($t->photo);
+
+// Choisit l'image à afficher :
+                            // - Si une photo personnelle existe → l'utiliser
+// - Sinon :
+//     - Si c'est un avocat homme → avatar-avocat-homme.png
+                            //     - Si c'est une avocate femme → avatar-avocat-femme.png
+//     - Sinon (non-avocat ou genre non précisé) → avatar générique
+$photoUrl = $photoExists
+    ? asset('storage/' . $t->photo)
+    : match (true) {
+        $t->fonction->fonction != 'Assistant administratif' ||
+            ($t->fonction->fonction != 'Administrative assistant' && $t->sexe === 'H')
+            => asset('assets/images/p2.png'),
+        $t->fonction->fonction != 'Assistant administratif' ||
+            ($t->fonction->fonction != 'Administrative assistant' && $t->sexe === 'F')
+            => asset('assets/images/p3.png'),
+        default => asset('assets/images/p1.png'),
+                                };
+                        @endphp
             <div class="col-lg-4 col-md-4 col-sm-4 col-12 mb-5">
                 <div class="lawyer-box">
                     <a href="#" data-toggle="modal" data-target="#modal-detail-team{{$t->id}}">
                         <figure class="lawyer-image image-wrapper">
-                            <img src="{{ asset('storage/'.$t->photo) }}" alt="image" class="img-fluid">
+                            <img src="{{ $photoUrl }}" alt="image" class="img-fluid">
                         </figure>
                         <div class="content">
                             <h4>{{ $t->prenom." - ".$t->nom }}</h4>
