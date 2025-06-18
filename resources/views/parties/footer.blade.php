@@ -72,12 +72,12 @@
                 </div>
                 <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6">
                     <div class="timing">
-                        <h4 class="heading">@lang('info.footer.titretemp') </h4>
+                        <h4 class="heading">@lang('info.footer.temps') </h4>
                         <ul class="list-unstyled mb-0">
                             <li>
                                 <p>@lang('info.footer.lundi') – @lang('info.footer.vendredi') </p>
                             </li>
-                            <li><span>@lang('info.footer.temps') </span></li>
+                            <li><span>@lang('info.footer.heure') </span></li>
                         </ul>
                     </div>
                 </div>
@@ -97,7 +97,8 @@
                             </li>
                             <li class="text">
                                 <i class="fa-solid fa-location-dot"></i>
-                                <p class="address mb-0">2380, Av. Goma, C/ Gombe, Immeuble 14 Perles, App. 702</p>
+                                <p class="address mb-0">@lang("info.site.add1")</p>
+                                <p>@lang("info.site.add2")</p>
                             </li>
                         </ul>
                     </div>

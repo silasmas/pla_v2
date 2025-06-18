@@ -81,7 +81,7 @@
     <section class="team-con position-relative">
         <div class="container">
             <div class="row">
-                <div class="col-12">
+                {{-- <div class="col-12">
                     <div class="text-center team_content" data-aos="fade-up">
                         <h6>Team Members</h6>
                         <h2>Team of Our Expert Lawyers</h2>
@@ -90,7 +90,7 @@
                             sint occaecati cupiditate non provident.
                         </p>
                     </div>
-                </div>
+                </div> --}}
                 {{-- Recherche Live --}}
                 <div class="col-12">
                     <div class="mb-4 text-center">

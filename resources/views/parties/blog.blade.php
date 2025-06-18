@@ -4,10 +4,10 @@
         <div class="row">
             <div class="col-12">
                 <div class="article_content text-center" data-aos="fade-up">
-                    <h6>News & Articles</h6>
-                    <h2>Latest <span class="span_borderbootom">blog</span> posts</h2>
-                    <p class="col-xl-8 col-lg-10 mx-auto text-size-16 mb-0">Kucimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores ruas molestias excepturi
-                        sint occaecati cupiditate non provident.
+                    <h6>@lang("info.autres.tArticle")</h6>
+                    <h2>@lang("info.autres.descArticle") <span class="span_borderbootom">@lang("info.autres.desc2Article")</span></h2>
+                    <p class="col-xl-8 col-lg-10 mx-auto text-size-16 mb-0">
+                        @lang("info.autres.description")
                     </p>
                 </div>
             </div>

@@ -8,8 +8,50 @@ return [
         'url'         => 'https://www.plalawfirm.com',
         'image'       => 'https://www.plalawfirm.com/images/logo.png',
         'keywords'    => 'law firm, business law, DRC, legal expertise, international lawyers',
+        'add1'        => '2380, Goma Avenue',
+        'add2'        => 'Kinshasa/Gombe – 14 Perles Building, Apartment 702',
+        'decouvrir1' => 'Discover',
+        'decouvrir2' => 'More',
     ],
 
+    'banner'=>[
+    'desc_about' => "Learn about our story, values, and commitment to delivering excellent legal services across Africa and beyond.",
+    'desc_expertise' => "Our areas of practice cover a wide range of legal specialties tailored to the needs of individuals, businesses, and institutions.",
+    'desc_team' => "Our firm brings together experienced, passionate lawyers committed to defending your rights with professionalism and dedication.",
+    'desc_presence' => "With a presence in several African countries, we offer strategic, localized, and culturally-aware legal support.",
+    'desc_publication' => "Explore our legal articles, insights, and news updates to better understand current legal issues.",
+    ],
+    'aboutStat'=> [
+    'who_title' => 'WHO WE ARE',
+    'who_heading' => 'Committed to Helping Our Clients Succeed',
+    'who_description' => 'Since our founding, we’ve dedicated our legal expertise to helping businesses, individuals, and institutions achieve justice and lasting results.',
+    'who_bullet_1' => 'Tailored, confidential, and rigorous legal support',
+    'who_bullet_2' => 'A responsive team focused on your challenges',
+    'who_bullet_3' => 'Proven results backed by legal excellence',
+    'stats_partners' => 'Business Partners',
+    'stats_cases' => 'Cases Done',
+    'stats_clients' => 'Happy Clients',
+    'stats_awards' => 'Awards Won',
+    ],
+
+     'slides'=>[
+        's1Titre' => ' We are based in the DRC',
+        's1desc' => 'Notre cabinet est solidement implanté en République Démocratique du Congo. Nous accompagnons les particuliers, entreprises et institutions dans leurs démarches juridiques, avec rigueur et proximité.',
+
+        's2Titre' => 'Our team is highly qualified',
+        's2desc' => 'Our firm includes experienced lawyers with diverse legal expertise. Every case is handled with professionalism, accuracy, and commitment.',
+
+        's3Titre' => 'PLA helps you understand your rights',
+        's3desc' => 'At PLA, we believe every citizen has the right to understand the law. That’s why we provide accessible resources and legal guidance tailored to your needs.',
+
+        's4Titre' => 'We are based in Republic of Congo',
+        's4desc' => 'With a strong presence in the Republic of Congo, we meet local legal needs with efficiency and dedication. Our local presence ensures proximity, responsiveness, and trust.',
+
+        's5Titre' => ' We are based in South Africa',
+        's5desc' => 'Our presence in South Africa allows us to serve regional legal needs with professionalism, cultural awareness, and a client-focused approach.',
+
+
+    ],
     'titrepage'        => [
         'home'         => 'Home',
         'about'        => 'About Us',
@@ -22,12 +64,15 @@ return [
         'vueparCat'    => 'Category',
         'adresse'      => 'Address',
         'videInfo'     => 'The content of this page will be available soon',
+        'tRdv'         => 'Defending Your Rights with Integrity and Determination',
+        'descRdv'      => 'Our team stands by your side, ensuring your voice is heard and your rights are protected.',
+        'btnRdv'       => 'Get Legal Help',
     ],
     'bureau'           => [
         'filtre'       => 'Office of ',
         'menu'         => 'Our offices',
         'avocat'       => 'Team',
-        'detail' => 'Details',
+        'detail'       => 'Details',
         'Presentation' => 'Presentation',
 
     ],
@@ -39,6 +84,10 @@ return [
         'categorie'    => 'Categorys ',
         'lirePlus'     => 'Read more',
         'teamViewmore' => 'More Lawyers',
+        'tArticle'     => 'OUR LATEST ARTICLES',
+        'descArticle'  => 'Our Latest Legal ',
+        'desc2Article' => 'Articles',
+        'description'  => 'Our latest articles help you understand your rights and navigate the law with confidence.',
 
     ],
     /*
@@ -56,16 +105,19 @@ return [
     sous menu
     */
     'expertise'        => [
-        's1'  => 'Mines & Hydrocarbon',
-        's2'  => 'Banking, Finance & Insurance',
-        's3'  => 'Electricity',
-        's4'  => 'Telecommunications, NICT and Digital economy',
-        's5'  => 'Transport and Communication Routes',
-        's6'  => 'Land and Real Estate',
-        's7'  => 'Agriculture and Forestry',
-        's8'  => 'Sports Betting',
-        's9'  => 'Family and Personal Patrimony',
-        's10' => 'NGOs and Development',
+        'titre'       => 'Our Legal Practice ares',
+        'description' => 'Our firm provides tailored legal solutions with commitment, integrity, and professionalism',
+
+        's1'          => 'Mines & Hydrocarbon',
+        's2'          => 'Banking, Finance & Insurance',
+        's3'          => 'Electricity',
+        's4'          => 'Telecommunications, NICT and Digital economy',
+        's5'          => 'Transport and Communication Routes',
+        's6'          => 'Land and Real Estate',
+        's7'          => 'Agriculture and Forestry',
+        's8'          => 'Sports Betting',
+        's9'          => 'Family and Personal Patrimony',
+        's10'         => 'NGOs and Development',
     ],
 
     'contenuExpertise' => [
@@ -194,7 +246,8 @@ To this end, we assist and advise our clients in this sector in particular in :
         'titreMenuRaccourci'    => 'Useful Links',
         'lundi'                 => 'Monday',
         'vendredi'              => 'Friday',
-        'temps'                 => '12:00 – 14:45',
+        'temps'                 => 'Hours of work',
+        'heure'                 => '08:00AM – 05:00PM',
         'tNewsletter'           => 'Subscription',
         'txtNewsletter'         => 'Subscribe to our newsletter',
         'btnNewsletter'         => 'Subscribe',
@@ -215,6 +268,9 @@ To this end, we assist and advise our clients in this sector in particular in :
 
     'team'             => [
         'titre'       => 'Our Team',
+        'desc1'       => 'Our team of dedicated and ',
+        'desc2'       => 'experienced lawyers',
+        'description' => 'Our lawyers bring together diverse legal expertise to deliver the best results for your case.',
         'entete'      => 'Our Firm',
         'bio'         => 'Biography',
         't1'          => 'lawyer',
@@ -231,18 +287,20 @@ To this end, we assist and advise our clients in this sector in particular in :
     */
 
     'expertises'       => [
-        'detail'  => 'Details',
-        'menu'    => 'Industry',
-        'mine'    => 'Mines & Hydrocarbon',
-        'banque'  => 'Banking, Finance & Insurance',
-        'elec'    => 'Electricity',
-        'tel'     => 'Telecommunications, NICT and Digital economy',
-        'trans'   => 'Transport and Communication Routes',
-        'foncier' => 'Land and Real Estate',
-        'agri'    => 'Agriculture and Forestry',
-        'pari'    => 'Sports Betting',
-        'fam'     => 'Family and Personal Patrimony',
-        'ong'     => 'NGOs and Development',
+        'titre'       => 'Our Legal Practice Fields',
+        'description' => 'Our firm provides tailored legal solutions with commitment, integrity, and professionalism.',
+        'detail'      => 'Details',
+        'menu'        => 'Industry',
+        'mine'        => 'Mines & Hydrocarbon',
+        'banque'      => 'Banking, Finance & Insurance',
+        'elec'        => 'Electricity',
+        'tel'         => 'Telecommunications, NICT and Digital economy',
+        'trans'       => 'Transport and Communication Routes',
+        'foncier'     => 'Land and Real Estate',
+        'agri'        => 'Agriculture and Forestry',
+        'pari'        => 'Sports Betting',
+        'fam'         => 'Family and Personal Patrimony',
+        'ong'         => 'NGOs and Development',
     ],
     'detailExpertises' => [
         'minep1'    => 'Due to its vast natural resources, Africa is today an important destination for the mining and hydrocarbon industry. For many African countries, the exploration and production of these resources is an important part of their economies and remains the key to their economic growth.',

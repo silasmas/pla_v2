@@ -5,13 +5,13 @@
 <section class="portfolio-con">
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            {{-- <div class="col-12">
                 <div class="portfolio_content text-center" data-aos="fade-up">
                     <h6>Notre presence</h6>
                     <h2>Nos différents bureaux dans le monde</h2>
                     <p class="col-xl-8 col-lg-10 mx-auto text-size-16 mb-0">Auit zaser aut odit aut fugit sen quia conseauntur magni eos rui ratione voluptatem serui magni dolor eos rui ratione voluptatem.</p>
                 </div>
-            </div>
+            </div> --}}
         </div>
         <div class="row" data-aos="fade-up">
             @forelse ($presence as $b)

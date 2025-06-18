@@ -59,31 +59,32 @@
 
 <!-- Succeed -->
 <section class="succeed-con position-relative">
-
     <div class="container">
         <div class="row">
+            <!-- Texte principal -->
             <div class="col-lg-6 col-md-12 col-sm-12 col-12">
                 <div class="succeed_content" data-aos="fade-up">
-                    <h6>Who We Are</h6>
-                    <h2>Committed to Helping Our Clients Succeed</h2>
-                    <p class="text text-size-16">Nucimus qui blanditiis praesentium voluptatum deleniti atrue corrupti
-                        ruos dolores ruas molestias occaecati.</p>
+                    <h6>@lang('info.aboutStat.who_title')</h6>
+                    <h2>@lang('info.aboutStat.who_heading')</h2>
+                    <p class="text text-size-16">@lang('info.aboutStat.who_description')</p>
                     <ul class="mb-0 list-unstyled">
                         <li>
                             <i class="fa fa-check" aria-hidden="true"></i>
-                            <p class="mb-0 text-size-16">Nxcepteur sint occaecat cupidatat noru even.</p>
+                            <p class="mb-0 text-size-16">@lang('info.aboutStat.who_bullet_1')</p>
                         </li>
                         <li>
                             <i class="fa fa-check" aria-hidden="true"></i>
-                            <p class="mb-0 text-size-16">Guis aute irure dolor in reprehenderit in voluta facis.</p>
+                            <p class="mb-0 text-size-16">@lang('info.aboutStat.who_bullet_2')</p>
                         </li>
                         <li>
                             <i class="fa fa-check" aria-hidden="true"></i>
-                            <p class="mb-0 text-size-16">Kerum hic tenetur a sapiente delectus au occae.</p>
+                            <p class="mb-0 text-size-16">@lang('info.aboutStat.who_bullet_3')</p>
                         </li>
                     </ul>
                 </div>
             </div>
+
+            <!-- Statistiques -->
             <div class="col-lg-6 col-md-12 col-sm-12 col-12">
                 <div class="succeed_wrapper" data-aos="zoom-in">
                     <div class="row">
@@ -95,18 +96,18 @@
                                     </figure>
                                     <span class="number counter">250</span>
                                     <sup class="plus">+</sup>
-                                    <span class="text">Business Partners</span>
+                                    <span class="text">@lang('info.aboutStat.stats_partners')</span>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                             <div class="succeed-box">
                                 <figure class="icon">
-                                    <img src="{{ asset('assets/images/succeed-icon2.png') }} " alt="image" class="img-fluid">
+                                    <img src="{{ asset('assets/images/succeed-icon2.png') }}" alt="image" class="img-fluid">
                                 </figure>
                                 <span class="number counter">180</span>
                                 <sup class="plus">+</sup>
-                                <span class="text">Cases Done</span>
+                                <span class="text">@lang('info.aboutStat.stats_cases')</span>
                             </div>
                         </div>
                     </div>
@@ -116,22 +117,22 @@
                                 <div class="box">
                                     <div class="succeed-box">
                                         <figure class="icon">
-                                            <img src="{{ asset('assets/images/succeed-icon3.png') }} " alt="image" class="img-fluid">
+                                            <img src="{{ asset('assets/images/succeed-icon3.png') }}" alt="image" class="img-fluid">
                                         </figure>
                                         <span class="number counter">370</span>
                                         <sup class="plus">+</sup>
-                                        <span class="text">Happy Clients</span>
+                                        <span class="text">@lang('info.aboutStat.stats_clients')</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="succeed-box">
                                     <figure class="icon">
-                                        <img src="{{ asset('assets/images/succeed-icon4.png') }} " alt="image" class="img-fluid">
+                                        <img src="{{ asset('assets/images/succeed-icon4.png') }}" alt="image" class="img-fluid">
                                     </figure>
                                     <span class="number counter">90</span>
                                     <sup class="plus">+</sup>
-                                    <span class="text">Awards Won</span>
+                                    <span class="text">@lang('info.aboutStat.stats_awards')</span>
                                 </div>
                             </div>
                         </div>
@@ -141,6 +142,7 @@
         </div>
     </div>
 </section>
+
 
 <div class="modal fade modal-about" data-backdrop="static" data-keyboard="false" id="modalAbout" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">

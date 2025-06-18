@@ -8,8 +8,50 @@ return [
         'url' => 'https://www.plalawfirm.com',
         'image' => 'https://www.plalawfirm.com/images/logo.png',
         'keywords' => 'cabinet d\'avocats, droit des affaires, RDC, expertise juridique, avocats internationaux',
+        'add1' => '2380, Avenue Goma',
+        'add2' => 'Kinshasa/Gombe Immeuble 14 Perles Appartement 702',
+        'decouvrir1' => 'Découvrir',
+        'decouvrir2' => 'Plus',
 
 
+    ],
+  'banner'=> [
+    'desc_about' => "Découvrez notre histoire, nos valeurs et notre engagement à offrir des services juridiques d’excellence au cœur de l’Afrique et au-delà.",
+    'desc_expertise' => "Nos domaines d'intervention couvrent un large éventail de spécialités juridiques, adaptées aux besoins des particuliers, entreprises et institutions.",
+    'desc_team' => "Notre cabinet réunit des avocats expérimentés, passionnés et engagés à défendre vos droits avec rigueur et professionnalisme.",
+    'desc_presence' => "Grâce à une présence dans plusieurs pays africains, nous offrons un accompagnement juridique stratégique, de proximité et multiculturel.",
+    'desc_publication' => "Consultez nos articles, analyses juridiques et actualités pour mieux comprendre les enjeux légaux actuels.",
+  ],
+  'aboutStat'=> [
+    'who_title' => 'QUI SOMMES-NOUS',
+    'who_heading' => 'Engagés à faire réussir nos clients',
+    'who_description' => 'Depuis notre création, nous mettons notre expertise juridique au service des entreprises, particuliers et institutions pour les accompagner vers le succès et la justice.',
+    'who_bullet_1' => 'Un accompagnement sur mesure, confidentiel et rigoureux',
+    'who_bullet_2' => 'Une équipe réactive à l’écoute de vos enjeux',
+    'who_bullet_3' => 'Des résultats concrets basés sur l’excellence juridique',
+    'stats_partners' => 'Partenaires juridiques',
+    'stats_cases' => 'Affaires résolues',
+    'stats_clients' => 'Clients satisfaits',
+    'stats_awards' => 'Récompenses obtenues',
+  ],
+
+
+
+    'slides'=>[
+        's1Titre' => 'Nous sommes en RDC',
+        's1desc' => 'Notre cabinet est solidement implanté en République Démocratique du Congo. Nous accompagnons les particuliers, entreprises et institutions dans leurs démarches juridiques, avec rigueur et proximité.',
+
+        's2Titre' => 'Notre équipe est qualifiée',
+        's2desc' => 'Notre cabinet est composé d’avocats expérimentés, spécialisés dans des domaines variés du droit. Chaque dossier est traité avec professionnalisme, précision et engagement.',
+
+        's3Titre' => 'PLA pour vous aidez à connaître vos droit.',
+        's3desc' => 'Chez PLA, nous croyons que chaque citoyen a le droit de comprendre la loi. C’est pourquoi nous mettons à votre disposition des ressources claires et un accompagnement pédagogique.',
+
+        's4Titre' => 'Nous sommes en République du Congo',
+        's4desc' => 'Grâce à notre présence en République du Congo, nous répondons efficacement aux besoins juridiques locaux. Notre ancrage territorial est un gage de proximité, de réactivité et de confiance.',
+
+        's5Titre' => 'Nous sommes en Afrique du Sud',
+        's5desc' => 'Notre présence en Afrique du Sud nous permet de mieux répondre aux besoins juridiques régionaux, dans un cadre professionnel et multiculturel.',
     ],
 
     'titrepage' => [
@@ -23,7 +65,10 @@ return [
         'vueparBureau' => 'Bureau',
         'vueparCat' => 'Catégorie',
         'adresse' => 'Adresse',
-        'videInfo' => 'Le contenu de cette page sera bientôt disponible'
+        'videInfo' => 'Le contenu de cette page sera bientôt disponible',
+        'tRdv' => 'Votre justice, notre priorité absolue',
+        'descRdv' => 'Notre cabinet agit avec discrétion et détermination pour protéger vos droits et faire valoir votre cause.',
+        'btnRdv' => 'Obtenir un accompagnement'
 
     ],
     'bureau' => [
@@ -41,7 +86,11 @@ return [
         'nos' => 'Nos ',
         'categorie' => 'Catégories ',
         'lirePlus' => 'Lire plus',
-        'teamViewmore' => 'Plus d\'Avocats'
+        'teamViewmore' => 'Plus d\'Avocats',
+        'tArticle' => 'NOS DERNIÈRES PUBLICATIONS',
+        'descArticle' => 'Derniers articles ',
+        'desc2Article' => 'juridiques',
+        'description' => 'Restez informé des évolutions juridiques grâce à nos analyses et conseils d’experts.'
 
     ],
 
@@ -159,7 +208,7 @@ return [
         'lundi' => 'Lundi',
         'vendredi' => 'Vendredi',
         'temps' => 'Heures de travail',
-        'temps' => '08:00 – 17:00',
+        'heure' => '08:00 – 17:00',
         'titretemp' => 'Heures de travail',
         'tNewsletter' => 'Abonnement',
         'txtNewsletter' => 'Abonnez-vous à notre newsletter',
@@ -180,6 +229,9 @@ return [
 
     'team' => [
         'titre' => 'Notre equipe',
+        'desc1' => 'Des professionnels du droit à ',
+        'desc2' => 'votre service',
+        'description' => 'Chaque membre de notre cabinet met son expertise au service de vos intérêts, avec rigueur, humanité et professionnalisme.',
         'entete' => 'Notre Cabinet',
         't1' => 'Avocat',
         'all' => 'Tous',
@@ -195,6 +247,8 @@ return [
     */
 
     'expertises' => [
+        'titre' => 'Nos champs d’intervention',
+        'description' => 'Notre cabinet vous accompagne avec rigueur et engagement dans tous vos besoins juridiques, personnels ou professionnels.',
         'detail' => 'Details',
         'menu' => 'Secteurs d\'activités',
         'mine' => 'Mines & Hydrocarbures',

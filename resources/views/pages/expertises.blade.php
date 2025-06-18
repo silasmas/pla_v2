@@ -35,7 +35,7 @@
     <!-- Practice Area -->
     <section class="practice-con">
         <div class="container">
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-12">
                     <div class="text-center practice_content" data-aos="fade-up">
                         <h6>Our Expertise</h6>
@@ -46,7 +46,7 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <div class="tabs">
                 <ul class="mb-4 nav nav-tabs mb-lg-5" id="tabs-posts" role="tablist" data-aos="fade-up"
                     data-aos-duration="700">

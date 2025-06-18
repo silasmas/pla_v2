@@ -33,20 +33,6 @@
                     <p class="text text-size-16">
                         {!! !empty($about->extrait)?Str::limit($about->contenu,450, '...'):'Vide '!!}
                     </p>
-                    {{-- <ul class="list-unstyled">
-                        <li>
-                            <i class="fa fa-check" aria-hidden="true"></i>
-                            <p class="mb-0 text-size-16">Excepteur sint occaecat cupidatat noru even.</p>
-                        </li>
-                        <li>
-                            <i class="fa fa-check" aria-hidden="true"></i>
-                            <p class="mb-0 text-size-16">Duis aute irure dolor in reprehenderit in voluta facis.</p>
-                        </li>
-                        <li>
-                            <i class="fa fa-check" aria-hidden="true"></i>
-                            <p class="mb-0 text-size-16">Rerum hic tenetur a sapiente delectus au occae.</p>
-                        </li>
-                    </ul> --}}
                     <a href="{{ route('about') }}" class="text-decoration-none read_more">@lang('info.apropo.accueilBtn')<i
                             class="fa-solid fa-arrow-right"></i></a>
                 </div>
@@ -61,11 +47,10 @@
         <div class="row">
             <div class="col-12">
                 <div class="practice_content text-center" data-aos="fade-up">
-                    <h6>Nos Expertises</h6>
-                    <h2>Our Legal Practice Areas</h2>
-                    <p class="col-xl-8 col-lg-10 mx-auto text-size-16 mb-0">Nucimus qui blanditiis praesentium
-                        voluptatum deleniti atque corrupti quos dolores ruas molestias excepturi
-                        sint occaecati cupiditate non provident.
+                    <h6>@lang('info.m3')</h6>
+                    <h2>@lang('info.expertises.titre')</h2>
+                    <p class="col-xl-8 col-lg-10 mx-auto text-size-16 mb-0">
+                        @lang('info.expertises.description')
                     </p>
                 </div>
             </div>
@@ -104,13 +89,12 @@
             <div class="col-lg-8">
                 <div class="violence_wrapper position-relative">
                     <div class="violence_content" data-aos="fade-up">
-                        <h1 class="text-white">We are here to fight against any violence</h1>
-                        <p class="text-white text-size-16">Repudiandae sint et molestiae non recusandae itaque earum
-                            rerum hic tenetur a sapiente delectus maiores alias soluta nobis
-                            est eligendi optio cumque nihil imeit minus id quod maxime placeat facere possimus,.
+                        <h1 class="text-white">@lang("info.titrepage.tRdv")</h1>
+                        <p class="text-white text-size-16">
+                            @lang("info.titrepage.descRdv")
                         </p>
-                        <a href="#"  id="book-appointment-btn" class="text-decoration-none appointment">Book Appointment<i
-                                class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#"  id="book-appointment-btn" class="text-decoration-none appointment">
+                            @lang("info.titrepage.btnRdv")<i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -139,11 +123,10 @@
         <div class="row">
             <div class="col-12">
                 <div class="lawyer_content text-center" data-aos="fade-up">
-                    <h6>Team Members</h6>
-                    <h2>Team of our expert <span class="span_borderbootom">lawyers</span></h2>
-                    <p class="col-xl-8 col-lg-10 mx-auto text-size-16 mb-0">Qucimus qui blanditiis praesentium
-                        voluptatum deleniti atque corrupti quos dolores ruas molestias excepturi
-                        sint occaecati cupiditate non provident.
+                    <h6>@lang("info.team.titre")</h6>
+                    <h2>@lang("info.team.desc1")<span class="span_borderbootom">@lang("info.team.desc2")</span></h2>
+                    <p class="col-xl-8 col-lg-10 mx-auto text-size-16 mb-0">
+                        @lang("info.team.description")
                     </p>
                 </div>
             </div>
@@ -159,14 +142,14 @@
                         <div class="content">
                             <h4>{{ $t->prenom." - ".$t->nom }}</h4>
                             <span class="text-size-14">{{ $t->fonction->fonction }}</span>
-                            <ul class="list-unstyled mb-0">
+                            {{-- <ul class="list-unstyled mb-0">
                                 <li class="icons"><a href="https://www.facebook.com/login/" target="blank"><i
                                             class="fa-brands fa-facebook-f"></i></a></li>
                                 <li class="icons"><a href="https://twitter.com/i/flow/login" target="blank"><i
                                             class="fa-brands fa-x-twitter"></i></a></li>
                                 <li class="icons"><a href="https://www.linkedin.com/login" target="blank"><i
                                             class="fa-brands fa-linkedin"></i></a></li>
-                            </ul>
+                            </ul> --}}
                         </div>
                     </a>
                 </div>
