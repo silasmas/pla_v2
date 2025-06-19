@@ -1,41 +1,45 @@
-@extends("layouts.template")
+@extends('layouts.template')
 
-@section("contente")
+@section('contente')
 
-<!-- About -->
-<section class="aboutpage-con position-relative">
-    <figure class="mb-0 about-sideimage">
-        <img src="{{ asset('assets/images/client-sideimage.png') }}" alt="image" class="img-fluid">
-    </figure>
-    <div class="container">
-        <div class="row">
-            <div class="order-2 text-center col-lg-6 col-md-12 col-sm-12 col-12 order-lg-1 text-lg-left">
-                <div class="about_wrapper position-relative" data-aos="zoom-in">
-                    <figure class="mb-0 about-image">
-                        <img src="{{ asset('/assets/images/img/02.png') }}" alt="image" class="img-fluid">
-                    </figure>
-                    <figure class="mb-0 about-circle">
-                        <img src="{{ asset('assets/images/aboutpage-circle.png') }}" alt="image" class="img-fluid">
-                    </figure>
-                    <div class="about-box">
-                        <figure class="about-icon">
-                            <img src="{{ asset('assets/images/aboutpage-icon.png') }}" alt="image" class="img-fluid">
+    <!-- About -->
+    <section class="aboutpage-con position-relative">
+        <figure class="mb-0 about-sideimage">
+            <img src="{{ asset('assets/images/client-sideimage.png') }}" alt="image" class="img-fluid">
+        </figure>
+        <div class="container">
+            <div class="row">
+                <div class="order-2 text-center col-lg-6 col-md-12 col-sm-12 col-12 order-lg-1 text-lg-left">
+                    <div class="about_wrapper position-relative" data-aos="zoom-in">
+                        <figure class="mb-0 about-image">
+                            <img src="{{ asset('/assets/images/img/02.png') }}" alt="image" class="img-fluid">
                         </figure>
-                        <span class="number counter">30</span>
-                        <sup class="plus">+</sup>
-                        <span class="text">Years of Experience</span>
+                        <figure class="mb-0 about-circle">
+                            <img src="{{ asset('assets/images/aboutpage-circle.png') }}" alt="image" class="img-fluid">
+                        </figure>
+                        <div class="about-box">
+                            <figure class="about-icon">
+                                <img src="{{ asset('assets/images/aboutpage-icon.png') }}" alt="image" class="img-fluid">
+                            </figure>
+                            <span class="number counter">30</span>
+                            <sup class="plus">+</sup>
+                            <span class="text">Years of Experience</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="order-1 col-lg-6 col-md-12 col-sm-12 col-12 order-lg-2">
-                <div class="about_content" data-aos="fade-up">
-                    <h6>About us</h6>
-                    <h2>Providing Top-Notch Legal Representation</h2>
-                    <p class="text text-size-16">Quis autem vel eum iure reprehenderit rui in ea volurate veli esse ruam
-                        nihil molestiae conseauatur vel illum rui dolorema
-                        eum fugiat ruo voluetas nulla pariatur.
-                    </p>
-                    <ul class="list-unstyled">
+                <div class="order-1 col-lg-6 col-md-12 col-sm-12 col-12 order-lg-2">
+                    <div class="about_content" data-aos="fade-up">
+                        <h6>{{ !empty($about->quisommenous) ? $about->quisommenous : '' }}</h6>
+                        <h2>{{ !empty($about->titrecabinet) ? $about->titrecabinet : '' }}</h2>
+                        @if (!empty($about->contenu))
+                            <p class="text text-size-16">
+                                @if (Str::length($about->contenu) > 500)
+                                    {!! Str::limit($about->contenu, 500, '...') !!}
+                                @else
+                                    {!! $about->contenu !!}
+                                @endif
+                            </p>
+                            {{-- <ul class="list-unstyled">
                         <li>
                             <i class="fa fa-check" aria-hidden="true"></i>
                             <p class="mb-0 text-size-16">Excepteur sint occaecat cupidatat noru even.</p>
@@ -48,91 +52,99 @@
                             <i class="fa fa-check" aria-hidden="true"></i>
                             <p class="mb-0 text-size-16">Rerum hic tenetur a sapiente delectus au occae.</p>
                         </li>
-                    </ul>
-                    <a href="#" class="text-decoration-none read_more" data-toggle="modal"
-                        data-target="#modalAbout">Read More<i class="fa-solid fa-arrow-right"></i></a>
+                    </ul> --}}
+                            @if (Str::length($about->extrait) > 800)
+                                <a href="#" class="text-decoration-none read_more" data-toggle="modal"
+                                    data-target="#modalAbout">@lang('info.apropo.accueilBtn')<i class="fa-solid fa-arrow-right"></i></a>
+                            @endif
+                    </div>
+                    @endif
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Succeed -->
-<section class="succeed-con position-relative">
-    <div class="container">
-        <div class="row">
-            <!-- Texte principal -->
-            <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                <div class="succeed_content" data-aos="fade-up">
-                    <h6>@lang('info.aboutStat.who_title')</h6>
-                    <h2>@lang('info.aboutStat.who_heading')</h2>
-                    <p class="text text-size-16">@lang('info.aboutStat.who_description')</p>
-                    <ul class="mb-0 list-unstyled">
-                        <li>
-                            <i class="fa fa-check" aria-hidden="true"></i>
-                            <p class="mb-0 text-size-16">@lang('info.aboutStat.who_bullet_1')</p>
-                        </li>
-                        <li>
-                            <i class="fa fa-check" aria-hidden="true"></i>
-                            <p class="mb-0 text-size-16">@lang('info.aboutStat.who_bullet_2')</p>
-                        </li>
-                        <li>
-                            <i class="fa fa-check" aria-hidden="true"></i>
-                            <p class="mb-0 text-size-16">@lang('info.aboutStat.who_bullet_3')</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Statistiques -->
-            <div class="col-lg-6 col-md-12 col-sm-12 col-12">
-                <div class="succeed_wrapper" data-aos="zoom-in">
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                            <div class="box">
-                                <div class="succeed-box">
-                                    <figure class="icon">
-                                        <img src="{{ asset('assets/images/succeed-icon1.png') }}" alt="image" class="img-fluid">
-                                    </figure>
-                                    <span class="number counter">250</span>
-                                    <sup class="plus">+</sup>
-                                    <span class="text">@lang('info.aboutStat.stats_partners')</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                            <div class="succeed-box">
-                                <figure class="icon">
-                                    <img src="{{ asset('assets/images/succeed-icon2.png') }}" alt="image" class="img-fluid">
-                                </figure>
-                                <span class="number counter">180</span>
-                                <sup class="plus">+</sup>
-                                <span class="text">@lang('info.aboutStat.stats_cases')</span>
-                            </div>
-                        </div>
+    <!-- Succeed -->
+    <section class="succeed-con position-relative">
+        <div class="container">
+            <div class="row">
+                <!-- Texte principal -->
+                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div class="succeed_content" data-aos="fade-up">
+                        <h6>@lang('info.aboutStat.who_title')</h6>
+                        <h2>@lang('info.aboutStat.who_heading')</h2>
+                        <p class="text text-size-16">@lang('info.aboutStat.who_description')</p>
+                        <ul class="mb-0 list-unstyled">
+                            <li>
+                                <i class="fa fa-check" aria-hidden="true"></i>
+                                <p class="mb-0 text-size-16">@lang('info.aboutStat.who_bullet_1')</p>
+                            </li>
+                            <li>
+                                <i class="fa fa-check" aria-hidden="true"></i>
+                                <p class="mb-0 text-size-16">@lang('info.aboutStat.who_bullet_2')</p>
+                            </li>
+                            <li>
+                                <i class="fa fa-check" aria-hidden="true"></i>
+                                <p class="mb-0 text-size-16">@lang('info.aboutStat.who_bullet_3')</p>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="succeed-downcontent">
+                </div>
+
+                <!-- Statistiques -->
+                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div class="succeed_wrapper" data-aos="zoom-in">
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="box">
                                     <div class="succeed-box">
                                         <figure class="icon">
-                                            <img src="{{ asset('assets/images/succeed-icon3.png') }}" alt="image" class="img-fluid">
+                                            <img src="{{ asset('assets/images/succeed-icon1.png') }}" alt="image"
+                                                class="img-fluid">
                                         </figure>
-                                        <span class="number counter">370</span>
+                                        <span class="number counter">250</span>
                                         <sup class="plus">+</sup>
-                                        <span class="text">@lang('info.aboutStat.stats_clients')</span>
+                                        <span class="text">@lang('info.aboutStat.stats_partners')</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-12">
                                 <div class="succeed-box">
                                     <figure class="icon">
-                                        <img src="{{ asset('assets/images/succeed-icon4.png') }}" alt="image" class="img-fluid">
+                                        <img src="{{ asset('assets/images/succeed-icon2.png') }}" alt="image"
+                                            class="img-fluid">
                                     </figure>
-                                    <span class="number counter">90</span>
+                                    <span class="number counter">180</span>
                                     <sup class="plus">+</sup>
-                                    <span class="text">@lang('info.aboutStat.stats_awards')</span>
+                                    <span class="text">@lang('info.aboutStat.stats_cases')</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="succeed-downcontent">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                    <div class="box">
+                                        <div class="succeed-box">
+                                            <figure class="icon">
+                                                <img src="{{ asset('assets/images/succeed-icon3.png') }}" alt="image"
+                                                    class="img-fluid">
+                                            </figure>
+                                            <span class="number counter">370</span>
+                                            <sup class="plus">+</sup>
+                                            <span class="text">@lang('info.aboutStat.stats_clients')</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                    <div class="succeed-box">
+                                        <figure class="icon">
+                                            <img src="{{ asset('assets/images/succeed-icon4.png') }}" alt="image"
+                                                class="img-fluid">
+                                        </figure>
+                                        <span class="number counter">90</span>
+                                        <sup class="plus">+</sup>
+                                        <span class="text">@lang('info.aboutStat.stats_awards')</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -140,36 +152,30 @@
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
-<div class="modal fade modal-about" data-backdrop="static" data-keyboard="false" id="modalAbout" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content" style="border: none">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <h3>
-                    A propos de nous
-                </h3>
-                <h1>PLA Law Firm</h1>
-                <p> Est un cabinet d’avocats basé en République Démocratique du Congo, offrant ses services dans tous
-                    les domaines du droit des affaires en Afrique francophone. <br>Nos avocats sont des experts
-                    juridiques internationaux ayant plus de 15 ans de pratique en droit des affaires et des compétences
-                    approfondies en analyse juridique.&nbsp; Ils suivent avec diligence les évolutions constantes des
-                    cadres juridiques et réglementaires de nos différents secteurs d’intervention.</p>
-                <p>Avec une équipe multiculturelle et multidisciplinaire respectant les standards internationaux de
-                    leurs professions, nous fournissons à nos clients une assistance et une représentation efficaces
-                    avec proactivité et une attention particulière à chaque détail dans la gestion des intérêts de nos
-                    clients. &nbsp;<br><br></p>
+    <div class="modal fade modal-about" data-backdrop="static" data-keyboard="false" id="modalAbout" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="border: none">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h3>
+                    {{ !empty($about->quisommenous) ? $about->quisommenous : '' }}
+                    </h3>
+                    <h1>{{ !empty($about->titrecabinet) ? $about->titrecabinet : '' }}</h1>
+                    <p>
+                         {!! $about->contenu  !!}
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-@include("parties.blog")
+    @include('parties.blog')
 @endsection()

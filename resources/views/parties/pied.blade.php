@@ -61,30 +61,30 @@
     }
     document.addEventListener('DOMContentLoaded', () => {
 
- // 1. Récupérer le bouton “Book Appointment”
-  const bookBtn = document.getElementById('book-appointment-btn');
-  // 2. Récupérer le conteneur du pop-up
-  const contactPopup = document.getElementById('fixed-form-container');
-   if (bookBtn && contactPopup) {
-    bookBtn.addEventListener('click', function(e) {
-      e.preventDefault();
+        // 1. Récupérer le bouton “Book Appointment”
+        const bookBtn = document.getElementById('book-appointment-btn');
+        // 2. Récupérer le conteneur du pop-up
+        const contactPopup = document.getElementById('fixed-form-container');
+        if (bookBtn && contactPopup) {
+            bookBtn.addEventListener('click', function(e) {
+                e.preventDefault();
 
-      // 3.1. Faire défiler la page jusqu’en bas (scroll fluide vers le bas)
-      window.scrollTo({
-        top: document.documentElement.scrollHeight,
-        behavior: 'smooth'
-      });
+                // 3.1. Faire défiler la page jusqu’en bas (scroll fluide vers le bas)
+                window.scrollTo({
+                    top: document.documentElement.scrollHeight,
+                    behavior: 'smooth'
+                });
 
-      // 3.2. Dès que le scroll est terminé (ou un petit délai pour laisser le scroll se terminer),
-      //        on ajoute la classe .popup-visible pour faire apparaître le pop-up.
-      //        On peut laisser un délai de 500 ms, mais vous pouvez ajuster.
+                // 3.2. Dès que le scroll est terminé (ou un petit délai pour laisser le scroll se terminer),
+                //        on ajoute la classe .popup-visible pour faire apparaître le pop-up.
+                //        On peut laisser un délai de 500 ms, mais vous pouvez ajuster.
 
-      setTimeout(function() {
-        contactPopup.classList.add('popup-visible');
-        contactPopup.classList.remove('popup-hidden');
-      }, 500); // 0.5 seconde : à ajuster si nécessaire
-    });
-  }
+                setTimeout(function() {
+                    contactPopup.classList.add('popup-visible');
+                    contactPopup.classList.remove('popup-hidden');
+                }, 500); // 0.5 seconde : à ajuster si nécessaire
+            });
+        }
 
 
 
@@ -167,7 +167,7 @@
                     if (response.ok) {
                         // 4.4.1. En cas de succès (HTTP 200-299)
                         feedback.textContent = data.message ||
-                            '@lang("info.footer.msgSuccessEmail")';
+                            '@lang('info.footer.msgSuccessEmail')';
                         feedback.style.color = 'green';
                         emailInput.value = ''; // Vider le champ
                     } else {
@@ -179,14 +179,14 @@
                             feedback.textContent = data.message;
                         } else {
                             feedback.textContent =
-                                '@lang("info.footer.msgExceptionEmail")';
+                                '@lang('info.footer.msgExceptionEmail')';
                         }
                         feedback.style.color = 'red';
                     }
                 }).catch((error) => {
                     // 4.4.3. En cas de problème réseau ou exception
                     console.error('Erreur AJAX newsletter :', error);
-                    feedback.textContent ='@lang("info.footer.msgErr")';
+                    feedback.textContent = '@lang('info.footer.msgErr')';
                     feedback.style.color = 'red';
                 })
                 .finally(() => {
